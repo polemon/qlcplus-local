@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE Workspace>
-<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="SimpleDesk">
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FixtureManager">
  <Creator>
   <Name>Q Light Controller Plus</Name>
   <Version>4.10.1</Version>
@@ -203,6 +203,16 @@
    <Universe>0</Universe>
    <Address>26</Address>
    <Channels>4</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Showtec</Manufacturer>
+   <Model>Atmos 2000</Model>
+   <Mode>Normal</Mode>
+   <ID>19</ID>
+   <Name>Atmos 2000</Name>
+   <Universe>0</Universe>
+   <Address>22</Address>
+   <Channels>1</Channels>
   </Fixture>
   <Function Type="Scene" Name="Strobo alles" ID="0">
    <Speed Duration="0" FadeOut="0" FadeIn="0"/>
@@ -453,6 +463,8 @@
    <Command></Command>
    <Command></Command>
    <Command></Command>
+   <Command></Command>
+   <Command></Command>
   </Function>
   <Function Type="Chaser" Name="test" ID="8">
    <Speed Duration="0" FadeOut="0" FadeIn="0"/>
@@ -468,8 +480,8 @@
    <RunOrder>SingleShot</RunOrder>
    <SpeedModes Duration="Common" FadeOut="Default" FadeIn="Default"/>
    <Sequence BoundScene="0"/>
-   <Step Values="15" Number="0" FadeOut="0" FadeIn="0" Hold="0">0,0,225,0,1,255,8,3,255,8,4,200,9,3,255,9,4,200,10,3,255,10,4,200,11,3,255,11,4,200,12,3,255,12,4,200,13,3,255,13,4,200</Step>
-   <Step Values="15" Number="1" FadeOut="0" FadeIn="0" Hold="0">0,0,225,0,1,255,8,3,255,8,4,200,9,3,255,9,4,200,10,3,255,10,4,200,11,3,255,11,4,200,12,3,255,12,4,200,13,3,255,13,4,200</Step>
+   <Step Values="33" Number="0" FadeOut="0" FadeIn="0" Hold="0">0,0,225,0,1,255,8,3,255,8,4,200,9,3,255,9,4,200,10,3,255,10,4,200,11,3,255,11,4,200,12,3,255,12,4,200,13,3,255,13,4,200</Step>
+   <Step Values="33" Number="1" FadeOut="0" FadeIn="0" Hold="0">0,0,225,0,1,255,8,3,255,8,4,200,9,3,255,9,4,200,10,3,255,10,4,200,11,3,255,11,4,200,12,3,255,12,4,200,13,3,255,13,4,200</Step>
   </Function>
   <Monitor ShowLabels="1" DisplayMode="0">
    <Font>Fira Mono,12,-1,5,50,0,0,0,0,0</Font>
@@ -477,7 +489,9 @@
    <ValueStyle>0</ValueStyle>
    <Grid Width="10" Height="12" Units="0"/>
    <FxItem ID="0" YPos="9871.79" XPos="4820.51" GelColor="#ffffff"/>
+   <FxItem ID="17" YPos="871.795" XPos="4307.69"/>
    <FxItem ID="1" YPos="692.308" XPos="1692.31"/>
+   <FxItem ID="18" YPos="916.662" XPos="5383.87"/>
    <FxItem ID="2" YPos="692.308" XPos="2820.51"/>
    <FxItem ID="3" YPos="717.949" XPos="6846.15"/>
    <FxItem ID="4" YPos="743.59" XPos="8025.64"/>
@@ -487,8 +501,6 @@
    <FxItem ID="14" YPos="9871.79" XPos="3538.46"/>
    <FxItem ID="15" YPos="9871.79" XPos="6153.85"/>
    <FxItem ID="16" YPos="9897.44" XPos="7692.31"/>
-   <FxItem ID="17" YPos="871.795" XPos="4307.69"/>
-   <FxItem ID="18" YPos="916.662" XPos="5383.87"/>
   </Monitor>
  </Engine>
  <VirtualConsole>

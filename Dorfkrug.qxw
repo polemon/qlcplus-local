@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE Workspace>
-<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FunctionManager">
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="SimpleDesk">
  <Creator>
   <Name>Q Light Controller Plus</Name>
   <Version>4.10.1</Version>
-  <Author>Bereziak</Author>
+  <Author>bereziak</Author>
  </Creator>
  <Engine Autostart="7">
   <InputOutputMap>
@@ -96,63 +96,63 @@
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
-   <Model>LED PAR 56 RGB DMX</Model>
-   <Mode>5 Channels</Mode>
+   <Model>LED SLS-7x3W TCL</Model>
+   <Mode>6-Channel</Mode>
    <ID>8</ID>
-   <Name>LED PAR #1</Name>
+   <Name>LED Par #1</Name>
    <Universe>0</Universe>
    <Address>40</Address>
-   <Channels>5</Channels>
+   <Channels>6</Channels>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
-   <Model>LED PAR 56 RGB DMX</Model>
-   <Mode>5 Channels</Mode>
+   <Model>LED SLS-7x3W TCL</Model>
+   <Mode>6-Channel</Mode>
    <ID>9</ID>
-   <Name>LED PAR #2</Name>
+   <Name>LED Par #2</Name>
    <Universe>0</Universe>
    <Address>56</Address>
-   <Channels>5</Channels>
+   <Channels>6</Channels>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
-   <Model>LED PAR 56 RGB DMX</Model>
-   <Mode>5 Channels</Mode>
+   <Model>LED SLS-7x3W TCL</Model>
+   <Mode>6-Channel</Mode>
    <ID>10</ID>
-   <Name>LED PAR #3</Name>
+   <Name>LED Par #3</Name>
    <Universe>0</Universe>
    <Address>72</Address>
-   <Channels>5</Channels>
+   <Channels>6</Channels>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
-   <Model>LED PAR 56 RGB DMX</Model>
-   <Mode>5 Channels</Mode>
+   <Model>LED SLS-7x3W TCL</Model>
+   <Mode>6-Channel</Mode>
    <ID>11</ID>
-   <Name>LED PAR #4</Name>
+   <Name>LED Par #4</Name>
    <Universe>0</Universe>
    <Address>88</Address>
-   <Channels>5</Channels>
+   <Channels>6</Channels>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
-   <Model>LED PAR 56 RGB DMX</Model>
-   <Mode>5 Channels</Mode>
+   <Model>LED SLS-7x3W TCL</Model>
+   <Mode>6-Channel</Mode>
    <ID>12</ID>
-   <Name>LED PAR #5</Name>
+   <Name>LED Par #5</Name>
    <Universe>0</Universe>
    <Address>104</Address>
-   <Channels>5</Channels>
+   <Channels>6</Channels>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
-   <Model>LED PAR 56 RGB DMX</Model>
-   <Mode>5 Channels</Mode>
+   <Model>LED SLS-7x3W TCL</Model>
+   <Mode>6-Channel</Mode>
    <ID>13</ID>
-   <Name>LED PAR #6</Name>
+   <Name>LED Par #6</Name>
    <Universe>0</Universe>
    <Address>120</Address>
-   <Channels>5</Channels>
+   <Channels>6</Channels>
   </Fixture>
   <Fixture>
    <Manufacturer>GLP</Manufacturer>
@@ -207,12 +207,12 @@
   <Function Type="Scene" Name="Strobo alles" ID="0">
    <Speed Duration="0" FadeOut="0" FadeIn="0"/>
    <FixtureVal ID="0">0,0,1,0,2,0</FixtureVal>
-   <FixtureVal ID="8">3,0,4,0</FixtureVal>
-   <FixtureVal ID="9">3,0,4,0</FixtureVal>
-   <FixtureVal ID="10">3,0,4,0</FixtureVal>
-   <FixtureVal ID="11">3,0,4,0</FixtureVal>
-   <FixtureVal ID="12">3,0,4,0</FixtureVal>
-   <FixtureVal ID="13">3,0,4,0</FixtureVal>
+   <FixtureVal ID="8">0,0,1,0,2,0,3,0,4,0</FixtureVal>
+   <FixtureVal ID="9">0,0,1,0,2,0,3,0,4,0</FixtureVal>
+   <FixtureVal ID="10">0,0,1,0,2,0,3,0,4,0</FixtureVal>
+   <FixtureVal ID="11">0,0,1,0,2,0,3,0,4,0</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0,3,0,4,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0,3,0,4,0</FixtureVal>
   </Function>
   <Function Type="Scene" Name="Gobo1" ID="1">
    <Speed Duration="0" FadeOut="0" FadeIn="0"/>
@@ -255,7 +255,7 @@
     <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed Duration="2500" FadeOut="0" FadeIn="0"/>
+   <Speed Duration="10300" FadeOut="0" FadeIn="0"/>
    <Direction>Forward</Direction>
    <RunOrder>PingPong</RunOrder>
    <Algorithm>Lissajous</Algorithm>
@@ -309,7 +309,7 @@
     <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed Duration="5000" FadeOut="0" FadeIn="0"/>
+   <Speed Duration="10300" FadeOut="0" FadeIn="0"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <Algorithm>Lissajous</Algorithm>
@@ -368,7 +368,7 @@
     <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed Duration="1000" FadeOut="0" FadeIn="0"/>
+   <Speed Duration="1020" FadeOut="0" FadeIn="0"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <Algorithm>Line</Algorithm>
@@ -422,7 +422,7 @@
     <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed Duration="1000" FadeOut="0" FadeIn="0"/>
+   <Speed Duration="1020" FadeOut="0" FadeIn="0"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <Algorithm>Line</Algorithm>
@@ -450,6 +450,9 @@
    <Command>setfixture%3A14%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%232%2C%20Speed</Command>
    <Command>setfixture%3A15%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%233%2C%20Speed</Command>
    <Command>setfixture%3A16%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%234%2C%20Speed</Command>
+   <Command></Command>
+   <Command></Command>
+   <Command></Command>
   </Function>
   <Function Type="Chaser" Name="test" ID="8">
    <Speed Duration="0" FadeOut="0" FadeIn="0"/>
@@ -481,12 +484,6 @@
    <FxItem ID="5" YPos="9897.44" XPos="2076.92"/>
    <FxItem ID="6" YPos="2777.06" XPos="8910.62" GelColor="#ffff00"/>
    <FxItem ID="7" YPos="7999.68" XPos="836.421" GelColor="#ffff00"/>
-   <FxItem ID="8" YPos="1953.38" XPos="904.11"/>
-   <FxItem ID="9" YPos="2879.84" XPos="904.59"/>
-   <FxItem ID="10" YPos="3894.74" XPos="894.737"/>
-   <FxItem ID="11" YPos="6824.56" XPos="8929.82"/>
-   <FxItem ID="12" YPos="7894.74" XPos="8912.28"/>
-   <FxItem ID="13" YPos="8947.37" XPos="8929.82"/>
    <FxItem ID="14" YPos="9871.79" XPos="3538.46"/>
    <FxItem ID="15" YPos="9871.79" XPos="6153.85"/>
    <FxItem ID="16" YPos="9897.44" XPos="7692.31"/>
@@ -507,7 +504,7 @@
     <WindowState Width="155" X="580" Y="10" Height="45" Visible="False"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
-     <ForegroundColor>4290557440</ForegroundColor>
+     <ForegroundColor>4290822144</ForegroundColor>
      <BackgroundColor>Default</BackgroundColor>
      <BackgroundImage>None</BackgroundImage>
      <Font>Fira Mono,22,-1,5,75,0,0,0,0,0</Font>
@@ -553,7 +550,7 @@
      <Font>Default</Font>
     </Appearance>
     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-    <Level HighLimit="255" LowLimit="0" Value="91">
+    <Level HighLimit="255" LowLimit="0" Value="15">
      <Channel Fixture="1">3</Channel>
      <Channel Fixture="2">3</Channel>
      <Channel Fixture="3">3</Channel>
@@ -574,32 +571,13 @@
     </Appearance>
     <Input Universe="0" Channel="2"/>
     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="None">Level</SliderMode>
-    <Level HighLimit="255" LowLimit="0" Value="186">
-     <Channel Fixture="8">0</Channel>
-     <Channel Fixture="8">1</Channel>
-     <Channel Fixture="8">2</Channel>
-     <Channel Fixture="9">0</Channel>
-     <Channel Fixture="9">1</Channel>
-     <Channel Fixture="9">2</Channel>
-     <Channel Fixture="10">0</Channel>
-     <Channel Fixture="10">1</Channel>
-     <Channel Fixture="10">2</Channel>
-     <Channel Fixture="11">0</Channel>
-     <Channel Fixture="11">1</Channel>
-     <Channel Fixture="11">2</Channel>
-     <Channel Fixture="12">0</Channel>
-     <Channel Fixture="12">1</Channel>
-     <Channel Fixture="12">2</Channel>
-     <Channel Fixture="13">0</Channel>
-     <Channel Fixture="13">1</Channel>
-     <Channel Fixture="13">2</Channel>
-    </Level>
+    <Level HighLimit="255" LowLimit="0" Value="131"/>
     <Playback>
      <Function>4294967295</Function>
     </Playback>
    </Slider>
    <XYPad ID="12" Caption="XY Pad TS-255" InvertedAppearance="0">
-    <WindowState Width="230" X="230" Y="95" Height="230" Visible="False"/>
+    <WindowState Width="230" X="225" Y="95" Height="230" Visible="False"/>
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
      <ForegroundColor>4291348480</ForegroundColor>
@@ -623,10 +601,10 @@
      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
     </Fixture>
-    <Pan Position="137">
+    <Pan Position="143">
      <Input Universe="0" Channel="0"/>
     </Pan>
-    <Tilt Position="158">
+    <Tilt Position="88">
      <Input Universe="0" Channel="1"/>
     </Tilt>
     <Width/>
@@ -1052,10 +1030,10 @@
      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
     </Fixture>
-    <Pan Position="127">
+    <Pan Position="44">
      <Input Universe="0" Channel="0"/>
     </Pan>
-    <Tilt Position="128">
+    <Tilt Position="58">
      <Input Universe="0" Channel="1"/>
     </Tilt>
     <Width/>
@@ -1129,11 +1107,11 @@
      <Font>Default</Font>
     </Appearance>
    </Button>
-   <SpeedDial ID="40" Caption="Duration">
-    <WindowState Width="60" X="400" Y="335" Height="105" Visible="False"/>
+   <SpeedDial ID="40" Caption="Scan">
+    <WindowState Width="85" X="375" Y="345" Height="105" Visible="False"/>
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
+     <ForegroundColor>4290822144</ForegroundColor>
      <BackgroundColor>Default</BackgroundColor>
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
@@ -1145,13 +1123,15 @@
     <Div/>
     <MultDivReset/>
     <Apply/>
-    <Time>2000</Time>
+    <Time>10300</Time>
+    <Function Duration="6" FadeOut="0" FadeIn="0">2</Function>
+    <Function Duration="6" FadeOut="0" FadeIn="0">3</Function>
    </SpeedDial>
-   <SpeedDial ID="41" Caption="Duration">
-    <WindowState Width="60" X="475" Y="335" Height="105" Visible="False"/>
+   <SpeedDial ID="41" Caption="Sweep">
+    <WindowState Width="75" X="475" Y="335" Height="115" Visible="False"/>
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
+     <ForegroundColor>4290822144</ForegroundColor>
      <BackgroundColor>Default</BackgroundColor>
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
@@ -1163,7 +1143,9 @@
     <Div/>
     <MultDivReset/>
     <Apply/>
-    <Time>11000</Time>
+    <Time>1020</Time>
+    <Function Duration="6" FadeOut="0" FadeIn="0">6</Function>
+    <Function Duration="6" FadeOut="0" FadeIn="0">5</Function>
    </SpeedDial>
   </Frame>
   <Properties>

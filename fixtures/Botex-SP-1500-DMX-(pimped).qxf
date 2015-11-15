@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE FixtureDefinition>
+<FixtureDefinition xmlns="http://www.qlcplus.org/FixtureDefinition">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>4.10.1</Version>
+  <Author>bereziak</Author>
+ </Creator>
+ <Manufacturer>Botex</Manufacturer>
+ <Model>SP-1500 DMX (pimped)</Model>
+ <Type>Strobe</Type>
+ <Channel Name="Speed / Trigger">
+  <Group Byte="0">Shutter</Group>
+  <Capability Min="0" Max="255">Speed / Trigger</Capability>
+ </Channel>
+ <Channel Name="Intensity">
+  <Group Byte="0">Intensity</Group>
+  <Colour>White</Colour>
+  <Capability Min="0" Max="255">Intensity</Capability>
+ </Channel>
+ <Channel Name="Function">
+  <Group Byte="0">Maintenance</Group>
+  <Capability Min="0" Max="49">Normal</Capability>
+  <Capability Min="50" Max="99">Blinder</Capability>
+  <Capability Min="100" Max="149">Random</Capability>
+  <Capability Min="150" Max="199">Single Flash</Capability>
+  <Capability Min="200" Max="255">SYNC</Capability>
+ </Channel>
+ <Mode Name="Normal">
+  <Physical>
+   <Bulb Lumens="0" Type="" ColourTemperature="0"/>
+   <Dimensions Width="0" Height="0" Weight="0" Depth="0"/>
+   <Lens DegreesMax="0" Name="Other" DegreesMin="0"/>
+   <Focus PanMax="0" Type="Fixed" TiltMax="0"/>
+   <Technical PowerConsumption="0" DmxConnector="3-pin"/>
+  </Physical>
+  <Channel Number="0">Speed / Trigger</Channel>
+  <Channel Number="1">Intensity</Channel>
+  <Channel Number="2">Function</Channel>
+ </Mode>
+</FixtureDefinition>

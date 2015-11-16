@@ -35,7 +35,7 @@
   <Capability Min="255" Max="255">Music control</Capability>
  </Channel>
  <Channel Name="Rotation">
-  <Group Byte="0">Pan</Group>
+  <Group Byte="0">Speed</Group>
   <Capability Min="0" Max="4">Off</Capability>
   <Capability Min="5" Max="127">Clockwise rotation (increasing speed)</Capability>
   <Capability Min="128" Max="133">Stop</Capability>

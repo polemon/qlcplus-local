@@ -11,14 +11,14 @@
  <Type>Flower</Type>
  <Channel Name="Colour">
   <Group Byte="0">Colour</Group>
-  <Capability Min="0" Max="9">Blackout</Capability>
-  <Capability Min="10" Max="19">Red</Capability>
-  <Capability Min="20" Max="29">Green</Capability>
-  <Capability Min="30" Max="39">Blue</Capability>
-  <Capability Min="40" Max="49">Cyan</Capability>
-  <Capability Min="50" Max="59">Magenta</Capability>
-  <Capability Min="60" Max="69">Yellow</Capability>
-  <Capability Min="70" Max="79">White</Capability>
+  <Capability Min="0" Max="9" Color="#000000">Blackout</Capability>
+  <Capability Min="10" Max="19" Color="#ff0000">Red</Capability>
+  <Capability Min="20" Max="29" Color="#00ff00">Green</Capability>
+  <Capability Min="30" Max="39" Color="#0000ff">Blue</Capability>
+  <Capability Min="40" Max="49" Color="#00ffff">Cyan</Capability>
+  <Capability Min="50" Max="59" Color="#ff00ff">Magenta</Capability>
+  <Capability Min="60" Max="69" Color="#ffff00">Yellow</Capability>
+  <Capability Min="70" Max="79" Color="#ffffff">White</Capability>
   <Capability Min="80" Max="139">Single color chase</Capability>
   <Capability Min="140" Max="199">Multi color chase</Capability>
   <Capability Min="200" Max="224">Auto (fast)</Capability>
@@ -37,9 +37,9 @@
  <Channel Name="Rotation">
   <Group Byte="0">Speed</Group>
   <Capability Min="0" Max="4">Off</Capability>
-  <Capability Min="5" Max="127">Clockwise rotation (increasing speed)</Capability>
+  <Capability Min="5" Max="127">CW rot. (slow - fast)</Capability>
   <Capability Min="128" Max="133">Stop</Capability>
-  <Capability Min="134" Max="255">Counter clockwise rotation (increasing speed)</Capability>
+  <Capability Min="134" Max="255">CCW rot. (slow - fast)</Capability>
  </Channel>
  <Mode Name="Normal">
   <Physical>

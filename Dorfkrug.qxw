@@ -4,7 +4,7 @@
  <Creator>
   <Name>Q Light Controller Plus</Name>
   <Version>4.10.1</Version>
-  <Author>polemon</Author>
+  <Author>bereziak</Author>
  </Creator>
  <Engine Autostart="7">
   <InputOutputMap>
@@ -468,6 +468,10 @@
    <Command>setfixture%3A14%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%232%2C%20Speed</Command>
    <Command>setfixture%3A15%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%233%2C%20Speed</Command>
    <Command>setfixture%3A16%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%234%2C%20Speed</Command>
+   <Command></Command>
+   <Command></Command>
+   <Command></Command>
+   <Command></Command>
   </Function>
   <Function Type="Chaser" Name="test" ID="8">
    <Speed Duration="0" FadeOut="0" FadeIn="0"/>
@@ -771,7 +775,7 @@
     <Action>Toggle</Action>
     <Key>X</Key>
     <Intensity Adjust="False">100</Intensity>
-    <WindowState Width="135" X="435" Y="270" Height="40" Visible="True"/>
+    <WindowState Width="135" X="440" Y="270" Height="40" Visible="True"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -785,7 +789,7 @@
     <Action>Toggle</Action>
     <Key>Shift+X</Key>
     <Intensity Adjust="False">100</Intensity>
-    <WindowState Width="145" X="770" Y="265" Height="35" Visible="True"/>
+    <WindowState Width="125" X="770" Y="265" Height="40" Visible="True"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -799,7 +803,7 @@
     <Action>Toggle</Action>
     <Key>Shift+X</Key>
     <Intensity Adjust="False">100</Intensity>
-    <WindowState Width="155" X="770" Y="315" Height="45" Visible="True"/>
+    <WindowState Width="145" X="770" Y="315" Height="50" Visible="True"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -1034,7 +1038,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Width="445" X="970" Y="20" Height="265" Visible="True"/>
+    <WindowState Width="425" X="925" Y="20" Height="265" Visible="True"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>False</ShowHeader>
@@ -1163,7 +1167,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Width="340" X="970" Y="310" Height="310" Visible="True"/>
+    <WindowState Width="340" X="925" Y="300" Height="310" Visible="True"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>False</ShowHeader>
@@ -1258,7 +1262,7 @@
    </Frame>
   </Frame>
   <Properties>
-   <Size Width="1850" Height="950"/>
+   <Size Width="1385" Height="855"/>
    <GrandMaster SliderMode="Normal" ChannelMode="Intensity" ValueMode="Reduce"/>
   </Properties>
  </VirtualConsole>

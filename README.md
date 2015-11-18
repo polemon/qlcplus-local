@@ -1,2 +1,4 @@
-# fixtures
-My personal fixture definitions for qlcplus
+# qlcplus-local
+My local directory for qlcplus.
+
+It contains shows, fixtures, gobos, etc.

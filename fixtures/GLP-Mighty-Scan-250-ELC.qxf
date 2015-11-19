@@ -63,34 +63,34 @@
   <Capability Min="148" Max="151">Halftone 19</Capability>
   <Capability Min="152" Max="155">Red 301</Capability>
   <Capability Min="156" Max="159">Halftone 20</Capability>
-  <Capability Min="160" Max="175">Open (no filter)</Capability>
-  <Capability Min="176" Max="208">Color rotation 1 (fast - slow)</Capability>
+  <Capability Min="160" Max="175" Color="#ffffff">Open (no filter)</Capability>
+  <Capability Res="Others/rainbow.png" Min="176" Max="208">Color rotation 1 (fast - slow)</Capability>
   <Capability Min="209" Max="221">Color rotation stop</Capability>
-  <Capability Min="222" Max="255">Color rotation 2 (slow - fast)</Capability>
+  <Capability Res="Others/rainbow.png" Min="222" Max="255">Color rotation 2 (slow - fast)</Capability>
  </Channel>
  <Channel Name="Gobo">
   <Group Byte="0">Gobo</Group>
-  <Capability Min="0" Max="7">Gobo 1</Capability>
-  <Capability Min="8" Max="15">Gobo 2</Capability>
-  <Capability Min="16" Max="23">Gobo 3</Capability>
-  <Capability Min="24" Max="31">Gobo 4</Capability>
-  <Capability Min="32" Max="39">Gobo 5</Capability>
-  <Capability Min="40" Max="47">Gobo 6</Capability>
-  <Capability Min="48" Max="55">Gobo 7</Capability>
-  <Capability Min="56" Max="63">Gobo 8</Capability>
-  <Capability Min="64" Max="71">Gobo 9</Capability>
-  <Capability Min="72" Max="79">Gobo 10</Capability>
-  <Capability Min="80" Max="87">Gobo 11</Capability>
-  <Capability Min="88" Max="95">Gobo 12</Capability>
-  <Capability Min="96" Max="103">Gobo 13</Capability>
-  <Capability Min="104" Max="111">Gobo 14</Capability>
-  <Capability Min="112" Max="119">Gobo 15</Capability>
-  <Capability Min="120" Max="127">Gobo 16</Capability>
-  <Capability Min="128" Max="135">Gobo 17</Capability>
-  <Capability Min="136" Max="143">Gobo 18</Capability>
-  <Capability Min="144" Max="151">Gobo 19</Capability>
-  <Capability Min="152" Max="159">Gobo 20</Capability>
-  <Capability Min="160" Max="175">Gobo 21</Capability>
+  <Capability Res="Others/open.png" Min="0" Max="7">Open</Capability>
+  <Capability Res="GLP/gobo00002.png" Min="8" Max="15">Tunnel</Capability>
+  <Capability Res="Others/gobo00039.png" Min="16" Max="23">Tri-tunnel</Capability>
+  <Capability Res="Others/gobo00026.png" Min="24" Max="31">Sunflower</Capability>
+  <Capability Min="32" Max="39">Dual dotted line</Capability>
+  <Capability Res="GLP/gobo00001.png" Min="40" Max="47">Single dotted line</Capability>
+  <Capability Res="GLP/gobo00026.png" Min="48" Max="55">Triangle</Capability>
+  <Capability Res="Others/gobo00046.png" Min="56" Max="63">Swirl</Capability>
+  <Capability Res="GLP/gobo00010.png" Min="64" Max="71">Multi-star</Capability>
+  <Capability Res="Others/gobo00014.png" Min="72" Max="79">Segment tunnel</Capability>
+  <Capability Res="Others/gobo00042.png" Min="80" Max="87">Star</Capability>
+  <Capability Res="SGM/gobo00064.png" Min="88" Max="95">Small spot</Capability>
+  <Capability Min="96" Max="103">Segment squares</Capability>
+  <Capability Res="GLP/gobo00008.png" Min="104" Max="111">Twister</Capability>
+  <Capability Res="SGM/gobo00017.png" Min="112" Max="119">Split four</Capability>
+  <Capability Res="Others/gobo00045.png" Min="120" Max="127">Bars</Capability>
+  <Capability Min="128" Max="135">Splash</Capability>
+  <Capability Res="GLP/gobo00015.png" Min="136" Max="143">Asterisk</Capability>
+  <Capability Res="Others/gobo00036.png" Min="144" Max="151">Multi-small dot</Capability>
+  <Capability Min="152" Max="159">Euro stars</Capability>
+  <Capability Res="GLP/gobo00009.png" Min="160" Max="175">Bubbles</Capability>
   <Capability Min="176" Max="208">Gobo change (fast - slow)</Capability>
   <Capability Min="209" Max="254">Gobo change stop</Capability>
   <Capability Min="255" Max="255">Reset</Capability>

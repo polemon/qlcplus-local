@@ -93,7 +93,7 @@
   <Capability Res="GLP/gobo00009.png" Min="160" Max="175">Bubbles</Capability>
   <Capability Min="176" Max="208">Gobo change (fast - slow)</Capability>
   <Capability Min="209" Max="254">Gobo change stop</Capability>
-  <Capability Res="Others/rainbow.png" Min="255" Max="255">Reset</Capability>
+  <Capability Min="255" Max="255">Reset</Capability>
  </Channel>
  <Channel Name="Shutter / Strobe">
   <Group Byte="0">Shutter</Group>

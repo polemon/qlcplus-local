@@ -88,12 +88,12 @@
   <Capability Res="Others/gobo00045.png" Min="120" Max="127">Bars</Capability>
   <Capability Min="128" Max="135">Splash</Capability>
   <Capability Res="GLP/gobo00015.png" Min="136" Max="143">Asterisk</Capability>
-  <Capability Res="Others/gobo00036.png" Min="144" Max="151">Multi-small dot</Capability>
-  <Capability Min="152" Max="159">Euro stars</Capability>
+  <Capability Res="ClayPaky/gobo00003.png" Min="144" Max="151">Multi-small dot</Capability>
+  <Capability Res="Others/gobo00036.png" Min="152" Max="159">Euro stars</Capability>
   <Capability Res="GLP/gobo00009.png" Min="160" Max="175">Bubbles</Capability>
   <Capability Min="176" Max="208">Gobo change (fast - slow)</Capability>
   <Capability Min="209" Max="254">Gobo change stop</Capability>
-  <Capability Min="255" Max="255">Reset</Capability>
+  <Capability Res="Others/rainbow.png" Min="255" Max="255">Reset</Capability>
  </Channel>
  <Channel Name="Shutter / Strobe">
   <Group Byte="0">Shutter</Group>

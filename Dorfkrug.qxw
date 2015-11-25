@@ -470,6 +470,7 @@
    <Command>setfixture%3A16%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%234%2C%20Speed</Command>
    <Command></Command>
    <Command></Command>
+   <Command></Command>
   </Function>
   <Function Type="Chaser" Name="test" ID="8">
    <Speed Duration="0" FadeOut="0" FadeIn="0"/>
@@ -735,7 +736,7 @@
     <Function ID="12"/>
     <Action>Toggle</Action>
     <Intensity Adjust="False">100</Intensity>
-    <WindowState Width="100" X="590" Y="275" Height="80" Visible="True"/>
+    <WindowState Width="100" X="680" Y="290" Height="80" Visible="True"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -1040,6 +1041,14 @@
     <Enable>
      <Key></Key>
     </Enable>
+    <Multipage PagesNum="2" CurrentPage="0"/>
+    <Next>
+     <Key></Key>
+    </Next>
+    <Previous>
+     <Key></Key>
+    </Previous>
+    <PagesLoop>True</PagesLoop>
     <Slider WidgetStyle="Knob" ID="13" Caption="TS-255 Gobo" InvertedAppearance="false">
      <WindowState Width="70" X="570" Y="60" Height="170" Visible="True"/>
      <Appearance>

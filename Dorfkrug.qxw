@@ -273,7 +273,7 @@
     <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed Duration="2360" FadeOut="0" FadeIn="0"/>
+   <Speed Duration="2390" FadeOut="0" FadeIn="0"/>
    <Direction>Forward</Direction>
    <RunOrder>PingPong</RunOrder>
    <Algorithm>Lissajous</Algorithm>
@@ -327,7 +327,7 @@
     <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed Duration="2360" FadeOut="0" FadeIn="0"/>
+   <Speed Duration="2390" FadeOut="0" FadeIn="0"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <Algorithm>Lissajous</Algorithm>
@@ -468,9 +468,6 @@
    <Command>setfixture%3A14%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%232%2C%20Speed</Command>
    <Command>setfixture%3A15%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%233%2C%20Speed</Command>
    <Command>setfixture%3A16%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%234%2C%20Speed</Command>
-   <Command></Command>
-   <Command></Command>
-   <Command></Command>
   </Function>
   <Function Type="Chaser" Name="test" ID="8">
    <Speed Duration="0" FadeOut="0" FadeIn="0"/>
@@ -517,7 +514,7 @@
    <FixtureVal ID="12">4,255</FixtureVal>
    <FixtureVal ID="13">4,255</FixtureVal>
   </Function>
-  <Monitor ShowLabels="1" DisplayMode="0">
+  <Monitor ShowLabels="1" DisplayMode="1">
    <Font>Monospace,11,-1,5,50,0,0,0,0,0</Font>
    <ChannelStyle>0</ChannelStyle>
    <ValueStyle>0</ValueStyle>
@@ -761,7 +758,7 @@
     <Div/>
     <MultDivReset/>
     <Apply/>
-    <Time>2360</Time>
+    <Time>2390</Time>
     <Function Duration="6" FadeOut="0" FadeIn="0">2</Function>
     <Function Duration="6" FadeOut="0" FadeIn="0">3</Function>
    </SpeedDial>
@@ -960,7 +957,7 @@
       <Font>Default</Font>
      </Appearance>
      <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="224">
+     <Level HighLimit="255" LowLimit="0" Value="52">
       <Channel Fixture="17">3</Channel>
       <Channel Fixture="18">3</Channel>
      </Level>
@@ -978,7 +975,7 @@
       <Font>Default</Font>
      </Appearance>
      <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="240">
+     <Level HighLimit="255" LowLimit="0" Value="22">
       <Channel Fixture="17">0</Channel>
       <Channel Fixture="18">0</Channel>
      </Level>
@@ -996,7 +993,7 @@
       <Font>Default</Font>
      </Appearance>
      <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="None">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="0">
+     <Level HighLimit="255" LowLimit="0" Value="3">
       <Channel Fixture="17">1</Channel>
       <Channel Fixture="18">1</Channel>
      </Level>
@@ -1059,7 +1056,7 @@
       <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
      <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="138">
+     <Level HighLimit="255" LowLimit="0" Value="141">
       <Channel Fixture="1">3</Channel>
       <Channel Fixture="2">3</Channel>
       <Channel Fixture="3">3</Channel>
@@ -1100,7 +1097,7 @@
      </Appearance>
      <Input Universe="0" Channel="2"/>
      <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="142">
+     <Level HighLimit="255" LowLimit="0" Value="170">
       <Channel Fixture="1">2</Channel>
       <Channel Fixture="2">2</Channel>
       <Channel Fixture="3">2</Channel>
@@ -1130,7 +1127,7 @@
      <Pan Position="160">
       <Input Universe="0" Channel="0"/>
      </Pan>
-     <Tilt Position="128">
+     <Tilt Position="114">
       <Input Universe="0" Channel="1"/>
      </Tilt>
      <Width/>
@@ -1153,10 +1150,10 @@
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
      </Fixture>
-     <Pan Position="54">
+     <Pan Position="166">
       <Input Universe="0" Channel="0"/>
      </Pan>
-     <Tilt Position="122">
+     <Tilt Position="118">
       <Input Universe="0" Channel="1"/>
      </Tilt>
      <Width/>
@@ -1172,7 +1169,7 @@
       <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
      <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="254" LowLimit="0" Value="153">
+     <Level HighLimit="254" LowLimit="0" Value="99">
       <Channel Fixture="5">4</Channel>
       <Channel Fixture="14">4</Channel>
       <Channel Fixture="15">4</Channel>
@@ -1212,7 +1209,7 @@
       <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
      <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="0">
+     <Level HighLimit="255" LowLimit="0" Value="113">
       <Channel Fixture="5">3</Channel>
       <Channel Fixture="14">3</Channel>
       <Channel Fixture="15">3</Channel>
@@ -1239,8 +1236,8 @@
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
      </Fixture>
-     <Pan Position="95"/>
-     <Tilt Position="149"/>
+     <Pan Position="141"/>
+     <Tilt Position="135"/>
      <Width/>
      <Height/>
     </XYPad>
@@ -1261,8 +1258,8 @@
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
      </Fixture>
-     <Pan Position="166"/>
-     <Tilt Position="128"/>
+     <Pan Position="120"/>
+     <Tilt Position="174"/>
      <Width/>
      <Height/>
     </XYPad>

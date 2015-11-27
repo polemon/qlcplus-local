@@ -15,10 +15,10 @@
   <Capability Min="10" Max="19" Color="#ff0000">Red</Capability>
   <Capability Min="20" Max="29" Color="#00ff00">Green</Capability>
   <Capability Min="30" Max="39" Color="#0000ff">Blue</Capability>
-  <Capability Min="40" Max="49" Color="#00ffff">Cyan</Capability>
-  <Capability Min="50" Max="59" Color="#ff00ff">Magenta</Capability>
-  <Capability Min="60" Max="69" Color="#ffff00">Yellow</Capability>
-  <Capability Min="70" Max="79" Color="#ffffff">White</Capability>
+  <Capability Color2="#0000ff" Min="40" Max="49" Color="#00ff00">Green + Blue</Capability>
+  <Capability Color2="#0000ff" Min="50" Max="59" Color="#ff0000">Red + Blue</Capability>
+  <Capability Color2="#00ff00" Min="60" Max="69" Color="#ff0000">Red + Green</Capability>
+  <Capability Min="70" Max="79" Color="#ffffff">Red Green Blue</Capability>
   <Capability Min="80" Max="139">Single color chase</Capability>
   <Capability Min="140" Max="199">Multi color chase</Capability>
   <Capability Min="200" Max="224">Auto (fast)</Capability>

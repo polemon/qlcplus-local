@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE Workspace>
-<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FunctionManager">
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="VirtualConsole">
  <Creator>
   <Name>Q Light Controller Plus</Name>
   <Version>4.10.1</Version>
-  <Author>bereziak</Author>
+  <Author>Bereziak</Author>
  </Creator>
  <Engine Autostart="7">
   <InputOutputMap>
@@ -227,7 +227,7 @@
    <Model>Atmos 2000</Model>
    <Mode>Normal</Mode>
    <ID>19</ID>
-   <Name>Nebel</Name>
+   <Name>Fog</Name>
    <Universe>0</Universe>
    <Address>22</Address>
    <Channels>1</Channels>
@@ -477,8 +477,6 @@
    <Command>setfixture%3A15%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%233%2C%20Speed</Command>
    <Command>setfixture%3A16%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%234%2C%20Speed</Command>
    <Command></Command>
-   <Command></Command>
-   <Command></Command>
   </Function>
   <Function Type="Chaser" Name="test" ID="8">
    <Speed Duration="0" FadeOut="0" FadeIn="0"/>
@@ -525,7 +523,7 @@
    <FixtureVal ID="12">4,255</FixtureVal>
    <FixtureVal ID="13">4,255</FixtureVal>
   </Function>
-  <Monitor ShowLabels="1" DisplayMode="1">
+  <Monitor ShowLabels="1" DisplayMode="0">
    <Font>Monospace,11,-1,5,50,0,0,0,0,0</Font>
    <ChannelStyle>0</ChannelStyle>
    <ValueStyle>0</ValueStyle>
@@ -561,7 +559,7 @@
     <Font>Default</Font>
    </Appearance>
    <Clock Type="Stopwatch" ID="7" Caption="">
-    <WindowState Width="130" X="1115" Y="525" Height="30" Visible="False"/>
+    <WindowState Width="130" X="765" Y="520" Height="30" Visible="True"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4290822144</ForegroundColor>
@@ -576,7 +574,7 @@
     <Key>S</Key>
     <Intensity Adjust="True">100</Intensity>
     <Input Universe="0" Channel="6"/>
-    <WindowState Width="130" X="770" Y="130" Height="45" Visible="False"/>
+    <WindowState Width="130" X="780" Y="110" Height="45" Visible="True"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -590,7 +588,7 @@
     <Action>Blackout</Action>
     <Key>Space</Key>
     <Intensity Adjust="False">100</Intensity>
-    <WindowState Width="105" X="800" Y="40" Height="60" Visible="False"/>
+    <WindowState Width="105" X="800" Y="40" Height="60" Visible="True"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -599,25 +597,12 @@
      <Font>Default</Font>
     </Appearance>
    </Button>
-   <Button Icon="" ID="39" Caption="Scanner: Target Disco Ball">
-    <Function ID="12"/>
-    <Action>Toggle</Action>
-    <Intensity Adjust="False">100</Intensity>
-    <WindowState Width="100" X="760" Y="280" Height="80" Visible="False"/>
-    <Appearance>
-     <FrameStyle>None</FrameStyle>
-     <ForegroundColor>4292342264</ForegroundColor>
-     <BackgroundColor>4285822082</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
-    </Appearance>
-   </Button>
    <Button Icon="" ID="44" Caption="Fog">
     <Function ID="11"/>
     <Action>Toggle</Action>
-    <Key>N</Key>
+    <Key>Shift+F</Key>
     <Intensity Adjust="False">100</Intensity>
-    <WindowState Width="115" X="1080" Y="600" Height="45" Visible="False"/>
+    <WindowState Width="115" X="775" Y="420" Height="45" Visible="True"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -634,7 +619,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Width="405" X="945" Y="5" Height="260" Visible="False"/>
+    <WindowState Width="405" X="945" Y="5" Height="260" Visible="True"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -646,14 +631,14 @@
     </Enable>
     <Multipage PagesNum="2" CurrentPage="0"/>
     <Next>
-     <Key></Key>
+     <Key>Pause</Key>
     </Next>
     <Previous>
-     <Key></Key>
+     <Key>ScrollLock</Key>
     </Previous>
-    <PagesLoop>False</PagesLoop>
+    <PagesLoop>True</PagesLoop>
     <Slider WidgetStyle="Knob" ID="54" Caption="RGB" InvertedAppearance="false">
-     <WindowState Width="65" X="10" Y="45" Height="205" Visible="False"/>
+     <WindowState Width="65" X="10" Y="45" Height="205" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -678,7 +663,7 @@
      </Playback>
     </Slider>
     <Slider WidgetStyle="Slider" ID="53" Caption="Strobe Speed" InvertedAppearance="false">
-     <WindowState Width="65" X="260" Y="45" Height="205" Visible="False"/>
+     <WindowState Width="65" X="260" Y="45" Height="205" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -700,7 +685,7 @@
      </Playback>
     </Slider>
     <Slider WidgetStyle="Knob" ID="55" Caption="Mode" InvertedAppearance="false">
-     <WindowState Width="65" X="330" Y="45" Height="205" Visible="False"/>
+     <WindowState Width="65" X="330" Y="45" Height="205" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -722,7 +707,7 @@
      </Playback>
     </Slider>
     <Slider WidgetStyle="Slider" ID="57" Caption="Value" InvertedAppearance="false">
-     <WindowState Width="65" X="190" Y="45" Height="205" Visible="False"/>
+     <WindowState Width="65" X="190" Y="45" Height="205" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -744,7 +729,7 @@
      </Playback>
     </Slider>
     <Slider WidgetStyle="Knob" ID="0" Caption="RGB" InvertedAppearance="false">
-     <WindowState Width="65" X="80" Y="45" Height="205" Visible="False"/>
+     <WindowState Width="65" X="80" Y="45" Height="205" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -777,7 +762,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Width="295" X="945" Y="275" Height="260" Visible="False"/>
+    <WindowState Width="380" X="945" Y="275" Height="260" Visible="True"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -787,8 +772,16 @@
     <Enable>
      <Key></Key>
     </Enable>
+    <Multipage PagesNum="2" CurrentPage="0"/>
+    <Next>
+     <Key>Pause</Key>
+    </Next>
+    <Previous>
+     <Key>ScrollLock</Key>
+    </Previous>
+    <PagesLoop>True</PagesLoop>
     <Slider WidgetStyle="Knob" ID="3" Caption="Rotation" InvertedAppearance="false">
-     <WindowState Width="65" X="150" Y="45" Height="205" Visible="False"/>
+     <WindowState Width="65" X="150" Y="45" Height="205" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -806,7 +799,7 @@
      </Playback>
     </Slider>
     <Slider WidgetStyle="Knob" ID="2" Caption="Color" InvertedAppearance="false">
-     <WindowState Width="65" X="10" Y="45" Height="205" Visible="False"/>
+     <WindowState Width="65" X="10" Y="45" Height="205" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -824,7 +817,7 @@
      </Playback>
     </Slider>
     <Slider WidgetStyle="Slider" ID="4" Caption="Chase speed" InvertedAppearance="false">
-     <WindowState Width="65" X="80" Y="45" Height="205" Visible="False"/>
+     <WindowState Width="65" X="80" Y="45" Height="205" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -842,7 +835,7 @@
      </Playback>
     </Slider>
     <Slider WidgetStyle="Slider" ID="5" Caption="Strobe" InvertedAppearance="false">
-     <WindowState Width="65" X="220" Y="45" Height="205" Visible="False"/>
+     <WindowState Width="65" X="220" Y="45" Height="205" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -868,7 +861,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Width="725" X="15" Y="10" Height="485" Visible="False"/>
+    <WindowState Width="725" X="15" Y="10" Height="485" Visible="True"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -880,14 +873,14 @@
     </Enable>
     <Multipage PagesNum="2" CurrentPage="0"/>
     <Next>
-     <Key></Key>
+     <Key>Pause</Key>
     </Next>
     <Previous>
-     <Key></Key>
+     <Key>ScrollLock</Key>
     </Previous>
     <PagesLoop>True</PagesLoop>
     <Slider WidgetStyle="Knob" ID="13" Caption="TS-255 Gobo" InvertedAppearance="false">
-     <WindowState Width="70" X="570" Y="60" Height="170" Visible="False"/>
+     <WindowState Width="70" X="570" Y="60" Height="170" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -907,7 +900,7 @@
      </Playback>
     </Slider>
     <Slider WidgetStyle="Slider" ID="14" Caption="TS-255 Shutter" InvertedAppearance="false">
-     <WindowState Width="70" X="495" Y="60" Height="170" Visible="False"/>
+     <WindowState Width="70" X="495" Y="60" Height="170" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -927,7 +920,7 @@
      </Playback>
     </Slider>
     <Slider WidgetStyle="Knob" ID="15" Caption="TS-255 Color" InvertedAppearance="false">
-     <WindowState Width="70" X="420" Y="60" Height="170" Visible="False"/>
+     <WindowState Width="70" X="420" Y="60" Height="170" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -948,7 +941,7 @@
      </Playback>
     </Slider>
     <XYPad ID="16" Caption="TS-255 L" InvertedAppearance="0">
-     <WindowState Width="200" X="10" Y="45" Height="200" Visible="False"/>
+     <WindowState Width="200" X="10" Y="45" Height="200" Visible="True"/>
      <Appearance>
       <FrameStyle>Raised</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -974,7 +967,7 @@
      <Height/>
     </XYPad>
     <XYPad ID="17" Caption="TS-255 R" InvertedAppearance="0">
-     <WindowState Width="200" X="215" Y="45" Height="200" Visible="False"/>
+     <WindowState Width="200" X="215" Y="45" Height="200" Visible="True"/>
      <Appearance>
       <FrameStyle>Raised</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1000,7 +993,7 @@
      <Height/>
     </XYPad>
     <Slider WidgetStyle="Knob" ID="18" Caption="Mighty Gobo" InvertedAppearance="false">
-     <WindowState Width="70" X="420" Y="295" Height="170" Visible="False"/>
+     <WindowState Width="70" X="420" Y="295" Height="170" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1020,7 +1013,7 @@
      </Playback>
     </Slider>
     <Slider WidgetStyle="Slider" ID="19" Caption="Mighty Shutter" InvertedAppearance="false">
-     <WindowState Width="70" X="495" Y="295" Height="170" Visible="False"/>
+     <WindowState Width="70" X="495" Y="295" Height="170" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1040,7 +1033,7 @@
      </Playback>
     </Slider>
     <Slider WidgetStyle="Knob" ID="20" Caption="Mighty Color" InvertedAppearance="false">
-     <WindowState Width="70" X="570" Y="295" Height="170" Visible="False"/>
+     <WindowState Width="70" X="570" Y="295" Height="170" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1060,7 +1053,7 @@
      </Playback>
     </Slider>
     <XYPad ID="21" Caption="Mightys L" InvertedAppearance="0">
-     <WindowState Width="200" X="10" Y="280" Height="200" Visible="False"/>
+     <WindowState Width="200" X="10" Y="280" Height="200" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1082,7 +1075,7 @@
      <Height/>
     </XYPad>
     <XYPad ID="22" Caption="Mightys R" InvertedAppearance="0">
-     <WindowState Width="200" X="215" Y="280" Height="200" Visible="False"/>
+     <WindowState Width="200" X="215" Y="280" Height="200" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1104,7 +1097,7 @@
      <Height/>
     </XYPad>
     <Slider WidgetStyle="Slider" ID="1" Caption="Gobo rot." InvertedAppearance="false">
-     <WindowState Width="65" X="645" Y="60" Height="170" Visible="False"/>
+     <WindowState Width="65" X="645" Y="60" Height="170" Visible="True"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1219,6 +1212,19 @@
       <Font>Sans Serif,10,-1,5,75,0,0,0,0,0</Font>
      </Appearance>
     </Button>
+    <Button Icon="" ID="29" Caption="Scanner: Target Disco Ball" Page="1">
+     <Function ID="12"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Width="100" X="275" Y="60" Height="80" Visible="False"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>4292342264</ForegroundColor>
+      <BackgroundColor>4285822082</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
+     </Appearance>
+    </Button>
    </Frame>
    <Frame ID="10" Caption="Dimmer">
     <Appearance>
@@ -1228,7 +1234,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Width="405" X="70" Y="520" Height="170" Visible="False"/>
+    <WindowState Width="405" X="70" Y="520" Height="170" Visible="True"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -1238,8 +1244,16 @@
     <Enable>
      <Key></Key>
     </Enable>
+    <Multipage PagesNum="2" CurrentPage="0"/>
+    <Next>
+     <Key>Pause</Key>
+    </Next>
+    <Previous>
+     <Key>ScrollLock</Key>
+    </Previous>
+    <PagesLoop>True</PagesLoop>
     <AudioTriggers BarsNumber="24" ID="11" Caption="Par Eq.">
-     <WindowState Width="270" X="10" Y="45" Height="105" Visible="False"/>
+     <WindowState Width="270" X="10" Y="45" Height="105" Visible="True"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4290557440</ForegroundColor>
@@ -1313,7 +1327,7 @@
      <Action>Flash</Action>
      <Key>F</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Width="105" X="285" Y="45" Height="50" Visible="False"/>
+     <WindowState Width="105" X="285" Y="45" Height="50" Visible="True"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4292342264</ForegroundColor>
@@ -1328,7 +1342,7 @@
      <Key>R</Key>
      <Intensity Adjust="True">100</Intensity>
      <Input Universe="0" Channel="7"/>
-     <WindowState Width="90" X="285" Y="110" Height="50" Visible="False"/>
+     <WindowState Width="90" X="285" Y="110" Height="50" Visible="True"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4292342264</ForegroundColor>

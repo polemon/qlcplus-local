@@ -477,6 +477,7 @@
    <Command>setfixture%3A15%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%233%2C%20Speed</Command>
    <Command>setfixture%3A16%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%234%2C%20Speed</Command>
    <Command></Command>
+   <Command></Command>
   </Function>
   <Function Type="Chaser" Name="test" ID="8">
    <Speed Duration="0" FadeOut="0" FadeIn="0"/>
@@ -484,6 +485,17 @@
    <RunOrder>SingleShot</RunOrder>
    <SpeedModes Duration="Common" FadeOut="Default" FadeIn="Default"/>
    <Step Number="0" FadeOut="0" FadeIn="0" Hold="0">4</Step>
+  </Function>
+  <Function Type="Scene" Name="Scanner Control Handover" ID="9">
+   <Speed Duration="0" FadeOut="0" FadeIn="0"/>
+   <FixtureVal ID="1">0,0,1,0</FixtureVal>
+   <FixtureVal ID="2">0,0,1,0</FixtureVal>
+   <FixtureVal ID="3">0,0,1,0</FixtureVal>
+   <FixtureVal ID="4">0,0,1,0</FixtureVal>
+   <FixtureVal ID="5">0,0,1,0</FixtureVal>
+   <FixtureVal ID="14">0,0,1,0</FixtureVal>
+   <FixtureVal ID="15">0,0,1,0</FixtureVal>
+   <FixtureVal ID="16">0,0,1,0</FixtureVal>
   </Function>
   <Function Type="Scene" Name="Fog" ID="10">
    <Speed Duration="0" FadeOut="0" FadeIn="0"/>
@@ -957,10 +969,10 @@
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
      </Fixture>
-     <Pan Position="180">
+     <Pan Position="145">
       <Input Universe="0" Channel="0"/>
      </Pan>
-     <Tilt Position="73">
+     <Tilt Position="110">
       <Input Universe="0" Channel="1"/>
      </Tilt>
      <Width/>
@@ -983,10 +995,10 @@
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
      </Fixture>
-     <Pan Position="69">
+     <Pan Position="126">
       <Input Universe="0" Channel="0"/>
      </Pan>
-     <Tilt Position="81">
+     <Tilt Position="120">
       <Input Universe="0" Channel="1"/>
      </Tilt>
      <Width/>
@@ -1069,8 +1081,8 @@
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
      </Fixture>
-     <Pan Position="129"/>
-     <Tilt Position="27"/>
+     <Pan Position="147"/>
+     <Tilt Position="145"/>
      <Width/>
      <Height/>
     </XYPad>
@@ -1091,8 +1103,8 @@
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
       <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
      </Fixture>
-     <Pan Position="122"/>
-     <Tilt Position="29"/>
+     <Pan Position="91"/>
+     <Tilt Position="133"/>
      <Width/>
      <Height/>
     </XYPad>
@@ -1217,6 +1229,19 @@
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
      <WindowState Width="100" X="275" Y="60" Height="80" Visible="False"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>4292342264</ForegroundColor>
+      <BackgroundColor>4285822082</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
+     </Appearance>
+    </Button>
+    <Button Icon="" ID="30" Caption="Release" Page="1">
+     <Function ID="9"/>
+     <Action>Flash</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Width="115" X="275" Y="160" Height="80" Visible="False"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4292342264</ForegroundColor>

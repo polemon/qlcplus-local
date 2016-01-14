@@ -1,10 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Workspace>
 <Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="VirtualConsole">
  <Creator>
   <Name>Q Light Controller Plus</Name>
-  <Version>4.10.1</Version>
-  <Author>Bereziak</Author>
+  <Version>4.10.2b</Version>
+  <Author>jaspe_000</Author>
  </Creator>
  <Engine Autostart="7">
   <InputOutputMap>
@@ -77,8 +77,8 @@
    <Universe>0</Universe>
    <Address>64</Address>
    <Channels>6</Channels>
-   <Modifier Channel="0" Name="Invert"/>
    <Modifier Channel="1" Name="Invert"/>
+   <Modifier Channel="0" Name="Invert"/>
   </Fixture>
   <Fixture>
    <Manufacturer>Botex</Manufacturer>
@@ -175,8 +175,8 @@
    <Universe>0</Universe>
    <Address>80</Address>
    <Channels>6</Channels>
-   <Modifier Channel="0" Name="Invert"/>
    <Modifier Channel="1" Name="Invert"/>
+   <Modifier Channel="0" Name="Invert"/>
   </Fixture>
   <Fixture>
    <Manufacturer>GLP</Manufacturer>
@@ -187,8 +187,8 @@
    <Universe>0</Universe>
    <Address>96</Address>
    <Channels>6</Channels>
-   <Modifier Channel="0" Name="Invert"/>
    <Modifier Channel="1" Name="Invert"/>
+   <Modifier Channel="0" Name="Invert"/>
   </Fixture>
   <Fixture>
    <Manufacturer>GLP</Manufacturer>
@@ -199,8 +199,8 @@
    <Universe>0</Universe>
    <Address>112</Address>
    <Channels>6</Channels>
-   <Modifier Channel="0" Name="Invert"/>
    <Modifier Channel="1" Name="Invert"/>
+   <Modifier Channel="0" Name="Invert"/>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
@@ -233,8 +233,8 @@
    <Channels>1</Channels>
    <ForcedHTP>0</ForcedHTP>
   </Fixture>
-  <Function Type="Scene" Name="Strobe" ID="0">
-   <Speed Duration="0" FadeOut="0" FadeIn="0"/>
+  <Function ID="0" Type="Scene" Name="Strobe">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="0">0,200,1,255,2,0</FixtureVal>
    <FixtureVal ID="8">0,255,1,255,2,255,3,255,4,200</FixtureVal>
    <FixtureVal ID="9">0,255,1,255,2,255,3,255,4,200</FixtureVal>
@@ -243,18 +243,13 @@
    <FixtureVal ID="12">0,255,1,255,2,255,3,255,4,200</FixtureVal>
    <FixtureVal ID="13">0,255,1,255,2,255,3,255,4,200</FixtureVal>
   </Function>
-  <Function Type="Scene" Name="New Scene 1" ID="1">
-   <Speed Duration="0" FadeOut="0" FadeIn="0"/>
-   <FixtureVal ID="-1"/>
-  </Function>
-  <Function Type="EFX" Name="TS-255 Scan" ID="2">
+  <Function ID="2" Type="EFX" Name="TS-255 Scan">
    <Fixture>
     <ID>1</ID>
     <Head>0</Head>
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>2</ID>
@@ -262,7 +257,6 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>3</ID>
@@ -270,7 +264,6 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>4</ID>
@@ -278,10 +271,9 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed Duration="6930" FadeOut="0" FadeIn="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="6930"/>
    <Direction>Forward</Direction>
    <RunOrder>PingPong</RunOrder>
    <Algorithm>Lissajous</Algorithm>
@@ -301,14 +293,13 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Type="EFX" Name="Mighty Scan" ID="3">
+  <Function ID="3" Type="EFX" Name="Mighty Scan">
    <Fixture>
     <ID>5</ID>
     <Head>0</Head>
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>14</ID>
@@ -316,7 +307,6 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>15</ID>
@@ -324,7 +314,6 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>16</ID>
@@ -332,10 +321,9 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed Duration="6930" FadeOut="0" FadeIn="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="6930"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <Algorithm>Lissajous</Algorithm>
@@ -355,19 +343,18 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Type="Scene" Name="Rot" ID="4">
-   <Speed Duration="0" FadeOut="0" FadeIn="0"/>
+  <Function ID="4" Type="Scene" Name="Rot">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="6">0,255</FixtureVal>
    <FixtureVal ID="7">3,255</FixtureVal>
   </Function>
-  <Function Type="EFX" Name="Mighty vertical scan" ID="5">
+  <Function ID="5" Type="EFX" Name="Mighty vertical scan">
    <Fixture>
     <ID>5</ID>
     <Head>0</Head>
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>14</ID>
@@ -375,7 +362,6 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>15</ID>
@@ -383,7 +369,6 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>16</ID>
@@ -391,10 +376,9 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed Duration="520" FadeOut="0" FadeIn="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="520"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <Algorithm>Line</Algorithm>
@@ -414,14 +398,13 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Type="EFX" Name="TS-255 vertical scan" ID="6">
+  <Function ID="6" Type="EFX" Name="TS-255 vertical scan">
    <Fixture>
     <ID>1</ID>
     <Head>0</Head>
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>2</ID>
@@ -429,7 +412,6 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>3</ID>
@@ -437,7 +419,6 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <Fixture>
     <ID>4</ID>
@@ -445,10 +426,9 @@
     <Mode>0</Mode>
     <Direction>Forward</Direction>
     <StartOffset>0</StartOffset>
-    <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed Duration="520" FadeOut="0" FadeIn="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="520"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <Algorithm>Line</Algorithm>
@@ -468,8 +448,8 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Type="Script" Name="Set Mighty mirrors to max speed" ID="7">
-   <Speed Duration="0" FadeOut="0" FadeIn="0"/>
+  <Function ID="7" Type="Script" Name="Set Mighty mirrors to max speed">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <Command>setfixture%3A5%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%231%2C%20Speed</Command>
@@ -478,16 +458,17 @@
    <Command>setfixture%3A16%20ch%3A2%20val%3A255%20%2F%2F%20Mighty%20%234%2C%20Speed</Command>
    <Command></Command>
    <Command></Command>
+   <Command></Command>
   </Function>
-  <Function Type="Chaser" Name="test" ID="8">
-   <Speed Duration="0" FadeOut="0" FadeIn="0"/>
+  <Function ID="8" Type="Chaser" Name="test">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <Direction>Forward</Direction>
    <RunOrder>SingleShot</RunOrder>
-   <SpeedModes Duration="Common" FadeOut="Default" FadeIn="Default"/>
-   <Step Number="0" FadeOut="0" FadeIn="0" Hold="0">4</Step>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">4</Step>
   </Function>
-  <Function Type="Scene" Name="Scanner Control Handover" ID="9">
-   <Speed Duration="0" FadeOut="0" FadeIn="0"/>
+  <Function ID="9" Type="Scene" Name="Scanner Control Handover">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,0,1,0</FixtureVal>
    <FixtureVal ID="2">0,0,1,0</FixtureVal>
    <FixtureVal ID="3">0,0,1,0</FixtureVal>
@@ -497,21 +478,21 @@
    <FixtureVal ID="15">0,0,1,0</FixtureVal>
    <FixtureVal ID="16">0,0,1,0</FixtureVal>
   </Function>
-  <Function Type="Scene" Name="Fog" ID="10">
-   <Speed Duration="0" FadeOut="0" FadeIn="0"/>
+  <Function ID="10" Type="Scene" Name="Fog">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="19">0,0</FixtureVal>
   </Function>
-  <Function Type="Chaser" Name="Fog burst" ID="11">
-   <Speed Duration="500" FadeOut="0" FadeIn="0"/>
+  <Function ID="11" Type="Chaser" Name="Fog burst">
+   <Speed FadeIn="0" FadeOut="0" Duration="500"/>
    <Direction>Forward</Direction>
    <RunOrder>SingleShot</RunOrder>
-   <SpeedModes Duration="PerStep" FadeOut="Default" FadeIn="Default"/>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
    <Sequence BoundScene="10"/>
-   <Step Values="1" Number="0" FadeOut="0" FadeIn="0" Hold="1000">19,0,255</Step>
-   <Step Values="1" Number="1" FadeOut="0" FadeIn="0" Hold="0"/>
+   <Step Number="0" FadeIn="0" Hold="1000" FadeOut="0" Values="1">19,0,255</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0" Values="1"/>
   </Function>
-  <Function Type="Scene" Name="Scanner target disco ball" ID="12">
-   <Speed Duration="0" FadeOut="0" FadeIn="0"/>
+  <Function ID="12" Type="Scene" Name="Scanner target disco ball">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,183,1,39</FixtureVal>
    <FixtureVal ID="2">0,171,1,33</FixtureVal>
    <FixtureVal ID="3">0,101,1,27</FixtureVal>
@@ -521,13 +502,13 @@
    <FixtureVal ID="15">0,119,1,3</FixtureVal>
    <FixtureVal ID="16">0,90,1,16</FixtureVal>
   </Function>
-  <Function Type="Scene" Name="Full on (Dimmer)" ID="13">
-   <Speed Duration="0" FadeOut="0" FadeIn="0"/>
+  <Function ID="13" Type="Scene" Name="Full on (Dimmer)">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="6">0,255,1,255,2,255,3,255</FixtureVal>
    <FixtureVal ID="7">0,255,1,255,2,255,3,255</FixtureVal>
   </Function>
-  <Function Type="Scene" Name="LED PAR strobe master" ID="14">
-   <Speed Duration="0" FadeOut="0" FadeIn="0"/>
+  <Function ID="14" Type="Scene" Name="LED PAR strobe master" Path="LED PAR">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">4,255</FixtureVal>
    <FixtureVal ID="9">4,255</FixtureVal>
    <FixtureVal ID="10">4,255</FixtureVal>
@@ -535,30 +516,378 @@
    <FixtureVal ID="12">4,255</FixtureVal>
    <FixtureVal ID="13">4,255</FixtureVal>
   </Function>
-  <Monitor ShowLabels="1" DisplayMode="0">
+  <Function ID="15" Type="EFX" Name="mighty eight (2+3 rev)">
+   <Fixture>
+    <ID>5</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <Fixture>
+    <ID>14</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Backward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <Fixture>
+    <ID>15</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Backward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <Fixture>
+    <ID>16</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <PropagationMode>Parallel</PropagationMode>
+   <Speed FadeIn="0" FadeOut="0" Duration="420"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm>Eight</Algorithm>
+   <Width>127</Width>
+   <Height>127</Height>
+   <Rotation>0</Rotation>
+   <StartOffset>0</StartOffset>
+   <IsRelative>0</IsRelative>
+   <Axis Name="X">
+    <Offset>127</Offset>
+    <Frequency>2</Frequency>
+    <Phase>90</Phase>
+   </Axis>
+   <Axis Name="Y">
+    <Offset>127</Offset>
+    <Frequency>3</Frequency>
+    <Phase>0</Phase>
+   </Axis>
+  </Function>
+  <Function ID="16" Type="EFX" Name="TS-255 eight (1+4 rev)">
+   <Fixture>
+    <ID>1</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Backward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <Fixture>
+    <ID>2</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <Fixture>
+    <ID>3</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <Fixture>
+    <ID>4</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Backward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <PropagationMode>Parallel</PropagationMode>
+   <Speed FadeIn="0" FadeOut="0" Duration="420"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm>Eight</Algorithm>
+   <Width>127</Width>
+   <Height>127</Height>
+   <Rotation>0</Rotation>
+   <StartOffset>0</StartOffset>
+   <IsRelative>0</IsRelative>
+   <Axis Name="X">
+    <Offset>127</Offset>
+    <Frequency>2</Frequency>
+    <Phase>90</Phase>
+   </Axis>
+   <Axis Name="Y">
+    <Offset>127</Offset>
+    <Frequency>3</Frequency>
+    <Phase>0</Phase>
+   </Axis>
+  </Function>
+  <Function ID="17" Type="EFX" Name="TS-255 midout#1" Path="ts-255 mid-out">
+   <Fixture>
+    <ID>1</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <PropagationMode>Parallel</PropagationMode>
+   <Speed FadeIn="0" FadeOut="0" Duration="20000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>SingleShot</RunOrder>
+   <Algorithm>Line</Algorithm>
+   <Width>127</Width>
+   <Height>127</Height>
+   <Rotation>0</Rotation>
+   <StartOffset>9</StartOffset>
+   <IsRelative>0</IsRelative>
+   <Axis Name="X">
+    <Offset>127</Offset>
+    <Frequency>2</Frequency>
+    <Phase>90</Phase>
+   </Axis>
+   <Axis Name="Y">
+    <Offset>127</Offset>
+    <Frequency>3</Frequency>
+    <Phase>0</Phase>
+   </Axis>
+  </Function>
+  <Function ID="18" Type="EFX" Name="TS-255 midout#2" Path="ts-255 mid-out">
+   <Fixture>
+    <ID>2</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <PropagationMode>Parallel</PropagationMode>
+   <Speed FadeIn="0" FadeOut="0" Duration="20000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>SingleShot</RunOrder>
+   <Algorithm>Line</Algorithm>
+   <Width>127</Width>
+   <Height>127</Height>
+   <Rotation>335</Rotation>
+   <StartOffset>0</StartOffset>
+   <IsRelative>0</IsRelative>
+   <Axis Name="X">
+    <Offset>127</Offset>
+    <Frequency>2</Frequency>
+    <Phase>90</Phase>
+   </Axis>
+   <Axis Name="Y">
+    <Offset>127</Offset>
+    <Frequency>3</Frequency>
+    <Phase>0</Phase>
+   </Axis>
+  </Function>
+  <Function ID="19" Type="EFX" Name="TS-255 midout#3" Path="ts-255 mid-out">
+   <Fixture>
+    <ID>3</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <PropagationMode>Parallel</PropagationMode>
+   <Speed FadeIn="0" FadeOut="0" Duration="20000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>SingleShot</RunOrder>
+   <Algorithm>Line</Algorithm>
+   <Width>127</Width>
+   <Height>127</Height>
+   <Rotation>295</Rotation>
+   <StartOffset>0</StartOffset>
+   <IsRelative>0</IsRelative>
+   <Axis Name="X">
+    <Offset>127</Offset>
+    <Frequency>2</Frequency>
+    <Phase>90</Phase>
+   </Axis>
+   <Axis Name="Y">
+    <Offset>127</Offset>
+    <Frequency>3</Frequency>
+    <Phase>0</Phase>
+   </Axis>
+  </Function>
+  <Function ID="20" Type="EFX" Name="TS-255 midout#4" Path="ts-255 mid-out">
+   <Fixture>
+    <ID>4</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <PropagationMode>Parallel</PropagationMode>
+   <Speed FadeIn="0" FadeOut="0" Duration="20000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>SingleShot</RunOrder>
+   <Algorithm>Line</Algorithm>
+   <Width>127</Width>
+   <Height>127</Height>
+   <Rotation>270</Rotation>
+   <StartOffset>0</StartOffset>
+   <IsRelative>0</IsRelative>
+   <Axis Name="X">
+    <Offset>127</Offset>
+    <Frequency>2</Frequency>
+    <Phase>90</Phase>
+   </Axis>
+   <Axis Name="Y">
+    <Offset>127</Offset>
+    <Frequency>3</Frequency>
+    <Phase>0</Phase>
+   </Axis>
+  </Function>
+  <Function ID="23" Type="Collection" Name="TS-255 midout">
+   <Step Number="0">17</Step>
+   <Step Number="1">18</Step>
+   <Step Number="2">19</Step>
+   <Step Number="3">20</Step>
+  </Function>
+  <Function ID="24" Type="Scene" Name="LED RED" Path="LED PAR/colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">0,255</FixtureVal>
+   <FixtureVal ID="9">0,255</FixtureVal>
+   <FixtureVal ID="10">0,255</FixtureVal>
+   <FixtureVal ID="11">0,255</FixtureVal>
+   <FixtureVal ID="12">0,255</FixtureVal>
+   <FixtureVal ID="13">0,255</FixtureVal>
+  </Function>
+  <Function ID="25" Type="Scene" Name="LED GREEN" Path="LED PAR/colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">1,255</FixtureVal>
+   <FixtureVal ID="9">1,255</FixtureVal>
+   <FixtureVal ID="10">1,255</FixtureVal>
+   <FixtureVal ID="11">1,255</FixtureVal>
+   <FixtureVal ID="12">1,255</FixtureVal>
+   <FixtureVal ID="13">1,255</FixtureVal>
+  </Function>
+  <Function ID="26" Type="Scene" Name="LED BLUE" Path="LED PAR/colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">2,255</FixtureVal>
+   <FixtureVal ID="9">2,255</FixtureVal>
+   <FixtureVal ID="10">2,255</FixtureVal>
+   <FixtureVal ID="11">2,255</FixtureVal>
+   <FixtureVal ID="12">2,255</FixtureVal>
+   <FixtureVal ID="13">2,255</FixtureVal>
+  </Function>
+  <Function ID="27" Type="Scene" Name="LED YELLOW" Path="LED PAR/colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">0,255,1,255</FixtureVal>
+   <FixtureVal ID="9">0,255,1,255</FixtureVal>
+   <FixtureVal ID="10">0,255,1,255</FixtureVal>
+   <FixtureVal ID="11">0,255,1,255</FixtureVal>
+   <FixtureVal ID="12">0,255,1,255</FixtureVal>
+   <FixtureVal ID="13">0,255,1,255</FixtureVal>
+  </Function>
+  <Function ID="28" Type="Scene" Name="LED ORANGE" Path="LED PAR/colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">0,255,1,128</FixtureVal>
+   <FixtureVal ID="9">0,255,1,128</FixtureVal>
+   <FixtureVal ID="10">0,255,1,128</FixtureVal>
+   <FixtureVal ID="11">0,255,1,128</FixtureVal>
+   <FixtureVal ID="12">0,255,1,128</FixtureVal>
+   <FixtureVal ID="13">0,255,1,128</FixtureVal>
+  </Function>
+  <Function ID="29" Type="Scene" Name="LED PURPLE" Path="LED PAR/colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">0,255,2,255</FixtureVal>
+   <FixtureVal ID="9">0,255,2,255</FixtureVal>
+   <FixtureVal ID="10">0,255,2,255</FixtureVal>
+   <FixtureVal ID="11">0,255,2,255</FixtureVal>
+   <FixtureVal ID="12">0,255,2,255</FixtureVal>
+   <FixtureVal ID="13">0,255,2,255</FixtureVal>
+  </Function>
+  <Function ID="30" Type="Scene" Name="LED TEAL" Path="LED PAR/colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">1,255,2,255</FixtureVal>
+   <FixtureVal ID="9">1,255,2,255</FixtureVal>
+   <FixtureVal ID="10">1,255,2,255</FixtureVal>
+   <FixtureVal ID="11">1,255,2,255</FixtureVal>
+   <FixtureVal ID="12">1,255,2,255</FixtureVal>
+   <FixtureVal ID="13">1,255,2,255</FixtureVal>
+  </Function>
+  <Function ID="31" Type="Scene" Name="LED PINK" Path="LED PAR/colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">0,255,1,51,2,170</FixtureVal>
+   <FixtureVal ID="9">0,255,1,51,2,170</FixtureVal>
+   <FixtureVal ID="10">0,255,1,51,2,170</FixtureVal>
+   <FixtureVal ID="11">0,255,1,51,2,170</FixtureVal>
+   <FixtureVal ID="12">0,255,1,51,2,170</FixtureVal>
+   <FixtureVal ID="13">0,255,1,51,2,170</FixtureVal>
+  </Function>
+  <Function ID="32" Type="Scene" Name="LED WARMWHITE" Path="LED PAR/colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">0,255,1,255,2,211</FixtureVal>
+   <FixtureVal ID="9">0,255,1,255,2,211</FixtureVal>
+   <FixtureVal ID="10">0,255,1,255,2,211</FixtureVal>
+   <FixtureVal ID="11">0,255,1,255,2,211</FixtureVal>
+   <FixtureVal ID="12">0,255,1,255,2,211</FixtureVal>
+   <FixtureVal ID="13">0,255,1,255,2,211</FixtureVal>
+  </Function>
+  <Function ID="33" Type="Scene" Name="LED WHITE" Path="LED PAR/colors">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="9">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="10">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="11">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="12">0,255,1,255,2,255</FixtureVal>
+   <FixtureVal ID="13">0,255,1,255,2,252</FixtureVal>
+  </Function>
+  <Function ID="34" Type="Scene" Name="LED OFF" Path="LED PAR/intesities">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,0</FixtureVal>
+   <FixtureVal ID="9">3,0</FixtureVal>
+   <FixtureVal ID="10">3,0</FixtureVal>
+   <FixtureVal ID="11">3,0</FixtureVal>
+   <FixtureVal ID="12">3,0</FixtureVal>
+   <FixtureVal ID="13">3,0</FixtureVal>
+  </Function>
+  <Function ID="36" Type="Scene" Name="LED 33" Path="LED PAR/intesities">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,85</FixtureVal>
+   <FixtureVal ID="9">3,85</FixtureVal>
+   <FixtureVal ID="10">3,85</FixtureVal>
+   <FixtureVal ID="11">3,85</FixtureVal>
+   <FixtureVal ID="12">3,85</FixtureVal>
+   <FixtureVal ID="13">3,85</FixtureVal>
+  </Function>
+  <Function ID="37" Type="Scene" Name="LED 66" Path="LED PAR/intesities">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,170</FixtureVal>
+   <FixtureVal ID="9">3,170</FixtureVal>
+   <FixtureVal ID="10">3,170</FixtureVal>
+   <FixtureVal ID="11">3,170</FixtureVal>
+   <FixtureVal ID="12">3,170</FixtureVal>
+   <FixtureVal ID="13">3,170</FixtureVal>
+  </Function>
+  <Function ID="38" Type="Scene" Name="LED 100" Path="LED PAR/intesities">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,255</FixtureVal>
+   <FixtureVal ID="9">3,255</FixtureVal>
+   <FixtureVal ID="10">3,255</FixtureVal>
+   <FixtureVal ID="11">3,255</FixtureVal>
+   <FixtureVal ID="12">3,255</FixtureVal>
+   <FixtureVal ID="13">3,255</FixtureVal>
+  </Function>
+  <Monitor DisplayMode="0" ShowLabels="1">
    <Font>Monospace,11,-1,5,50,0,0,0,0,0</Font>
    <ChannelStyle>0</ChannelStyle>
    <ValueStyle>0</ValueStyle>
    <Grid Width="10" Height="12" Units="0"/>
-   <FxItem ID="0" YPos="9871.79" XPos="4820.51" GelColor="#ffffff"/>
-   <FxItem ID="1" YPos="692.308" XPos="1692.31"/>
-   <FxItem ID="2" YPos="692.308" XPos="2820.51"/>
-   <FxItem ID="3" YPos="717.949" XPos="6846.15"/>
-   <FxItem ID="4" YPos="743.59" XPos="8047.86"/>
-   <FxItem ID="5" YPos="9897.96" XPos="1734.69"/>
-   <FxItem ID="6" YPos="2777.06" XPos="8910.62" GelColor="#ffff00"/>
-   <FxItem ID="7" YPos="7999.68" XPos="836.421" GelColor="#ffff00"/>
-   <FxItem ID="8" YPos="2040.82" XPos="877.551"/>
-   <FxItem ID="9" YPos="3088.89" XPos="866.667"/>
-   <FxItem ID="10" YPos="4111.11" XPos="844.444"/>
-   <FxItem ID="11" YPos="7155.56" XPos="8911.11"/>
-   <FxItem ID="12" YPos="8133.33" XPos="8888.89"/>
-   <FxItem ID="13" YPos="9177.78" XPos="8866.67"/>
-   <FxItem ID="14" YPos="9933.33" XPos="3000"/>
-   <FxItem ID="15" YPos="9911.11" XPos="6711.11"/>
-   <FxItem ID="16" YPos="9933.33" XPos="8044.44"/>
-   <FxItem ID="17" YPos="871.795" XPos="4307.69"/>
-   <FxItem ID="18" YPos="916.662" XPos="5383.87"/>
+   <FxItem ID="3" XPos="6846.15" YPos="717.949"/>
+   <FxItem ID="2" XPos="2820.51" YPos="692.308"/>
+   <FxItem ID="1" XPos="1692.31" YPos="692.308"/>
+   <FxItem ID="0" XPos="4820.51" YPos="9871.79" GelColor="#ffffff"/>
+   <FxItem ID="7" XPos="836.421" YPos="7999.68" GelColor="#ffff00"/>
+   <FxItem ID="6" XPos="8910.62" YPos="2777.06" GelColor="#ffff00"/>
+   <FxItem ID="5" XPos="1734.69" YPos="9897.96"/>
+   <FxItem ID="4" XPos="8047.86" YPos="743.59"/>
+   <FxItem ID="11" XPos="8911.11" YPos="7155.56"/>
+   <FxItem ID="10" XPos="844.444" YPos="4111.11"/>
+   <FxItem ID="9" XPos="866.667" YPos="3088.89"/>
+   <FxItem ID="8" XPos="877.551" YPos="2040.82"/>
+   <FxItem ID="15" XPos="6711.11" YPos="9911.11"/>
+   <FxItem ID="14" XPos="3000" YPos="9933.33"/>
+   <FxItem ID="13" XPos="8866.67" YPos="9177.78"/>
+   <FxItem ID="12" XPos="8888.89" YPos="8133.33"/>
+   <FxItem ID="18" XPos="5383.87" YPos="916.662"/>
+   <FxItem ID="17" XPos="4307.69" YPos="871.795"/>
+   <FxItem ID="16" XPos="8044.44" YPos="9933.33"/>
   </Monitor>
  </Engine>
  <VirtualConsole>
@@ -570,8 +899,8 @@
     <BackgroundImage>None</BackgroundImage>
     <Font>Default</Font>
    </Appearance>
-   <Clock Type="Stopwatch" ID="7" Caption="">
-    <WindowState Width="130" X="765" Y="520" Height="30" Visible="True"/>
+   <Clock Type="Stopwatch" Caption="" ID="7">
+    <WindowState Visible="True" X="750" Y="150" Width="105" Height="30"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4290822144</ForegroundColor>
@@ -580,13 +909,8 @@
      <Font>Monospace,16,-1,5,75,0,0,0,0,0</Font>
     </Appearance>
    </Clock>
-   <Button Icon="" ID="9" Caption="Strobe">
-    <Function ID="0"/>
-    <Action>Flash</Action>
-    <Key>S</Key>
-    <Intensity Adjust="True">100</Intensity>
-    <Input Universe="0" Channel="6"/>
-    <WindowState Width="130" X="780" Y="110" Height="45" Visible="True"/>
+   <Button Caption="Strobe" ID="9" Icon="">
+    <WindowState Visible="True" X="750" Y="70" Width="105" Height="35"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -594,13 +918,14 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Sans Serif,10,-1,5,75,0,0,0,0,0</Font>
     </Appearance>
+    <Function ID="0"/>
+    <Action>Flash</Action>
+    <Key>S</Key>
+    <Intensity Adjust="True">100</Intensity>
+    <Input Universe="0" Channel="6"/>
    </Button>
-   <Button Icon="" ID="38" Caption="">
-    <Function ID="4294967295"/>
-    <Action>Blackout</Action>
-    <Key>Space</Key>
-    <Intensity Adjust="False">100</Intensity>
-    <WindowState Width="105" X="800" Y="40" Height="60" Visible="True"/>
+   <Button Caption="" ID="38" Icon="">
+    <WindowState Visible="True" X="750" Y="5" Width="105" Height="60"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -608,13 +933,13 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-   </Button>
-   <Button Icon="" ID="44" Caption="Fog">
-    <Function ID="11"/>
-    <Action>Toggle</Action>
-    <Key>Shift+F</Key>
+    <Function ID="4294967295"/>
+    <Action>Blackout</Action>
+    <Key>Space</Key>
     <Intensity Adjust="False">100</Intensity>
-    <WindowState Width="115" X="775" Y="420" Height="45" Visible="True"/>
+   </Button>
+   <Button Caption="Fog" ID="44" Icon="">
+    <WindowState Visible="True" X="750" Y="110" Width="105" Height="35"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -622,8 +947,12 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Sans Serif,10,-1,5,75,0,0,0,0,0</Font>
     </Appearance>
+    <Function ID="11"/>
+    <Action>Toggle</Action>
+    <Key>Shift+F</Key>
+    <Intensity Adjust="False">100</Intensity>
    </Button>
-   <Frame ID="52" Caption="LED PARs">
+   <Frame Caption="LED PARs" ID="52">
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -631,17 +960,14 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Width="405" X="945" Y="5" Height="260" Visible="True"/>
+    <WindowState Visible="True" X="855" Y="0" Width="525" Height="495"/>
     <AllowChildren>True</AllowChildren>
-    <AllowResize>True</AllowResize>
+    <AllowResize>False</AllowResize>
     <ShowHeader>True</ShowHeader>
     <ShowEnableButton>False</ShowEnableButton>
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
-    <Enable>
-     <Key></Key>
-    </Enable>
-    <Multipage PagesNum="2" CurrentPage="0"/>
+    <Multipage PagesNum="2" CurrentPage="1"/>
     <Next>
      <Key>Pause</Key>
     </Next>
@@ -649,8 +975,8 @@
      <Key>ScrollLock</Key>
     </Previous>
     <PagesLoop>True</PagesLoop>
-    <Slider WidgetStyle="Knob" ID="54" Caption="RGB" InvertedAppearance="false">
-     <WindowState Width="65" X="10" Y="45" Height="205" Visible="True"/>
+    <Slider Caption="RGB" ID="54" WidgetStyle="Knob" InvertedAppearance="false">
+     <WindowState Visible="False" X="10" Y="45" Width="65" Height="205"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -658,8 +984,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="RGB">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="128">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="RGB" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="125">
       <Channel Fixture="8">0</Channel>
       <Channel Fixture="8">1</Channel>
       <Channel Fixture="8">2</Channel>
@@ -674,8 +1000,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <Slider WidgetStyle="Slider" ID="53" Caption="Strobe Speed" InvertedAppearance="false">
-     <WindowState Width="65" X="260" Y="45" Height="205" Visible="True"/>
+    <Slider Caption="Strobe Speed" ID="53" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="False" X="260" Y="45" Width="65" Height="205"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -684,7 +1010,7 @@
       <Font>Default</Font>
      </Appearance>
      <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None">Playback</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="102">
+     <Level LowLimit="0" HighLimit="255" Value="102">
       <Channel Fixture="8">4</Channel>
       <Channel Fixture="9">4</Channel>
       <Channel Fixture="10">4</Channel>
@@ -696,8 +1022,8 @@
       <Function>14</Function>
      </Playback>
     </Slider>
-    <Slider WidgetStyle="Knob" ID="55" Caption="Mode" InvertedAppearance="false">
-     <WindowState Width="65" X="330" Y="45" Height="205" Visible="True"/>
+    <Slider Caption="Mode" ID="55" WidgetStyle="Knob" InvertedAppearance="false">
+     <WindowState Visible="False" X="330" Y="45" Width="65" Height="205"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -705,8 +1031,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="6">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="Preset" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="6">
       <Channel Fixture="8">5</Channel>
       <Channel Fixture="9">5</Channel>
       <Channel Fixture="10">5</Channel>
@@ -718,8 +1044,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <Slider WidgetStyle="Slider" ID="57" Caption="Value" InvertedAppearance="false">
-     <WindowState Width="65" X="190" Y="45" Height="205" Visible="True"/>
+    <Slider Caption="Value" ID="57" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="False" X="190" Y="45" Width="65" Height="205"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -727,8 +1053,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="None">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="255">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0">
       <Channel Fixture="8">3</Channel>
       <Channel Fixture="9">3</Channel>
       <Channel Fixture="10">3</Channel>
@@ -740,8 +1066,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <Slider WidgetStyle="Knob" ID="0" Caption="RGB" InvertedAppearance="false">
-     <WindowState Width="65" X="80" Y="45" Height="205" Visible="True"/>
+    <Slider Caption="RGB" ID="0" WidgetStyle="Knob" InvertedAppearance="false">
+     <WindowState Visible="False" X="80" Y="45" Width="65" Height="205"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -749,8 +1075,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="RGB">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="128">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="RGB" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="128">
       <Channel Fixture="11">0</Channel>
       <Channel Fixture="11">1</Channel>
       <Channel Fixture="11">2</Channel>
@@ -765,8 +1091,376 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
+    <Frame Caption="LED Button" ID="32" Page="1">
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <WindowState Visible="True" X="5" Y="40" Width="260" Height="295"/>
+     <AllowChildren>True</AllowChildren>
+     <AllowResize>False</AllowResize>
+     <ShowHeader>True</ShowHeader>
+     <ShowEnableButton>True</ShowEnableButton>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <Button Caption="LED RED (1)" ID="33" Icon="">
+      <WindowState Visible="True" X="5" Y="40" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294901760</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="24"/>
+      <Action>Toggle</Action>
+      <Key>1</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED GREEN (2)" ID="34" Icon="">
+      <WindowState Visible="True" X="55" Y="40" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4278233600</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="25"/>
+      <Action>Toggle</Action>
+      <Key>2</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED BLUE (3)" ID="35" Icon="">
+      <WindowState Visible="True" X="105" Y="40" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4278212095</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="26"/>
+      <Action>Toggle</Action>
+      <Key>3</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED YELLOW (4)" ID="36" Icon="">
+      <WindowState Visible="True" X="155" Y="40" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294967040</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="27"/>
+      <Action>Toggle</Action>
+      <Key>4</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED PURPLE (5)" ID="37" Icon="">
+      <WindowState Visible="True" X="205" Y="40" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4283760895</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="29"/>
+      <Action>Toggle</Action>
+      <Key>5</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED ORANGE (6)" ID="39" Icon="">
+      <WindowState Visible="True" X="5" Y="90" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294945280</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="28"/>
+      <Action>Toggle</Action>
+      <Key>6</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED PINK (7)" ID="40" Icon="">
+      <WindowState Visible="True" X="55" Y="90" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294902015</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="31"/>
+      <Action>Toggle</Action>
+      <Key>7</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED TEAL (8)" ID="41" Icon="">
+      <WindowState Visible="True" X="105" Y="90" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4278255615</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="30"/>
+      <Action>Toggle</Action>
+      <Key>8</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED WARMWHITE (9)" ID="42" Icon="">
+      <WindowState Visible="True" X="155" Y="90" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294964673</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="32"/>
+      <Action>Toggle</Action>
+      <Key>9</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED WHITE (0)" ID="43" Icon="">
+      <WindowState Visible="True" X="205" Y="90" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294967295</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="33"/>
+      <Action>Toggle</Action>
+      <Key>0</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 45" ID="45" Icon="">
+      <WindowState Visible="True" X="5" Y="140" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 46" ID="46" Icon="">
+      <WindowState Visible="True" X="55" Y="140" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 47" ID="47" Icon="">
+      <WindowState Visible="True" X="105" Y="140" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 48" ID="48" Icon="">
+      <WindowState Visible="True" X="155" Y="140" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 49" ID="49" Icon="">
+      <WindowState Visible="True" X="205" Y="140" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 50" ID="50" Icon="">
+      <WindowState Visible="True" X="5" Y="190" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 51" ID="51" Icon="">
+      <WindowState Visible="True" X="55" Y="190" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 56" ID="56" Icon="">
+      <WindowState Visible="True" X="105" Y="190" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 59" ID="59" Icon="">
+      <WindowState Visible="True" X="155" Y="190" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 60" ID="60" Icon="">
+      <WindowState Visible="True" X="205" Y="190" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 61" ID="61" Icon="">
+      <WindowState Visible="True" X="5" Y="240" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Button 62" ID="62" Icon="">
+      <WindowState Visible="True" X="55" Y="240" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4294967295"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED 33 (N7)" ID="63" Icon="">
+      <WindowState Visible="True" X="105" Y="240" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>4278190080</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="36"/>
+      <Action>Toggle</Action>
+      <Key>Num+7</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED 66 (N8)" ID="64" Icon="">
+      <WindowState Visible="True" X="155" Y="240" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4284703587</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="37"/>
+      <Action>Toggle</Action>
+      <Key>Num+8</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="LED 100 (N9)" ID="65" Icon="">
+      <WindowState Visible="True" X="205" Y="240" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="38"/>
+      <Action>Toggle</Action>
+      <Key>Num+9</Key>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+    </Frame>
+    <Button Caption="LED OFF (N0)" ID="66" Page="1" Icon="">
+     <WindowState Visible="True" X="5" Y="335" Width="260" Height="35"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>4294901760</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Function ID="34"/>
+     <Action>Toggle</Action>
+     <Key>Num+0</Key>
+     <Intensity Adjust="False">100</Intensity>
+    </Button>
    </Frame>
-   <Frame ID="58" Caption="Moonflower">
+   <Frame Caption="Moonflower" ID="58">
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -774,16 +1468,13 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Width="380" X="945" Y="275" Height="260" Visible="True"/>
+    <WindowState Visible="True" X="1090" Y="500" Width="290" Height="255"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
     <ShowEnableButton>False</ShowEnableButton>
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
-    <Enable>
-     <Key></Key>
-    </Enable>
     <Multipage PagesNum="2" CurrentPage="0"/>
     <Next>
      <Key>Pause</Key>
@@ -792,8 +1483,8 @@
      <Key>ScrollLock</Key>
     </Previous>
     <PagesLoop>True</PagesLoop>
-    <Slider WidgetStyle="Knob" ID="3" Caption="Rotation" InvertedAppearance="false">
-     <WindowState Width="65" X="150" Y="45" Height="205" Visible="True"/>
+    <Slider Caption="Rotation" ID="3" WidgetStyle="Knob" InvertedAppearance="false">
+     <WindowState Visible="True" X="150" Y="45" Width="65" Height="205"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -801,8 +1492,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="124">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="Preset" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="124">
       <Channel Fixture="17">3</Channel>
       <Channel Fixture="18">3</Channel>
      </Level>
@@ -810,8 +1501,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <Slider WidgetStyle="Knob" ID="2" Caption="Color" InvertedAppearance="false">
-     <WindowState Width="65" X="10" Y="45" Height="205" Visible="True"/>
+    <Slider Caption="Color" ID="2" WidgetStyle="Knob" InvertedAppearance="false">
+     <WindowState Visible="True" X="10" Y="45" Width="65" Height="205"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -819,8 +1510,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="1">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="Preset" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="121">
       <Channel Fixture="17">0</Channel>
       <Channel Fixture="18">0</Channel>
      </Level>
@@ -828,8 +1519,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <Slider WidgetStyle="Slider" ID="4" Caption="Chase speed" InvertedAppearance="false">
-     <WindowState Width="65" X="80" Y="45" Height="205" Visible="True"/>
+    <Slider Caption="Chase speed" ID="4" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="80" Y="45" Width="65" Height="205"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -837,8 +1528,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="None">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="0">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0">
       <Channel Fixture="17">1</Channel>
       <Channel Fixture="18">1</Channel>
      </Level>
@@ -846,8 +1537,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <Slider WidgetStyle="Slider" ID="5" Caption="Strobe" InvertedAppearance="false">
-     <WindowState Width="65" X="220" Y="45" Height="205" Visible="True"/>
+    <Slider Caption="Strobe" ID="5" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="220" Y="45" Width="65" Height="205"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -855,8 +1546,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="None">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="0">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0">
       <Channel Fixture="17">2</Channel>
       <Channel Fixture="18">2</Channel>
      </Level>
@@ -865,7 +1556,7 @@
      </Playback>
     </Slider>
    </Frame>
-   <Frame ID="6" Caption="Scanner Control">
+   <Frame Caption="Scanner Control" ID="6">
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -873,17 +1564,14 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Width="725" X="15" Y="10" Height="485" Visible="True"/>
+    <WindowState Visible="True" X="20" Y="5" Width="730" Height="490"/>
     <AllowChildren>True</AllowChildren>
-    <AllowResize>True</AllowResize>
+    <AllowResize>False</AllowResize>
     <ShowHeader>True</ShowHeader>
     <ShowEnableButton>False</ShowEnableButton>
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
-    <Enable>
-     <Key></Key>
-    </Enable>
-    <Multipage PagesNum="2" CurrentPage="0"/>
+    <Multipage PagesNum="2" CurrentPage="1"/>
     <Next>
      <Key>Pause</Key>
     </Next>
@@ -891,8 +1579,8 @@
      <Key>ScrollLock</Key>
     </Previous>
     <PagesLoop>True</PagesLoop>
-    <Slider WidgetStyle="Knob" ID="13" Caption="TS-255 Gobo" InvertedAppearance="false">
-     <WindowState Width="70" X="570" Y="60" Height="170" Visible="True"/>
+    <Slider Caption="TS-255 Gobo" ID="13" WidgetStyle="Knob" InvertedAppearance="false">
+     <WindowState Visible="False" X="570" Y="60" Width="70" Height="170"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -900,8 +1588,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="77">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="Preset" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="77">
       <Channel Fixture="1">3</Channel>
       <Channel Fixture="2">3</Channel>
       <Channel Fixture="3">3</Channel>
@@ -911,8 +1599,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <Slider WidgetStyle="Slider" ID="14" Caption="TS-255 Shutter" InvertedAppearance="false">
-     <WindowState Width="70" X="495" Y="60" Height="170" Visible="True"/>
+    <Slider Caption="TS-255 Shutter" ID="14" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="False" X="495" Y="60" Width="70" Height="170"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -920,8 +1608,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="None">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="0">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0">
       <Channel Fixture="1">4</Channel>
       <Channel Fixture="2">4</Channel>
       <Channel Fixture="3">4</Channel>
@@ -931,8 +1619,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <Slider WidgetStyle="Knob" ID="15" Caption="TS-255 Color" InvertedAppearance="false">
-     <WindowState Width="70" X="420" Y="60" Height="170" Visible="True"/>
+    <Slider Caption="TS-255 Color" ID="15" WidgetStyle="Knob" InvertedAppearance="false">
+     <WindowState Visible="False" X="420" Y="60" Width="70" Height="170"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -941,8 +1629,8 @@
       <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
      <Input Universe="0" Channel="2"/>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="105">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="Preset" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="105">
       <Channel Fixture="1">2</Channel>
       <Channel Fixture="2">2</Channel>
       <Channel Fixture="3">2</Channel>
@@ -952,8 +1640,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <XYPad ID="16" Caption="TS-255 L" InvertedAppearance="0">
-     <WindowState Width="200" X="10" Y="45" Height="200" Visible="True"/>
+    <XYPad Caption="TS-255 L" ID="16" InvertedAppearance="0">
+     <WindowState Visible="False" X="10" Y="45" Width="200" Height="200"/>
      <Appearance>
       <FrameStyle>Raised</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -962,24 +1650,22 @@
       <Font>Sans Serif,8,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
      <Fixture ID="1" Head="0">
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
+      <Axis ID="X" LowLimit="0" HighLimit="1" Reverse="False"/>
+      <Axis ID="Y" LowLimit="0" HighLimit="1" Reverse="False"/>
      </Fixture>
      <Fixture ID="2" Head="0">
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
+      <Axis ID="X" LowLimit="0" HighLimit="1" Reverse="False"/>
+      <Axis ID="Y" LowLimit="0" HighLimit="1" Reverse="False"/>
      </Fixture>
-     <Pan Position="145">
+     <Pan Position="150">
       <Input Universe="0" Channel="0"/>
      </Pan>
-     <Tilt Position="110">
+     <Tilt Position="162">
       <Input Universe="0" Channel="1"/>
      </Tilt>
-     <Width/>
-     <Height/>
     </XYPad>
-    <XYPad ID="17" Caption="TS-255 R" InvertedAppearance="0">
-     <WindowState Width="200" X="215" Y="45" Height="200" Visible="True"/>
+    <XYPad Caption="TS-255 R" ID="17" InvertedAppearance="0">
+     <WindowState Visible="False" X="215" Y="45" Width="200" Height="200"/>
      <Appearance>
       <FrameStyle>Raised</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -988,12 +1674,12 @@
       <Font>Sans Serif,8,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
      <Fixture ID="3" Head="0">
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
+      <Axis ID="X" LowLimit="0" HighLimit="1" Reverse="False"/>
+      <Axis ID="Y" LowLimit="0" HighLimit="1" Reverse="False"/>
      </Fixture>
      <Fixture ID="4" Head="0">
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
+      <Axis ID="X" LowLimit="0" HighLimit="1" Reverse="False"/>
+      <Axis ID="Y" LowLimit="0" HighLimit="1" Reverse="False"/>
      </Fixture>
      <Pan Position="126">
       <Input Universe="0" Channel="0"/>
@@ -1001,11 +1687,9 @@
      <Tilt Position="120">
       <Input Universe="0" Channel="1"/>
      </Tilt>
-     <Width/>
-     <Height/>
     </XYPad>
-    <Slider WidgetStyle="Knob" ID="18" Caption="Mighty Gobo" InvertedAppearance="false">
-     <WindowState Width="70" X="420" Y="295" Height="170" Visible="True"/>
+    <Slider Caption="Mighty Gobo" ID="18" WidgetStyle="Knob" InvertedAppearance="false">
+     <WindowState Visible="False" X="420" Y="295" Width="70" Height="170"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1013,8 +1697,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="254" LowLimit="0" Value="105">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="Preset" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="254" Value="105">
       <Channel Fixture="5">4</Channel>
       <Channel Fixture="14">4</Channel>
       <Channel Fixture="15">4</Channel>
@@ -1024,8 +1708,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <Slider WidgetStyle="Slider" ID="19" Caption="Mighty Shutter" InvertedAppearance="false">
-     <WindowState Width="70" X="495" Y="295" Height="170" Visible="True"/>
+    <Slider Caption="Mighty Shutter" ID="19" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="False" X="495" Y="295" Width="70" Height="170"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1033,8 +1717,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="None">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="255">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="255">
       <Channel Fixture="5">5</Channel>
       <Channel Fixture="14">5</Channel>
       <Channel Fixture="15">5</Channel>
@@ -1044,8 +1728,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <Slider WidgetStyle="Knob" ID="20" Caption="Mighty Color" InvertedAppearance="false">
-     <WindowState Width="70" X="570" Y="295" Height="170" Visible="True"/>
+    <Slider Caption="Mighty Color" ID="20" WidgetStyle="Knob" InvertedAppearance="false">
+     <WindowState Visible="False" X="570" Y="295" Width="70" Height="170"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1053,8 +1737,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="1">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="Preset" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="1">
       <Channel Fixture="5">3</Channel>
       <Channel Fixture="14">3</Channel>
       <Channel Fixture="15">3</Channel>
@@ -1064,8 +1748,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <XYPad ID="21" Caption="Mightys L" InvertedAppearance="0">
-     <WindowState Width="200" X="10" Y="280" Height="200" Visible="True"/>
+    <XYPad Caption="Mightys L" ID="21" InvertedAppearance="0">
+     <WindowState Visible="False" X="10" Y="280" Width="200" Height="200"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1074,20 +1758,18 @@
       <Font>Sans Serif,8,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
      <Fixture ID="5" Head="0">
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
+      <Axis ID="X" LowLimit="0" HighLimit="1" Reverse="False"/>
+      <Axis ID="Y" LowLimit="0" HighLimit="1" Reverse="False"/>
      </Fixture>
      <Fixture ID="14" Head="0">
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
+      <Axis ID="X" LowLimit="0" HighLimit="1" Reverse="False"/>
+      <Axis ID="Y" LowLimit="0" HighLimit="1" Reverse="False"/>
      </Fixture>
      <Pan Position="147"/>
      <Tilt Position="145"/>
-     <Width/>
-     <Height/>
     </XYPad>
-    <XYPad ID="22" Caption="Mightys R" InvertedAppearance="0">
-     <WindowState Width="200" X="215" Y="280" Height="200" Visible="True"/>
+    <XYPad Caption="Mightys R" ID="22" InvertedAppearance="0">
+     <WindowState Visible="False" X="215" Y="280" Width="200" Height="200"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1096,20 +1778,18 @@
       <Font>Sans Serif,8,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
      <Fixture ID="15" Head="0">
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
+      <Axis ID="X" LowLimit="0" HighLimit="1" Reverse="False"/>
+      <Axis ID="Y" LowLimit="0" HighLimit="1" Reverse="False"/>
      </Fixture>
      <Fixture ID="16" Head="0">
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="X"/>
-      <Axis HighLimit="1" LowLimit="0" Reverse="False" ID="Y"/>
+      <Axis ID="X" LowLimit="0" HighLimit="1" Reverse="False"/>
+      <Axis ID="Y" LowLimit="0" HighLimit="1" Reverse="False"/>
      </Fixture>
      <Pan Position="91"/>
      <Tilt Position="133"/>
-     <Width/>
-     <Height/>
     </XYPad>
-    <Slider WidgetStyle="Slider" ID="1" Caption="Gobo rot." InvertedAppearance="false">
-     <WindowState Width="65" X="645" Y="60" Height="170" Visible="True"/>
+    <Slider Caption="Gobo rot." ID="1" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="False" X="645" Y="60" Width="65" Height="170"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1117,8 +1797,8 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level HighLimit="255" LowLimit="0" Value="0">
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="Preset" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0">
       <Channel Fixture="1">5</Channel>
       <Channel Fixture="2">5</Channel>
       <Channel Fixture="3">5</Channel>
@@ -1128,8 +1808,8 @@
       <Function>4294967295</Function>
      </Playback>
     </Slider>
-    <SpeedDial ID="8" Caption="roam" Page="1">
-     <WindowState Width="80" X="20" Y="55" Height="115" Visible="False"/>
+    <SpeedDial Caption="roam" ID="8" Page="1">
+     <WindowState Visible="True" X="20" Y="55" Width="80" Height="115"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1139,17 +1819,12 @@
      </Appearance>
      <Visibility>98</Visibility>
      <AbsoluteValue Minimum="0" Maximum="10000"/>
-     <Tap/>
-     <Mult/>
-     <Div/>
-     <MultDivReset/>
-     <Apply/>
      <Time>6930</Time>
-     <Function Duration="6" FadeOut="0" FadeIn="0">2</Function>
-     <Function Duration="6" FadeOut="0" FadeIn="0">3</Function>
+     <Function FadeIn="0" FadeOut="0" Duration="6">2</Function>
+     <Function FadeIn="0" FadeOut="0" Duration="6">3</Function>
     </SpeedDial>
-    <SpeedDial ID="24" Caption="Sweep" Page="1">
-     <WindowState Width="80" X="20" Y="175" Height="115" Visible="False"/>
+    <SpeedDial Caption="Sweep" ID="24" Page="1">
+     <WindowState Visible="True" X="20" Y="175" Width="80" Height="115"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>4291348480</ForegroundColor>
@@ -1159,63 +1834,54 @@
      </Appearance>
      <Visibility>98</Visibility>
      <AbsoluteValue Minimum="0" Maximum="10000"/>
-     <Tap/>
-     <Mult/>
-     <Div/>
-     <MultDivReset/>
-     <Apply/>
      <Time>520</Time>
-     <Function Duration="6" FadeOut="0" FadeIn="0">6</Function>
-     <Function Duration="6" FadeOut="0" FadeIn="0">5</Function>
+     <Function FadeIn="0" FadeOut="0" Duration="6">6</Function>
+     <Function FadeIn="0" FadeOut="0" Duration="6">5</Function>
     </SpeedDial>
-    <Button Icon="" ID="25" Caption="TS-255 roam" Page="1">
+    <Button Caption="TS-255 roam" ID="25" Page="1" Icon="">
+     <WindowState Visible="True" X="105" Y="55" Width="130" Height="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>4292342264</ForegroundColor>
+      <BackgroundColor>4285756291</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
+     </Appearance>
      <Function ID="2"/>
      <Action>Toggle</Action>
      <Key>X</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Width="130" X="105" Y="55" Height="50" Visible="False"/>
+    </Button>
+    <Button Caption="Mighty roam" ID="26" Page="1" Icon="">
+     <WindowState Visible="True" X="105" Y="110" Width="130" Height="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4292342264</ForegroundColor>
       <BackgroundColor>4285756291</BackgroundColor>
       <BackgroundImage>None</BackgroundImage>
-      <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
+      <Font>Sans Serif,10,-1,5,75,0,0,0,0,0</Font>
      </Appearance>
-    </Button>
-    <Button Icon="" ID="26" Caption="Mighty roam" Page="1">
      <Function ID="3"/>
      <Action>Toggle</Action>
      <Key>X</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Width="130" X="105" Y="110" Height="50" Visible="False"/>
+    </Button>
+    <Button Caption="TS-255 sweep" ID="27" Page="1" Icon="">
+     <WindowState Visible="True" X="105" Y="180" Width="130" Height="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4292342264</ForegroundColor>
       <BackgroundColor>4285756291</BackgroundColor>
       <BackgroundImage>None</BackgroundImage>
-      <Font>Sans Serif,10,-1,5,75,0,0,0,0,0</Font>
+      <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
      </Appearance>
-    </Button>
-    <Button Icon="" ID="27" Caption="TS-255 sweep" Page="1">
      <Function ID="6"/>
      <Action>Toggle</Action>
      <Key>Shift+X</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Width="130" X="105" Y="180" Height="50" Visible="False"/>
-     <Appearance>
-      <FrameStyle>None</FrameStyle>
-      <ForegroundColor>4292342264</ForegroundColor>
-      <BackgroundColor>4285756291</BackgroundColor>
-      <BackgroundImage>None</BackgroundImage>
-      <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
-     </Appearance>
     </Button>
-    <Button Icon="" ID="28" Caption="Mighty sweep" Page="1">
-     <Function ID="5"/>
-     <Action>Toggle</Action>
-     <Key>Shift+X</Key>
-     <Intensity Adjust="False">100</Intensity>
-     <WindowState Width="130" X="105" Y="235" Height="50" Visible="False"/>
+    <Button Caption="Mighty sweep" ID="28" Page="1" Icon="">
+     <WindowState Visible="True" X="105" Y="235" Width="130" Height="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4292342264</ForegroundColor>
@@ -1223,12 +1889,26 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Sans Serif,10,-1,5,75,0,0,0,0,0</Font>
      </Appearance>
+     <Function ID="5"/>
+     <Action>Toggle</Action>
+     <Key>Shift+X</Key>
+     <Intensity Adjust="False">100</Intensity>
     </Button>
-    <Button Icon="" ID="29" Caption="Scanner: Target Disco Ball" Page="1">
+    <Button Caption="Scanner: Target Disco Ball" ID="29" Page="1" Icon="">
+     <WindowState Visible="True" X="15" Y="430" Width="125" Height="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>4292342264</ForegroundColor>
+      <BackgroundColor>4285822082</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
+     </Appearance>
      <Function ID="12"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Width="100" X="275" Y="60" Height="80" Visible="False"/>
+    </Button>
+    <Button Caption="Release" ID="30" Page="1" Icon="">
+     <WindowState Visible="True" X="20" Y="295" Width="80" Height="55"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4292342264</ForegroundColor>
@@ -1236,22 +1916,81 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
      </Appearance>
-    </Button>
-    <Button Icon="" ID="30" Caption="Release" Page="1">
      <Function ID="9"/>
      <Action>Flash</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Width="115" X="275" Y="160" Height="80" Visible="False"/>
+    </Button>
+    <Button Caption="TS-255 midout" ID="31" Page="1" Icon="">
+     <WindowState Visible="True" X="20" Y="355" Width="80" Height="45"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4292342264</ForegroundColor>
       <BackgroundColor>4285822082</BackgroundColor>
       <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Function ID="23"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+    </Button>
+    <Button Caption="TS-255 eight" ID="68" Page="1" Icon="">
+     <WindowState Visible="True" X="240" Y="55" Width="130" Height="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>4292342264</ForegroundColor>
+      <BackgroundColor>4285756291</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
       <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
      </Appearance>
+     <Function ID="16"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
     </Button>
+    <Button Caption="Mighty eight" ID="69" Page="1" Icon="">
+     <WindowState Visible="True" X="240" Y="110" Width="130" Height="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>4292342264</ForegroundColor>
+      <BackgroundColor>4285756291</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
+     </Appearance>
+     <Function ID="15"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+    </Button>
+    <SpeedDial Caption="eight" ID="70" Page="1">
+     <WindowState Visible="True" X="375" Y="55" Width="155" Height="105"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>4294967295</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Visibility>127</Visibility>
+     <AbsoluteValue Minimum="0" Maximum="10000"/>
+     <Time>420</Time>
+     <Function FadeIn="0" FadeOut="0" Duration="6">16</Function>
+     <Function FadeIn="0" FadeOut="0" Duration="6">15</Function>
+    </SpeedDial>
+    <SpeedDial Caption="midout" ID="71" Page="1">
+     <WindowState Visible="True" X="105" Y="295" Width="75" Height="105"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>4291348480</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Arial,10,-1,5,75,0,0,0,0,0</Font>
+     </Appearance>
+     <Visibility>98</Visibility>
+     <AbsoluteValue Minimum="0" Maximum="10000"/>
+     <Time>0</Time>
+     <Function FadeIn="0" FadeOut="0" Duration="6">6</Function>
+     <Function FadeIn="0" FadeOut="0" Duration="6">5</Function>
+    </SpeedDial>
    </Frame>
-   <Frame ID="10" Caption="Dimmer">
+   <Frame Caption="Dimmer" ID="10">
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -1259,16 +1998,13 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Width="405" X="70" Y="520" Height="170" Visible="True"/>
+    <WindowState Visible="True" X="15" Y="500" Width="405" Height="170"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
     <ShowEnableButton>False</ShowEnableButton>
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
-    <Enable>
-     <Key></Key>
-    </Enable>
     <Multipage PagesNum="2" CurrentPage="0"/>
     <Next>
      <Key>Pause</Key>
@@ -1277,8 +2013,8 @@
      <Key>ScrollLock</Key>
     </Previous>
     <PagesLoop>True</PagesLoop>
-    <AudioTriggers BarsNumber="24" ID="11" Caption="Par Eq.">
-     <WindowState Width="270" X="10" Y="45" Height="105" Visible="True"/>
+    <AudioTriggers BarsNumber="24" Caption="Par Eq." ID="11">
+     <WindowState Visible="True" X="10" Y="45" Width="270" Height="105"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4290557440</ForegroundColor>
@@ -1286,73 +2022,69 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
      </Appearance>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#1 (0Hz - 208Hz)" MinThreshold="51" Index="0">
+     <SpectrumBar Name="#1 (0Hz - 208Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="0">
       <DMXChannels>6,0,7,3</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#3 (416Hz - 625Hz)" MinThreshold="51" Index="2">
+     <SpectrumBar Name="#3 (416Hz - 625Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="2">
       <DMXChannels>6,1,7,2</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#4 (625Hz - 833Hz)" MinThreshold="51" Index="3">
+     <SpectrumBar Name="#4 (625Hz - 833Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="3">
       <DMXChannels>6,1,7,2</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#5 (833Hz - 1041Hz)" MinThreshold="51" Index="4">
+     <SpectrumBar Name="#5 (833Hz - 1041Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="4">
       <DMXChannels>6,2,7,1</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#6 (1041Hz - 1250Hz)" MinThreshold="51" Index="5">
+     <SpectrumBar Name="#6 (1041Hz - 1250Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="5">
       <DMXChannels>6,2,7,1</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#7 (1250Hz - 1458Hz)" MinThreshold="51" Index="6">
+     <SpectrumBar Name="#7 (1250Hz - 1458Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="6">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#8 (1458Hz - 1666Hz)" MinThreshold="51" Index="7">
+     <SpectrumBar Name="#8 (1458Hz - 1666Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="7">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#9 (1666Hz - 1874Hz)" MinThreshold="51" Index="8">
+     <SpectrumBar Name="#9 (1666Hz - 1874Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="8">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#10 (1874Hz - 2083Hz)" MinThreshold="51" Index="9">
+     <SpectrumBar Name="#10 (1874Hz - 2083Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="9">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#11 (2083Hz - 2291Hz)" MinThreshold="51" Index="10">
+     <SpectrumBar Name="#11 (2083Hz - 2291Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="10">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#12 (2291Hz - 2500Hz)" MinThreshold="51" Index="11">
+     <SpectrumBar Name="#12 (2291Hz - 2500Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="11">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#13 (2500Hz - 2708Hz)" MinThreshold="51" Index="12">
+     <SpectrumBar Name="#13 (2500Hz - 2708Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="12">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#14 (2708Hz - 2916Hz)" MinThreshold="51" Index="13">
+     <SpectrumBar Name="#14 (2708Hz - 2916Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="13">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#15 (2916Hz - 3125Hz)" MinThreshold="51" Index="14">
+     <SpectrumBar Name="#15 (2916Hz - 3125Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="14">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#16 (3125Hz - 3333Hz)" MinThreshold="51" Index="15">
+     <SpectrumBar Name="#16 (3125Hz - 3333Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="15">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#17 (3333Hz - 3541Hz)" MinThreshold="51" Index="16">
+     <SpectrumBar Name="#17 (3333Hz - 3541Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="16">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#18 (3541Hz - 3750Hz)" MinThreshold="51" Index="17">
+     <SpectrumBar Name="#18 (3541Hz - 3750Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="17">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#19 (3750Hz - 3958Hz)" MinThreshold="51" Index="18">
+     <SpectrumBar Name="#19 (3750Hz - 3958Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="18">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#20 (3958Hz - 4166Hz)" MinThreshold="51" Index="19">
+     <SpectrumBar Name="#20 (3958Hz - 4166Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="19">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
-     <SpectrumBar Divisor="1" MaxThreshold="204" Type="1" Name="#21 (4166Hz - 4375Hz)" MinThreshold="51" Index="20">
+     <SpectrumBar Name="#21 (4166Hz - 4375Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="20">
       <DMXChannels>6,3,7,0</DMXChannels>
      </SpectrumBar>
     </AudioTriggers>
-    <Button Icon="" ID="12" Caption="Full on (Dimmer)">
-     <Function ID="13"/>
-     <Action>Flash</Action>
-     <Key>F</Key>
-     <Intensity Adjust="False">100</Intensity>
-     <WindowState Width="105" X="285" Y="45" Height="50" Visible="True"/>
+    <Button Caption="Full on (Dimmer)" ID="12" Icon="">
+     <WindowState Visible="True" X="285" Y="45" Width="105" Height="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4292342264</ForegroundColor>
@@ -1360,14 +2092,13 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Sans Serif,10,-1,5,75,0,0,0,0,0</Font>
      </Appearance>
-    </Button>
-    <Button Icon="" ID="23" Caption="Rot">
-     <Function ID="4"/>
+     <Function ID="13"/>
      <Action>Flash</Action>
-     <Key>R</Key>
-     <Intensity Adjust="True">100</Intensity>
-     <Input Universe="0" Channel="7"/>
-     <WindowState Width="90" X="285" Y="110" Height="50" Visible="True"/>
+     <Key>F</Key>
+     <Intensity Adjust="False">100</Intensity>
+    </Button>
+    <Button Caption="Rot" ID="23" Icon="">
+     <WindowState Visible="True" X="285" Y="110" Width="90" Height="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4292342264</ForegroundColor>
@@ -1375,16 +2106,20 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Sans Serif,10,-1,5,75,0,0,0,0,0</Font>
      </Appearance>
+     <Function ID="4"/>
+     <Action>Flash</Action>
+     <Key>R</Key>
+     <Intensity Adjust="True">100</Intensity>
+     <Input Universe="0" Channel="7"/>
     </Button>
    </Frame>
   </Frame>
   <Properties>
    <Size Width="1385" Height="855"/>
-   <GrandMaster SliderMode="Normal" ChannelMode="Intensity" ValueMode="Reduce"/>
+   <GrandMaster ChannelMode="Intensity" ValueMode="Reduce" SliderMode="Normal"/>
   </Properties>
  </VirtualConsole>
  <SimpleDesk>
   <Engine/>
  </SimpleDesk>
 </Workspace>
-

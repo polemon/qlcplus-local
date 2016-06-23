@@ -8,9 +8,9 @@
  </Creator>
  <Engine Autostart="7">
   <InputOutputMap>
-   <Universe Name="Dorfkrug Traverse" Passthrough="False" ID="0">
-    <Output Line="2" Plugin="ArtNet">
-     <PluginParameters UniverseChannels="136" outputIP="240" outputUni="1"/>
+   <Universe Name="Dorfkrug Traverse" ID="0" Passthrough="False">
+    <Output Plugin="ArtNet" Line="2">
+     <PluginParameters UniverseChannels="136" outputUni="1" outputIP="240"/>
     </Output>
    </Universe>
   </InputOutputMap>
@@ -77,8 +77,8 @@
    <Universe>0</Universe>
    <Address>64</Address>
    <Channels>6</Channels>
-   <Modifier Channel="1" Name="Invert"/>
    <Modifier Channel="0" Name="Invert"/>
+   <Modifier Channel="1" Name="Invert"/>
   </Fixture>
   <Fixture>
    <Manufacturer>Botex</Manufacturer>
@@ -110,6 +110,7 @@
    <Address>40</Address>
    <Channels>6</Channels>
    <ForcedHTP>4</ForcedHTP>
+   <ForcedLTP>0,1,2</ForcedLTP>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
@@ -121,6 +122,7 @@
    <Address>56</Address>
    <Channels>6</Channels>
    <ForcedHTP>4</ForcedHTP>
+   <ForcedLTP>0,1,2</ForcedLTP>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
@@ -132,6 +134,7 @@
    <Address>72</Address>
    <Channels>6</Channels>
    <ForcedHTP>4</ForcedHTP>
+   <ForcedLTP>0,1,2</ForcedLTP>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
@@ -143,6 +146,7 @@
    <Address>88</Address>
    <Channels>6</Channels>
    <ForcedHTP>4</ForcedHTP>
+   <ForcedLTP>0,1,2</ForcedLTP>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
@@ -154,6 +158,7 @@
    <Address>104</Address>
    <Channels>6</Channels>
    <ForcedHTP>4</ForcedHTP>
+   <ForcedLTP>0,1,2</ForcedLTP>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
@@ -165,6 +170,7 @@
    <Address>120</Address>
    <Channels>6</Channels>
    <ForcedHTP>4</ForcedHTP>
+   <ForcedLTP>0,1,2</ForcedLTP>
   </Fixture>
   <Fixture>
    <Manufacturer>GLP</Manufacturer>
@@ -175,8 +181,8 @@
    <Universe>0</Universe>
    <Address>80</Address>
    <Channels>6</Channels>
-   <Modifier Channel="1" Name="Invert"/>
    <Modifier Channel="0" Name="Invert"/>
+   <Modifier Channel="1" Name="Invert"/>
   </Fixture>
   <Fixture>
    <Manufacturer>GLP</Manufacturer>
@@ -187,8 +193,8 @@
    <Universe>0</Universe>
    <Address>96</Address>
    <Channels>6</Channels>
-   <Modifier Channel="1" Name="Invert"/>
    <Modifier Channel="0" Name="Invert"/>
+   <Modifier Channel="1" Name="Invert"/>
   </Fixture>
   <Fixture>
    <Manufacturer>GLP</Manufacturer>
@@ -199,8 +205,8 @@
    <Universe>0</Universe>
    <Address>112</Address>
    <Channels>6</Channels>
-   <Modifier Channel="1" Name="Invert"/>
    <Modifier Channel="0" Name="Invert"/>
+   <Modifier Channel="1" Name="Invert"/>
   </Fixture>
   <Fixture>
    <Manufacturer>Eurolite</Manufacturer>
@@ -233,7 +239,7 @@
    <Channels>1</Channels>
    <ForcedHTP>0</ForcedHTP>
   </Fixture>
-  <Function Name="Strobe" ID="0" Type="Scene">
+  <Function Type="Scene" Name="Strobe" ID="0">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="0">0,200,1,255,2,0</FixtureVal>
    <FixtureVal ID="8">0,255,1,255,2,255,3,255,4,200</FixtureVal>
@@ -243,14 +249,14 @@
    <FixtureVal ID="12">0,255,1,255,2,255,3,255,4,200</FixtureVal>
    <FixtureVal ID="13">0,255,1,255,2,255,3,255,4,200</FixtureVal>
   </Function>
-  <Function Path="TS-255/TS-255 color" Name="TS-255 white" ID="1" Type="Scene">
+  <Function Type="Scene" Path="TS-255/TS-255 color" Name="TS-255 white" ID="1">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">2,0</FixtureVal>
    <FixtureVal ID="2">2,0</FixtureVal>
    <FixtureVal ID="3">2,0</FixtureVal>
    <FixtureVal ID="4">2,0</FixtureVal>
   </Function>
-  <Function Name="TS-255 Scan" ID="2" Type="EFX">
+  <Function Type="EFX" Name="TS-255 Scan" ID="2">
    <Fixture>
     <ID>1</ID>
     <Head>0</Head>
@@ -284,7 +290,7 @@
     <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed FadeIn="0" FadeOut="0" Duration="17760"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="31040"/>
    <Direction>Forward</Direction>
    <RunOrder>PingPong</RunOrder>
    <Algorithm>Lissajous</Algorithm>
@@ -304,7 +310,7 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Name="Mighty Scan" ID="3" Type="EFX">
+  <Function Type="EFX" Name="Mighty Scan" ID="3">
    <Fixture>
     <ID>5</ID>
     <Head>0</Head>
@@ -338,7 +344,7 @@
     <Intensity>255</Intensity>
    </Fixture>
    <PropagationMode>Parallel</PropagationMode>
-   <Speed FadeIn="0" FadeOut="0" Duration="17760"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="31040"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <Algorithm>Lissajous</Algorithm>
@@ -358,12 +364,12 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Name="Rot" ID="4" Type="Scene">
+  <Function Type="Scene" Name="Rot" ID="4">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="6">0,255</FixtureVal>
    <FixtureVal ID="7">3,255</FixtureVal>
   </Function>
-  <Function Name="Mighty vertical scan" ID="5" Type="EFX">
+  <Function Type="EFX" Name="Mighty vertical scan" ID="5">
    <Fixture>
     <ID>5</ID>
     <Head>0</Head>
@@ -417,7 +423,7 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Name="TS-255 vertical scan" ID="6" Type="EFX">
+  <Function Type="EFX" Name="TS-255 vertical scan" ID="6">
    <Fixture>
     <ID>1</ID>
     <Head>0</Head>
@@ -471,7 +477,7 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Name="Set Mighty mirrors to max speed" ID="7" Type="Script">
+  <Function Type="Script" Name="Set Mighty mirrors to max speed" ID="7">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
@@ -497,18 +503,21 @@
    <Command></Command>
    <Command></Command>
    <Command></Command>
+   <Command></Command>
+   <Command></Command>
+   <Command></Command>
   </Function>
-  <Function Name="mighty switch" ID="8" Type="Chaser">
-   <Speed FadeIn="0" FadeOut="0" Duration="1110"/>
+  <Function Type="Chaser" Name="mighty switch" ID="8">
+   <Speed FadeIn="0" FadeOut="0" Duration="1940"/>
    <Direction>Forward</Direction>
    <RunOrder>Random</RunOrder>
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
-   <Step FadeIn="0" Number="0" Hold="0" FadeOut="0">71</Step>
-   <Step FadeIn="0" Number="1" Hold="0" FadeOut="0">72</Step>
-   <Step FadeIn="0" Number="2" Hold="0" FadeOut="0">73</Step>
-   <Step FadeIn="0" Number="3" Hold="0" FadeOut="0">74</Step>
+   <Step FadeIn="0" Hold="0" Number="0" FadeOut="0">71</Step>
+   <Step FadeIn="0" Hold="0" Number="1" FadeOut="0">72</Step>
+   <Step FadeIn="0" Hold="0" Number="2" FadeOut="0">73</Step>
+   <Step FadeIn="0" Hold="0" Number="3" FadeOut="0">74</Step>
   </Function>
-  <Function Name="Scanner Control Handover" ID="9" Type="Scene">
+  <Function Type="Scene" Name="Scanner Control Handover" ID="9">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,0,1,0</FixtureVal>
    <FixtureVal ID="2">0,0,1,0</FixtureVal>
@@ -519,20 +528,20 @@
    <FixtureVal ID="15">0,0,1,0</FixtureVal>
    <FixtureVal ID="16">0,0,1,0</FixtureVal>
   </Function>
-  <Function Name="Fog" ID="10" Type="Scene">
+  <Function Type="Scene" Name="Fog" ID="10">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="19">0,0</FixtureVal>
   </Function>
-  <Function Name="Fog burst" ID="11" Type="Chaser">
+  <Function Type="Chaser" Name="Fog burst" ID="11">
    <Speed FadeIn="0" FadeOut="0" Duration="500"/>
    <Direction>Forward</Direction>
    <RunOrder>SingleShot</RunOrder>
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
    <Sequence BoundScene="10"/>
-   <Step FadeIn="0" Number="0" Hold="1000" Values="1" FadeOut="0">19,0,255</Step>
-   <Step FadeIn="0" Number="1" Hold="0" Values="1" FadeOut="0"/>
+   <Step FadeIn="0" Hold="1000" Number="0" FadeOut="0" Values="1">19,0,255</Step>
+   <Step FadeIn="0" Hold="0" Number="1" FadeOut="0" Values="1"/>
   </Function>
-  <Function Name="Scanner target disco ball" ID="12" Type="Scene">
+  <Function Type="Scene" Name="Scanner target disco ball" ID="12">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,183,1,39</FixtureVal>
    <FixtureVal ID="2">0,171,1,33</FixtureVal>
@@ -543,12 +552,12 @@
    <FixtureVal ID="15">0,119,1,3</FixtureVal>
    <FixtureVal ID="16">0,90,1,16</FixtureVal>
   </Function>
-  <Function Name="Full on (Dimmer)" ID="13" Type="Scene">
+  <Function Type="Scene" Name="Full on (Dimmer)" ID="13">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="6">0,255,1,255,2,255,3,255</FixtureVal>
    <FixtureVal ID="7">0,255,1,255,2,255,3,255</FixtureVal>
   </Function>
-  <Function Path="LED PAR" Name="LED PAR strobe master" ID="14" Type="Scene">
+  <Function Type="Scene" Path="LED PAR" Name="LED PAR strobe master" ID="14">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">4,255</FixtureVal>
    <FixtureVal ID="9">4,255</FixtureVal>
@@ -557,7 +566,7 @@
    <FixtureVal ID="12">4,255</FixtureVal>
    <FixtureVal ID="13">4,255</FixtureVal>
   </Function>
-  <Function Name="mighty eight (2+3 rev)" ID="15" Type="EFX">
+  <Function Type="EFX" Name="mighty eight (2+3 rev)" ID="15">
    <Fixture>
     <ID>5</ID>
     <Head>0</Head>
@@ -611,7 +620,7 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Name="TS-255 eight (1+4 rev)" ID="16" Type="EFX">
+  <Function Type="EFX" Name="TS-255 eight (1+4 rev)" ID="16">
    <Fixture>
     <ID>1</ID>
     <Head>0</Head>
@@ -665,7 +674,7 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Path="ts-255 mid-out" Name="TS-255 midout#1" ID="17" Type="EFX">
+  <Function Type="EFX" Path="ts-255 mid-out" Name="TS-255 midout#1" ID="17">
    <Fixture>
     <ID>1</ID>
     <Head>0</Head>
@@ -695,7 +704,7 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Path="ts-255 mid-out" Name="TS-255 midout#2" ID="18" Type="EFX">
+  <Function Type="EFX" Path="ts-255 mid-out" Name="TS-255 midout#2" ID="18">
    <Fixture>
     <ID>2</ID>
     <Head>0</Head>
@@ -725,7 +734,7 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Path="ts-255 mid-out" Name="TS-255 midout#3" ID="19" Type="EFX">
+  <Function Type="EFX" Path="ts-255 mid-out" Name="TS-255 midout#3" ID="19">
    <Fixture>
     <ID>3</ID>
     <Head>0</Head>
@@ -755,7 +764,7 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Path="ts-255 mid-out" Name="TS-255 midout#4" ID="20" Type="EFX">
+  <Function Type="EFX" Path="ts-255 mid-out" Name="TS-255 midout#4" ID="20">
    <Fixture>
     <ID>4</ID>
     <Head>0</Head>
@@ -785,45 +794,45 @@
     <Phase>0</Phase>
    </Axis>
   </Function>
-  <Function Path="TS-255/TS-255 color" Name="TS-255 blue" ID="21" Type="Scene">
+  <Function Type="Scene" Path="TS-255/TS-255 color" Name="TS-255 blue" ID="21">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">2,201</FixtureVal>
    <FixtureVal ID="2">2,201</FixtureVal>
    <FixtureVal ID="3">2,201</FixtureVal>
    <FixtureVal ID="4">2,201</FixtureVal>
   </Function>
-  <Function Path="TS-255/TS-255 color" Name="TS-255 yellow" ID="22" Type="Scene">
+  <Function Type="Scene" Path="TS-255/TS-255 color" Name="TS-255 yellow" ID="22">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">2,80</FixtureVal>
    <FixtureVal ID="2">2,80</FixtureVal>
    <FixtureVal ID="3">2,80</FixtureVal>
    <FixtureVal ID="4">2,80</FixtureVal>
   </Function>
-  <Function Name="TS-255 midout" ID="23" Type="Collection">
+  <Function Type="Collection" Name="TS-255 midout" ID="23">
    <Step Number="0">17</Step>
    <Step Number="1">18</Step>
    <Step Number="2">19</Step>
    <Step Number="3">20</Step>
   </Function>
-  <Function Path="LED PAR/colors" Name="LED RED" ID="24" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/colors" Name="LED RED" ID="24">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="8">0,255</FixtureVal>
-   <FixtureVal ID="9">0,255</FixtureVal>
-   <FixtureVal ID="10">0,255</FixtureVal>
-   <FixtureVal ID="11">0,255</FixtureVal>
-   <FixtureVal ID="12">0,255</FixtureVal>
-   <FixtureVal ID="13">0,255</FixtureVal>
+   <FixtureVal ID="8">0,255,1,0,2,0</FixtureVal>
+   <FixtureVal ID="9">0,255,1,0,2,0</FixtureVal>
+   <FixtureVal ID="10">0,255,1,0,2,0</FixtureVal>
+   <FixtureVal ID="11">0,255,1,0,2,0</FixtureVal>
+   <FixtureVal ID="12">0,255,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,255,1,0,2,0</FixtureVal>
   </Function>
-  <Function Path="LED PAR/colors" Name="LED GREEN" ID="25" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/colors" Name="LED GREEN" ID="25">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="8">1,255</FixtureVal>
-   <FixtureVal ID="9">1,255</FixtureVal>
-   <FixtureVal ID="10">1,255</FixtureVal>
-   <FixtureVal ID="11">1,255</FixtureVal>
-   <FixtureVal ID="12">1,255</FixtureVal>
-   <FixtureVal ID="13">1,255</FixtureVal>
+   <FixtureVal ID="8">0,0,1,255,2,0</FixtureVal>
+   <FixtureVal ID="9">0,0,1,255,2,0</FixtureVal>
+   <FixtureVal ID="10">0,0,1,255,2,0</FixtureVal>
+   <FixtureVal ID="11">0,0,1,255,2,0</FixtureVal>
+   <FixtureVal ID="12">0,0,1,255,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,255,2,0</FixtureVal>
   </Function>
-  <Function Path="LED PAR/colors" Name="LED BLUE" ID="26" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/colors" Name="LED BLUE" ID="26">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,0,1,0,2,255</FixtureVal>
    <FixtureVal ID="9">0,0,1,0,2,255</FixtureVal>
@@ -832,43 +841,43 @@
    <FixtureVal ID="12">0,0,1,0,2,255</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,255</FixtureVal>
   </Function>
-  <Function Path="LED PAR/colors" Name="LED YELLOW" ID="27" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/colors" Name="LED YELLOW" ID="27">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="8">0,255,1,255</FixtureVal>
-   <FixtureVal ID="9">0,255,1,255</FixtureVal>
-   <FixtureVal ID="10">0,255,1,255</FixtureVal>
-   <FixtureVal ID="11">0,255,1,255</FixtureVal>
-   <FixtureVal ID="12">0,255,1,255</FixtureVal>
-   <FixtureVal ID="13">0,255,1,255</FixtureVal>
+   <FixtureVal ID="8">0,255,1,255,2,0</FixtureVal>
+   <FixtureVal ID="9">0,255,1,255,2,0</FixtureVal>
+   <FixtureVal ID="10">0,255,1,255,2,0</FixtureVal>
+   <FixtureVal ID="11">0,255,1,255,2,0</FixtureVal>
+   <FixtureVal ID="12">0,255,1,255,2,0</FixtureVal>
+   <FixtureVal ID="13">0,255,1,255,2,0</FixtureVal>
   </Function>
-  <Function Path="LED PAR/colors" Name="LED ORANGE" ID="28" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/colors" Name="LED ORANGE" ID="28">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="8">0,255,1,128</FixtureVal>
-   <FixtureVal ID="9">0,255,1,128</FixtureVal>
-   <FixtureVal ID="10">0,255,1,128</FixtureVal>
-   <FixtureVal ID="11">0,255,1,128</FixtureVal>
-   <FixtureVal ID="12">0,255,1,128</FixtureVal>
-   <FixtureVal ID="13">0,255,1,128</FixtureVal>
+   <FixtureVal ID="8">0,255,1,128,2,0</FixtureVal>
+   <FixtureVal ID="9">0,255,1,128,2,0</FixtureVal>
+   <FixtureVal ID="10">0,255,1,128,2,0</FixtureVal>
+   <FixtureVal ID="11">0,255,1,128,2,0</FixtureVal>
+   <FixtureVal ID="12">0,255,1,128,2,0</FixtureVal>
+   <FixtureVal ID="13">0,255,1,128,2,0</FixtureVal>
   </Function>
-  <Function Path="LED PAR/colors" Name="LED PURPLE" ID="29" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/colors" Name="LED PURPLE" ID="29">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="8">0,255,2,255</FixtureVal>
-   <FixtureVal ID="9">0,255,2,255</FixtureVal>
-   <FixtureVal ID="10">0,255,2,255</FixtureVal>
-   <FixtureVal ID="11">0,255,2,255</FixtureVal>
-   <FixtureVal ID="12">0,255,2,255</FixtureVal>
-   <FixtureVal ID="13">0,255,2,255</FixtureVal>
+   <FixtureVal ID="8">0,255,1,0,2,255</FixtureVal>
+   <FixtureVal ID="9">0,255,1,0,2,255</FixtureVal>
+   <FixtureVal ID="10">0,255,1,0,2,255</FixtureVal>
+   <FixtureVal ID="11">0,255,1,0,2,255</FixtureVal>
+   <FixtureVal ID="12">0,255,1,0,2,255</FixtureVal>
+   <FixtureVal ID="13">0,255,1,0,2,255</FixtureVal>
   </Function>
-  <Function Path="LED PAR/colors" Name="LED TEAL" ID="30" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/colors" Name="LED TEAL" ID="30">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="8">1,255,2,255</FixtureVal>
-   <FixtureVal ID="9">1,255,2,255</FixtureVal>
-   <FixtureVal ID="10">1,255,2,255</FixtureVal>
-   <FixtureVal ID="11">1,255,2,255</FixtureVal>
-   <FixtureVal ID="12">1,255,2,255</FixtureVal>
-   <FixtureVal ID="13">1,255,2,255</FixtureVal>
+   <FixtureVal ID="8">0,0,1,255,2,255</FixtureVal>
+   <FixtureVal ID="9">0,0,1,255,2,255</FixtureVal>
+   <FixtureVal ID="10">0,0,1,255,2,255</FixtureVal>
+   <FixtureVal ID="11">0,0,1,255,2,255</FixtureVal>
+   <FixtureVal ID="12">0,0,1,255,2,255</FixtureVal>
+   <FixtureVal ID="13">0,0,1,255,2,255</FixtureVal>
   </Function>
-  <Function Path="LED PAR/colors" Name="LED PINK" ID="31" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/colors" Name="LED PINK" ID="31">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,255,1,51,2,170</FixtureVal>
    <FixtureVal ID="9">0,255,1,51,2,170</FixtureVal>
@@ -877,7 +886,7 @@
    <FixtureVal ID="12">0,255,1,51,2,170</FixtureVal>
    <FixtureVal ID="13">0,255,1,51,2,170</FixtureVal>
   </Function>
-  <Function Path="LED PAR/colors" Name="LED WARMWHITE" ID="32" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/colors" Name="LED WARMWHITE" ID="32">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,255,1,255,2,211</FixtureVal>
    <FixtureVal ID="9">0,255,1,255,2,211</FixtureVal>
@@ -886,7 +895,7 @@
    <FixtureVal ID="12">0,255,1,255,2,211</FixtureVal>
    <FixtureVal ID="13">0,255,1,255,2,211</FixtureVal>
   </Function>
-  <Function Path="LED PAR/colors" Name="LED WHITE" ID="33" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/colors" Name="LED WHITE" ID="33">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,255,1,255,2,255</FixtureVal>
    <FixtureVal ID="9">0,255,1,255,2,255</FixtureVal>
@@ -895,7 +904,7 @@
    <FixtureVal ID="12">0,255,1,255,2,255</FixtureVal>
    <FixtureVal ID="13">0,255,1,255,2,252</FixtureVal>
   </Function>
-  <Function Path="LED PAR/intesities" Name="LED OFF" ID="34" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/intesities" Name="LED OFF" ID="34">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">3,0</FixtureVal>
    <FixtureVal ID="9">3,0</FixtureVal>
@@ -904,11 +913,11 @@
    <FixtureVal ID="12">3,0</FixtureVal>
    <FixtureVal ID="13">3,0</FixtureVal>
   </Function>
-  <Function Path="TS-255/einzeln" Name="TS-255 1 ON" ID="35" Type="Scene">
+  <Function Type="Scene" Path="TS-255/einzeln" Name="TS-255 1 ON" ID="35">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">4,255</FixtureVal>
   </Function>
-  <Function Path="LED PAR/intesities" Name="LED 33" ID="36" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/intesities" Name="LED 33" ID="36">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">3,85</FixtureVal>
    <FixtureVal ID="9">3,85</FixtureVal>
@@ -917,7 +926,7 @@
    <FixtureVal ID="12">3,85</FixtureVal>
    <FixtureVal ID="13">3,85</FixtureVal>
   </Function>
-  <Function Path="LED PAR/intesities" Name="LED 66" ID="37" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/intesities" Name="LED 66" ID="37">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">3,170</FixtureVal>
    <FixtureVal ID="9">3,170</FixtureVal>
@@ -926,7 +935,7 @@
    <FixtureVal ID="12">3,170</FixtureVal>
    <FixtureVal ID="13">3,170</FixtureVal>
   </Function>
-  <Function Path="LED PAR/intesities" Name="LED 100" ID="38" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/intesities" Name="LED 100" ID="38">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">3,255</FixtureVal>
    <FixtureVal ID="9">3,255</FixtureVal>
@@ -935,220 +944,220 @@
    <FixtureVal ID="12">3,255</FixtureVal>
    <FixtureVal ID="13">3,255</FixtureVal>
   </Function>
-  <Function Path="TS-255/TS-255 color" Name="TS-255 orange" ID="39" Type="Scene">
+  <Function Type="Scene" Path="TS-255/TS-255 color" Name="TS-255 orange" ID="39">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">2,170</FixtureVal>
    <FixtureVal ID="2">2,170</FixtureVal>
    <FixtureVal ID="3">2,170</FixtureVal>
    <FixtureVal ID="4">2,170</FixtureVal>
   </Function>
-  <Function Path="TS-255/TS-255 color" Name="TS-255 green" ID="40" Type="Scene">
+  <Function Type="Scene" Path="TS-255/TS-255 color" Name="TS-255 green" ID="40">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">2,142</FixtureVal>
    <FixtureVal ID="2">2,142</FixtureVal>
    <FixtureVal ID="3">2,142</FixtureVal>
    <FixtureVal ID="4">2,142</FixtureVal>
   </Function>
-  <Function Path="TS-255/TS-255 color" Name="TS-255 pink" ID="41" Type="Scene">
+  <Function Type="Scene" Path="TS-255/TS-255 color" Name="TS-255 pink" ID="41">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">2,240</FixtureVal>
    <FixtureVal ID="2">2,240</FixtureVal>
    <FixtureVal ID="3">2,240</FixtureVal>
    <FixtureVal ID="4">2,240</FixtureVal>
   </Function>
-  <Function Path="TS-255/TS-255 color" Name="TS-255 voilet" ID="42" Type="Scene">
+  <Function Type="Scene" Path="TS-255/TS-255 color" Name="TS-255 voilet" ID="42">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">2,106</FixtureVal>
    <FixtureVal ID="2">2,106</FixtureVal>
    <FixtureVal ID="3">2,106</FixtureVal>
    <FixtureVal ID="4">2,106</FixtureVal>
   </Function>
-  <Function Path="TS-255/TS-255 color" Name="TS-255 red" ID="43" Type="Scene">
+  <Function Type="Scene" Path="TS-255/TS-255 color" Name="TS-255 red" ID="43">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">2,42</FixtureVal>
    <FixtureVal ID="2">2,42</FixtureVal>
    <FixtureVal ID="3">2,42</FixtureVal>
    <FixtureVal ID="4">2,42</FixtureVal>
   </Function>
-  <Function Path="TS-255/shutter" Name="TS-255 FULL ON" ID="44" Type="Scene">
+  <Function Type="Scene" Path="TS-255/shutter" Name="TS-255 FULL ON" ID="44">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">4,255</FixtureVal>
    <FixtureVal ID="2">4,255</FixtureVal>
    <FixtureVal ID="3">4,255</FixtureVal>
    <FixtureVal ID="4">4,255</FixtureVal>
   </Function>
-  <Function Path="TS-255/shutter" Name="TS-255 FULL STROB" ID="45" Type="Scene">
+  <Function Type="Scene" Path="TS-255/shutter" Name="TS-255 FULL STROB" ID="45">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">4,240</FixtureVal>
    <FixtureVal ID="2">4,240</FixtureVal>
    <FixtureVal ID="3">4,240</FixtureVal>
    <FixtureVal ID="4">4,240</FixtureVal>
   </Function>
-  <Function Path="TS-255/shutter" Name="TS-255 HALF STROB" ID="46" Type="Scene">
+  <Function Type="Scene" Path="TS-255/shutter" Name="TS-255 HALF STROB" ID="46">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">4,100</FixtureVal>
    <FixtureVal ID="2">4,100</FixtureVal>
    <FixtureVal ID="3">4,100</FixtureVal>
    <FixtureVal ID="4">4,100</FixtureVal>
   </Function>
-  <Function Path="TS-255/scenes" Name="TS-255 gobogo" ID="47" Type="Scene">
+  <Function Type="Scene" Path="TS-255/scenes" Name="TS-255 gobogo" ID="47">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,178,1,71,3,89,4,255,5,255</FixtureVal>
    <FixtureVal ID="2">0,155,1,64,3,89,4,255,5,255</FixtureVal>
    <FixtureVal ID="3">0,103,1,64,3,89,4,255,5,255</FixtureVal>
    <FixtureVal ID="4">0,84,1,69,3,89,4,255,5,255</FixtureVal>
   </Function>
-  <Function Path="TS-255/scenes" Name="TS-255 OFF" ID="48" Type="Scene">
+  <Function Type="Scene" Path="TS-255/scenes" Name="TS-255 OFF" ID="48">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,0,1,0,3,0,4,0,5,0</FixtureVal>
    <FixtureVal ID="2">0,0,1,0,3,0,4,0,5,0</FixtureVal>
    <FixtureVal ID="3">0,0,1,0,3,0,4,0,5,0</FixtureVal>
    <FixtureVal ID="4">0,0,1,0,3,0,4,0,5,0</FixtureVal>
   </Function>
-  <Function Path="TS-255/scenes" Name="TS-255 SET" ID="49" Type="Scene">
+  <Function Type="Scene" Path="TS-255/scenes" Name="TS-255 SET" ID="49">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,140,1,71,3,0,4,255,5,0</FixtureVal>
    <FixtureVal ID="2">0,145,1,64,3,0,4,255,5,0</FixtureVal>
    <FixtureVal ID="3">0,120,1,64,3,0,4,255,5,0</FixtureVal>
    <FixtureVal ID="4">0,120,1,69,3,0,4,255,5,0</FixtureVal>
   </Function>
-  <Function Path="TS-255/scenes" Name="TS-255 drums" ID="50" Type="Scene">
+  <Function Type="Scene" Path="TS-255/scenes" Name="TS-255 drums" ID="50">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,193,1,150,3,0,4,255,5,0</FixtureVal>
    <FixtureVal ID="2">0,162,1,144,3,0,4,255,5,0</FixtureVal>
    <FixtureVal ID="3">0,80,1,177,3,0,4,255,5,0</FixtureVal>
    <FixtureVal ID="4">0,61,1,149,3,0,4,255,5,0</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/SCENE" Name="mighty off" ID="51" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/SCENE" Name="mighty off" ID="51">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">0,0,1,0,2,255,3,0,4,0,5,0</FixtureVal>
    <FixtureVal ID="14">0,0,1,0,2,255,3,0,4,0,5,0</FixtureVal>
    <FixtureVal ID="15">0,0,1,0,2,255,3,0,4,0,5,0</FixtureVal>
    <FixtureVal ID="16">0,0,1,0,2,255,3,0,4,0,5,0</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/SHUTTER" Name="mighty FULL ON" ID="52" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/SHUTTER" Name="mighty FULL ON" ID="52">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">5,255</FixtureVal>
    <FixtureVal ID="14">5,255</FixtureVal>
    <FixtureVal ID="15">5,255</FixtureVal>
    <FixtureVal ID="16">5,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/SHUTTER" Name="mighty FULL STOBE" ID="53" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/SHUTTER" Name="mighty FULL STOBE" ID="53">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">5,30</FixtureVal>
    <FixtureVal ID="14">5,30</FixtureVal>
    <FixtureVal ID="15">5,30</FixtureVal>
    <FixtureVal ID="16">5,30</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/SHUTTER" Name="mighty HALF STROBE" ID="54" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/SHUTTER" Name="mighty HALF STROBE" ID="54">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">5,60</FixtureVal>
    <FixtureVal ID="14">5,60</FixtureVal>
    <FixtureVal ID="15">5,60</FixtureVal>
    <FixtureVal ID="16">5,60</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/SCENE" Name="mighty stage" ID="55" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/SCENE" Name="mighty stage" ID="55">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">0,183,1,31,2,255,4,0,5,255</FixtureVal>
    <FixtureVal ID="14">0,161,1,21,2,255,4,0,5,255</FixtureVal>
    <FixtureVal ID="15">0,108,1,21,2,255,4,0,5,255</FixtureVal>
    <FixtureVal ID="16">0,80,1,33,2,255,4,0,5,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/mighty color" Name="mighty red" ID="56" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/mighty color" Name="mighty red" ID="56">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">3,73</FixtureVal>
    <FixtureVal ID="14">3,73</FixtureVal>
    <FixtureVal ID="15">3,73</FixtureVal>
    <FixtureVal ID="16">3,73</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/mighty color" Name="mighty green" ID="57" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/mighty color" Name="mighty green" ID="57">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">3,49</FixtureVal>
    <FixtureVal ID="14">3,49</FixtureVal>
    <FixtureVal ID="15">3,49</FixtureVal>
    <FixtureVal ID="16">3,49</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/mighty color" Name="mighty blue" ID="58" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/mighty color" Name="mighty blue" ID="58">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">3,25</FixtureVal>
    <FixtureVal ID="14">3,25</FixtureVal>
    <FixtureVal ID="15">3,25</FixtureVal>
    <FixtureVal ID="16">3,25</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/mighty color" Name="mighty yellow" ID="59" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/mighty color" Name="mighty yellow" ID="59">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">3,137</FixtureVal>
    <FixtureVal ID="14">3,137</FixtureVal>
    <FixtureVal ID="15">3,137</FixtureVal>
    <FixtureVal ID="16">3,137</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/mighty color" Name="mighty voilet" ID="60" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/mighty color" Name="mighty voilet" ID="60">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">3,145</FixtureVal>
    <FixtureVal ID="14">3,145</FixtureVal>
    <FixtureVal ID="15">3,145</FixtureVal>
    <FixtureVal ID="16">3,145</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/mighty color" Name="mighty orange" ID="61" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/mighty color" Name="mighty orange" ID="61">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">3,113</FixtureVal>
    <FixtureVal ID="14">3,113</FixtureVal>
    <FixtureVal ID="15">3,113</FixtureVal>
    <FixtureVal ID="16">3,113</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/mighty color" Name="mighty pink" ID="62" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/mighty color" Name="mighty pink" ID="62">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">3,129</FixtureVal>
    <FixtureVal ID="14">3,129</FixtureVal>
    <FixtureVal ID="15">3,129</FixtureVal>
    <FixtureVal ID="16">3,129</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/mighty color" Name="mighty white" ID="63" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/mighty color" Name="mighty white" ID="63">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">3,0</FixtureVal>
    <FixtureVal ID="14">3,0</FixtureVal>
    <FixtureVal ID="15">3,0</FixtureVal>
    <FixtureVal ID="16">3,0</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/SCENE" Name="mighty left" ID="64" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/SCENE" Name="mighty left" ID="64">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">0,129,1,31,2,255,4,0,5,255</FixtureVal>
    <FixtureVal ID="14">0,124,1,21,2,255,4,0,5,255</FixtureVal>
    <FixtureVal ID="15">0,99,1,21,2,255,4,0,5,255</FixtureVal>
    <FixtureVal ID="16">0,67,1,33,2,255,4,0,5,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/SCENE" Name="mighty right" ID="65" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/SCENE" Name="mighty right" ID="65">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">0,191,1,31,2,255,3,0,4,0,5,255</FixtureVal>
    <FixtureVal ID="14">0,163,1,21,2,255,3,0,4,0,5,255</FixtureVal>
    <FixtureVal ID="15">0,132,1,21,2,255,3,0,4,0,5,255</FixtureVal>
    <FixtureVal ID="16">0,124,1,25,2,255,3,0,4,0,5,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/SCENE" Name="mighty center" ID="66" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/SCENE" Name="mighty center" ID="66">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">0,153,1,31,2,255,3,0,4,0,5,255</FixtureVal>
    <FixtureVal ID="14">0,141,1,33,2,255,3,0,4,0,5,255</FixtureVal>
    <FixtureVal ID="15">0,121,1,21,2,255,3,0,4,0,5,255</FixtureVal>
    <FixtureVal ID="16">0,97,1,25,2,255,3,0,4,0,5,255</FixtureVal>
   </Function>
-  <Function Path="TS-255/einzeln" Name="TS-255 2 ON" ID="67" Type="Scene">
+  <Function Type="Scene" Path="TS-255/einzeln" Name="TS-255 2 ON" ID="67">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="2">4,255</FixtureVal>
   </Function>
-  <Function Path="TS-255/einzeln" Name="TS-255 3 ON" ID="68" Type="Scene">
+  <Function Type="Scene" Path="TS-255/einzeln" Name="TS-255 3 ON" ID="68">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="3">4,255</FixtureVal>
   </Function>
-  <Function Path="TS-255/einzeln" Name="TS-255 4 ON" ID="69" Type="Scene">
+  <Function Type="Scene" Path="TS-255/einzeln" Name="TS-255 4 ON" ID="69">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="4">4,255</FixtureVal>
   </Function>
-  <Function Name="SCAN LED INIT" ID="70" Type="Scene">
+  <Function Type="Scene" Name="SCAN LED INIT" ID="70">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="1">4,0</FixtureVal>
-   <FixtureVal ID="2">4,0</FixtureVal>
-   <FixtureVal ID="3">4,0</FixtureVal>
-   <FixtureVal ID="4">4,0</FixtureVal>
+   <FixtureVal ID="1">3,0,4,0,5,0</FixtureVal>
+   <FixtureVal ID="2">3,0,4,0,5,0</FixtureVal>
+   <FixtureVal ID="3">3,0,4,0,5,0</FixtureVal>
+   <FixtureVal ID="4">3,0,4,0,5,0</FixtureVal>
    <FixtureVal ID="5">5,0</FixtureVal>
    <FixtureVal ID="8">3,0</FixtureVal>
    <FixtureVal ID="9">3,0</FixtureVal>
@@ -1162,373 +1171,448 @@
    <FixtureVal ID="17">0,0,2,0,3,0</FixtureVal>
    <FixtureVal ID="18">0,0,2,0,3,0</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/einzeln" Name="Mighty 1 on" ID="71" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/einzeln" Name="Mighty 1 on" ID="71">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">5,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/einzeln" Name="Mighty 2 on" ID="72" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/einzeln" Name="Mighty 2 on" ID="72">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="14">5,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/einzeln" Name="Mighty 3 on" ID="73" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/einzeln" Name="Mighty 3 on" ID="73">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="15">5,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/einzeln" Name="Mighty 4 on" ID="74" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/einzeln" Name="Mighty 4 on" ID="74">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="16">5,255</FixtureVal>
   </Function>
-  <Function Path="LED PAR/einzeln" Name="LED 1 ON" ID="75" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/einzeln" Name="LED 1 ON" ID="75">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">3,20</FixtureVal>
   </Function>
-  <Function Path="LED PAR/einzeln" Name="LED 2 ON" ID="76" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/einzeln" Name="LED 2 ON" ID="76">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="9">3,20</FixtureVal>
   </Function>
-  <Function Path="LED PAR/einzeln" Name="LED 3 ON" ID="77" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/einzeln" Name="LED 3 ON" ID="77">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="10">3,20</FixtureVal>
   </Function>
-  <Function Path="LED PAR/einzeln" Name="LED 4 ON" ID="78" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/einzeln" Name="LED 4 ON" ID="78">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="11">3,20</FixtureVal>
   </Function>
-  <Function Path="LED PAR/einzeln" Name="LED 5 ON" ID="79" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/einzeln" Name="LED 5 ON" ID="79">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="12">3,20</FixtureVal>
   </Function>
-  <Function Path="LED PAR/einzeln" Name="LED 6 ON" ID="80" Type="Scene">
+  <Function Type="Scene" Path="LED PAR/einzeln" Name="LED 6 ON" ID="80">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="13">3,20</FixtureVal>
   </Function>
-  <Function Path="MOONFLOWERS" Name="MOON ROT" ID="81" Type="Scene">
+  <Function Type="Scene" Path="MOONFLOWERS" Name="MOON ROT" ID="81">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">0,17</FixtureVal>
    <FixtureVal ID="18">0,17</FixtureVal>
   </Function>
-  <Function Path="MOONFLOWERS" Name="MOON BLAU" ID="82" Type="Scene">
+  <Function Type="Scene" Path="MOONFLOWERS" Name="MOON BLAU" ID="82">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">0,30</FixtureVal>
    <FixtureVal ID="18">0,30</FixtureVal>
   </Function>
-  <Function Path="MOONFLOWERS" Name="MOON GRUEN" ID="83" Type="Scene">
+  <Function Type="Scene" Path="MOONFLOWERS" Name="MOON GRUEN" ID="83">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">0,23</FixtureVal>
    <FixtureVal ID="18">0,23</FixtureVal>
   </Function>
-  <Function Path="MOONFLOWERS" Name="MOON  AUS" ID="84" Type="Scene">
+  <Function Type="Scene" Path="MOONFLOWERS" Name="MOON  AUS" ID="84">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">0,0</FixtureVal>
    <FixtureVal ID="18">0,0</FixtureVal>
   </Function>
-  <Function Path="MOONFLOWERS" Name="MOON ROTA FAST" ID="85" Type="Scene">
+  <Function Type="Scene" Path="MOONFLOWERS" Name="MOON ROTA FAST" ID="85">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">3,127</FixtureVal>
    <FixtureVal ID="18">3,127</FixtureVal>
   </Function>
-  <Function Path="MOONFLOWERS" Name="MOON ROTA SLOW" ID="86" Type="Scene">
+  <Function Type="Scene" Path="MOONFLOWERS" Name="MOON ROTA SLOW" ID="86">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">3,91</FixtureVal>
    <FixtureVal ID="18">3,91</FixtureVal>
   </Function>
-  <Function Path="MOONFLOWERS" Name="MOON ROTA VSLOW" ID="87" Type="Scene">
+  <Function Type="Scene" Path="MOONFLOWERS" Name="MOON ROTA VSLOW" ID="87">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">3,45</FixtureVal>
    <FixtureVal ID="18">3,45</FixtureVal>
   </Function>
-  <Function Path="MOONFLOWERS" Name="MOON AUTO FAST" ID="88" Type="Scene">
+  <Function Type="Scene" Path="MOONFLOWERS" Name="MOON AUTO FAST" ID="88">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">0,200</FixtureVal>
    <FixtureVal ID="18">0,200</FixtureVal>
   </Function>
-  <Function Path="MOONFLOWERS" Name="MOON AUTO SLOW" ID="89" Type="Scene">
+  <Function Type="Scene" Path="MOONFLOWERS" Name="MOON AUTO SLOW" ID="89">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">0,229</FixtureVal>
    <FixtureVal ID="18">0,229</FixtureVal>
   </Function>
-  <Function Name="ts-255 switch" ID="90" Type="Chaser">
-   <Speed FadeIn="0" FadeOut="0" Duration="1110"/>
+  <Function Type="Chaser" Name="ts-255 switch" ID="90">
+   <Speed FadeIn="0" FadeOut="0" Duration="1940"/>
    <Direction>Forward</Direction>
    <RunOrder>Random</RunOrder>
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
-   <Step FadeIn="0" Number="0" Hold="0" FadeOut="0">35</Step>
-   <Step FadeIn="0" Number="1" Hold="0" FadeOut="0">69</Step>
-   <Step FadeIn="0" Number="2" Hold="0" FadeOut="0">68</Step>
-   <Step FadeIn="0" Number="3" Hold="0" FadeOut="0">67</Step>
+   <Step FadeIn="0" Hold="0" Number="0" FadeOut="0">35</Step>
+   <Step FadeIn="0" Hold="0" Number="1" FadeOut="0">69</Step>
+   <Step FadeIn="0" Hold="0" Number="2" FadeOut="0">68</Step>
+   <Step FadeIn="0" Hold="0" Number="3" FadeOut="0">67</Step>
   </Function>
-  <Function Path="MOONFLOWERS" Name="MOONFLOWER STROBO FAST" ID="91" Type="Scene">
+  <Function Type="Scene" Path="MOONFLOWERS" Name="MOONFLOWER STROBO FAST" ID="91">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">2,220</FixtureVal>
    <FixtureVal ID="18">2,220</FixtureVal>
   </Function>
-  <Function Path="MOONFLOWERS" Name="MOONFLOWER STROBO MED" ID="92" Type="Scene">
+  <Function Type="Scene" Path="MOONFLOWERS" Name="MOONFLOWER STROBO MED" ID="92">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">2,150</FixtureVal>
    <FixtureVal ID="18">2,150</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_1_pos_1" ID="94" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="Buehne_links" ID="93">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">0,128,1,24,2,255,3,0,5,9</FixtureVal>
+   <FixtureVal ID="14">0,116,1,23,2,255,5,11</FixtureVal>
+   <FixtureVal ID="15">0,92,1,47,2,255,5,9</FixtureVal>
+   <FixtureVal ID="16">0,88,1,33,5,12</FixtureVal>
+  </Function>
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_1_pos_1" ID="94">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,171,1,59</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_1_pos_2" ID="95" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_1_pos_2" ID="95">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,186,1,121</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_1_pos_3" ID="96" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_1_pos_3" ID="96">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,161,1,36</FixtureVal>
   </Function>
-  <Function Name="" ID="97" Type="Scene">
+  <Function Type="Scene" Name="BLINDER_KONZERT" ID="97">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="-1"/>
+   <FixtureVal ID="1">0,125,1,30,2,0,3,0,4,255,5,0</FixtureVal>
+   <FixtureVal ID="2">0,125,1,30,2,0,3,0,4,255,5,0</FixtureVal>
+   <FixtureVal ID="3">0,125,1,30,2,0,3,0,4,255,5,0</FixtureVal>
+   <FixtureVal ID="4">0,125,1,30,2,0,3,0,4,255,5,0</FixtureVal>
+   <FixtureVal ID="6">3,186</FixtureVal>
+   <FixtureVal ID="10">0,255,1,180,2,24,3,255</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_1_pos_4" ID="98" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_1_pos_4" ID="98">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,208,1,137</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_2_pos_1" ID="99" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_2_pos_1" ID="99">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="2">0,115,1,54</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_2_pos_2" ID="100" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_2_pos_2" ID="100">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="2">0,151,1,84</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_2_pos_3" ID="101" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_2_pos_3" ID="101">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="2">0,192,1,89</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_2_pos_4" ID="102" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_2_pos_4" ID="102">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="2">0,80,1,116</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_3_pos_1" ID="103" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_3_pos_1" ID="103">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="3">0,94,1,53</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_3_pos_2" ID="104" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_3_pos_2" ID="104">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="3">0,142,1,53</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_3_pos_3" ID="105" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_3_pos_3" ID="105">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="3">0,54,1,54</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_3_pos_4" ID="106" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_3_pos_4" ID="106">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="3">0,154,1,100</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_4_pos_1" ID="107" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_4_pos_1" ID="107">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="4">0,125,1,48</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_4_pos_2" ID="108" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_4_pos_2" ID="108">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="4">0,77,1,62</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_4_pos_3" ID="109" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_4_pos_3" ID="109">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="4">0,35,1,121</FixtureVal>
   </Function>
-  <Function Path="TS-255/positions" Name="scan_4_pos_4" ID="110" Type="Scene">
+  <Function Type="Scene" Path="TS-255/positions" Name="scan_4_pos_4" ID="110">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="4">0,133,1,66</FixtureVal>
   </Function>
-  <Function Name="TS-255 RAND POS" ID="111" Type="Chaser">
-   <Speed FadeIn="0" FadeOut="0" Duration="1110"/>
+  <Function Type="Chaser" Name="TS-255 RAND POS" ID="111">
+   <Speed FadeIn="0" FadeOut="0" Duration="1940"/>
    <Direction>Forward</Direction>
    <RunOrder>Random</RunOrder>
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
-   <Step FadeIn="0" Number="0" Hold="0" FadeOut="0">94</Step>
-   <Step FadeIn="0" Number="1" Hold="0" FadeOut="0">95</Step>
-   <Step FadeIn="0" Number="2" Hold="0" FadeOut="0">96</Step>
-   <Step FadeIn="0" Number="3" Hold="0" FadeOut="0">98</Step>
-   <Step FadeIn="0" Number="4" Hold="0" FadeOut="0">99</Step>
-   <Step FadeIn="0" Number="5" Hold="0" FadeOut="0">100</Step>
-   <Step FadeIn="0" Number="6" Hold="0" FadeOut="0">101</Step>
-   <Step FadeIn="0" Number="7" Hold="0" FadeOut="0">102</Step>
-   <Step FadeIn="0" Number="8" Hold="0" FadeOut="0">103</Step>
-   <Step FadeIn="0" Number="9" Hold="0" FadeOut="0">104</Step>
-   <Step FadeIn="0" Number="10" Hold="0" FadeOut="0">105</Step>
-   <Step FadeIn="0" Number="11" Hold="0" FadeOut="0">106</Step>
-   <Step FadeIn="0" Number="12" Hold="0" FadeOut="0">107</Step>
-   <Step FadeIn="0" Number="13" Hold="0" FadeOut="0">108</Step>
-   <Step FadeIn="0" Number="14" Hold="0" FadeOut="0">109</Step>
-   <Step FadeIn="0" Number="15" Hold="0" FadeOut="0">110</Step>
+   <Step FadeIn="0" Hold="0" Number="0" FadeOut="0">94</Step>
+   <Step FadeIn="0" Hold="0" Number="1" FadeOut="0">95</Step>
+   <Step FadeIn="0" Hold="0" Number="2" FadeOut="0">96</Step>
+   <Step FadeIn="0" Hold="0" Number="3" FadeOut="0">98</Step>
+   <Step FadeIn="0" Hold="0" Number="4" FadeOut="0">99</Step>
+   <Step FadeIn="0" Hold="0" Number="5" FadeOut="0">100</Step>
+   <Step FadeIn="0" Hold="0" Number="6" FadeOut="0">101</Step>
+   <Step FadeIn="0" Hold="0" Number="7" FadeOut="0">102</Step>
+   <Step FadeIn="0" Hold="0" Number="8" FadeOut="0">103</Step>
+   <Step FadeIn="0" Hold="0" Number="9" FadeOut="0">104</Step>
+   <Step FadeIn="0" Hold="0" Number="10" FadeOut="0">105</Step>
+   <Step FadeIn="0" Hold="0" Number="11" FadeOut="0">106</Step>
+   <Step FadeIn="0" Hold="0" Number="12" FadeOut="0">107</Step>
+   <Step FadeIn="0" Hold="0" Number="13" FadeOut="0">108</Step>
+   <Step FadeIn="0" Hold="0" Number="14" FadeOut="0">109</Step>
+   <Step FadeIn="0" Hold="0" Number="15" FadeOut="0">110</Step>
   </Function>
-  <Function Name="LED pars random" ID="112" Type="Chaser">
-   <Speed FadeIn="0" FadeOut="0" Duration="2220"/>
+  <Function Type="Chaser" Name="LED pars random" ID="112">
+   <Speed FadeIn="0" FadeOut="0" Duration="3880"/>
    <Direction>Forward</Direction>
    <RunOrder>Random</RunOrder>
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
-   <Step FadeIn="0" Number="0" Hold="0" FadeOut="0">75</Step>
-   <Step FadeIn="0" Number="1" Hold="0" FadeOut="0">76</Step>
-   <Step FadeIn="0" Number="2" Hold="0" FadeOut="0">77</Step>
-   <Step FadeIn="0" Number="3" Hold="0" FadeOut="0">78</Step>
-   <Step FadeIn="0" Number="4" Hold="0" FadeOut="0">79</Step>
-   <Step FadeIn="0" Number="5" Hold="0" FadeOut="0">80</Step>
+   <Step FadeIn="0" Hold="0" Number="0" FadeOut="0">75</Step>
+   <Step FadeIn="0" Hold="0" Number="1" FadeOut="0">76</Step>
+   <Step FadeIn="0" Hold="0" Number="2" FadeOut="0">77</Step>
+   <Step FadeIn="0" Hold="0" Number="3" FadeOut="0">78</Step>
+   <Step FadeIn="0" Hold="0" Number="4" FadeOut="0">79</Step>
+   <Step FadeIn="0" Hold="0" Number="5" FadeOut="0">80</Step>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_1_pos_1" ID="113" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_1_pos_1" ID="113">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">0,137,1,63,2,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_1_pos_2" ID="114" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_1_pos_2" ID="114">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">0,62,1,157,2,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_1_pos_3" ID="115" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_1_pos_3" ID="115">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">0,155,1,139,2,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_1_pos_4" ID="116" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_1_pos_4" ID="116">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">0,211,1,30,2,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_2_pos_1" ID="117" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_2_pos_1" ID="117">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="14">0,145,1,59,2,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_2_pos_2" ID="118" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_2_pos_2" ID="118">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="14">0,66,1,166,2,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_2_pos_3" ID="119" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_2_pos_3" ID="119">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="14">0,208,1,32,2,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_2_pos_4" ID="120" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_2_pos_4" ID="120">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="14">0,139,1,193,2,255</FixtureVal>
   </Function>
-  <Function Name="Neue Szene 121" ID="121" Type="Scene">
+  <Function Type="Scene" Name="Neue Szene 121" ID="121">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="-1"/>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_3_pos_1" ID="122" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_3_pos_1" ID="122">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="15">0,189,1,129</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_3_pos_2" ID="123" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_3_pos_2" ID="123">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="15">0,84,1,174</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_3_pos_3" ID="124" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_3_pos_3" ID="124">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="15">0,127,1,208</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_3_pos_4" ID="125" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_3_pos_4" ID="125">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="15">0,56,1,228</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_4_pos_1" ID="126" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_4_pos_1" ID="126">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="16">0,124,1,183,2,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_4_pos_2" ID="127" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_4_pos_2" ID="127">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="16">0,189,1,38,2,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_4_pos_3" ID="128" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_4_pos_3" ID="128">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="16">0,106,1,220,2,255</FixtureVal>
   </Function>
-  <Function Path="MIGHTY/positions" Name="mighty_4_pos_4" ID="129" Type="Scene">
+  <Function Type="Scene" Path="MIGHTY/positions" Name="mighty_4_pos_4" ID="129">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="16">0,217,1,38,2,255</FixtureVal>
   </Function>
-  <Function Name="Mighty Random Position" ID="130" Type="Chaser">
-   <Speed FadeIn="0" FadeOut="0" Duration="1110"/>
+  <Function Type="Chaser" Name="Mighty Random Position" ID="130">
+   <Speed FadeIn="0" FadeOut="0" Duration="1940"/>
    <Direction>Forward</Direction>
    <RunOrder>Random</RunOrder>
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
-   <Step FadeIn="0" Number="0" Hold="0" FadeOut="0">113</Step>
-   <Step FadeIn="0" Number="1" Hold="0" FadeOut="0">114</Step>
-   <Step FadeIn="0" Number="2" Hold="0" FadeOut="0">115</Step>
-   <Step FadeIn="0" Number="3" Hold="0" FadeOut="0">116</Step>
-   <Step FadeIn="0" Number="4" Hold="0" FadeOut="0">117</Step>
-   <Step FadeIn="0" Number="5" Hold="0" FadeOut="0">118</Step>
-   <Step FadeIn="0" Number="6" Hold="0" FadeOut="0">119</Step>
-   <Step FadeIn="0" Number="7" Hold="0" FadeOut="0">120</Step>
-   <Step FadeIn="0" Number="8" Hold="0" FadeOut="0">122</Step>
-   <Step FadeIn="0" Number="9" Hold="0" FadeOut="0">123</Step>
-   <Step FadeIn="0" Number="10" Hold="0" FadeOut="0">124</Step>
-   <Step FadeIn="0" Number="11" Hold="0" FadeOut="0">125</Step>
-   <Step FadeIn="0" Number="12" Hold="0" FadeOut="0">126</Step>
-   <Step FadeIn="0" Number="13" Hold="0" FadeOut="0">127</Step>
-   <Step FadeIn="0" Number="14" Hold="0" FadeOut="0">128</Step>
-   <Step FadeIn="0" Number="15" Hold="0" FadeOut="0">129</Step>
+   <Step FadeIn="0" Hold="0" Number="0" FadeOut="0">113</Step>
+   <Step FadeIn="0" Hold="0" Number="1" FadeOut="0">114</Step>
+   <Step FadeIn="0" Hold="0" Number="2" FadeOut="0">115</Step>
+   <Step FadeIn="0" Hold="0" Number="3" FadeOut="0">116</Step>
+   <Step FadeIn="0" Hold="0" Number="4" FadeOut="0">117</Step>
+   <Step FadeIn="0" Hold="0" Number="5" FadeOut="0">118</Step>
+   <Step FadeIn="0" Hold="0" Number="6" FadeOut="0">119</Step>
+   <Step FadeIn="0" Hold="0" Number="7" FadeOut="0">120</Step>
+   <Step FadeIn="0" Hold="0" Number="8" FadeOut="0">122</Step>
+   <Step FadeIn="0" Hold="0" Number="9" FadeOut="0">123</Step>
+   <Step FadeIn="0" Hold="0" Number="10" FadeOut="0">124</Step>
+   <Step FadeIn="0" Hold="0" Number="11" FadeOut="0">125</Step>
+   <Step FadeIn="0" Hold="0" Number="12" FadeOut="0">126</Step>
+   <Step FadeIn="0" Hold="0" Number="13" FadeOut="0">127</Step>
+   <Step FadeIn="0" Hold="0" Number="14" FadeOut="0">128</Step>
+   <Step FadeIn="0" Hold="0" Number="15" FadeOut="0">129</Step>
   </Function>
-  <Function Name="Mighty odd" ID="131" Type="Collection">
+  <Function Type="Collection" Name="Mighty odd" ID="131">
    <Step Number="0">71</Step>
    <Step Number="1">73</Step>
   </Function>
-  <Function Name="Mighty even" ID="132" Type="Collection">
+  <Function Type="Collection" Name="Mighty even" ID="132">
    <Step Number="0">72</Step>
    <Step Number="1">74</Step>
   </Function>
-  <Function Name="mighty odd even" ID="133" Type="Chaser">
-   <Speed FadeIn="0" FadeOut="0" Duration="1110"/>
+  <Function Type="Chaser" Name="mighty odd even" ID="133">
+   <Speed FadeIn="0" FadeOut="0" Duration="1940"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
-   <Step FadeIn="0" Number="0" Hold="0" FadeOut="0">132</Step>
-   <Step FadeIn="0" Number="1" Hold="0" FadeOut="0">131</Step>
+   <Step FadeIn="0" Hold="0" Number="0" FadeOut="0">132</Step>
+   <Step FadeIn="0" Hold="0" Number="1" FadeOut="0">131</Step>
   </Function>
-  <Function Name="ts-255 odd" ID="134" Type="Collection">
+  <Function Type="Collection" Name="ts-255 odd" ID="134">
    <Step Number="0">35</Step>
    <Step Number="1">68</Step>
   </Function>
-  <Function Name="TS-255 even" ID="135" Type="Collection">
+  <Function Type="Collection" Name="TS-255 even" ID="135">
    <Step Number="0">67</Step>
    <Step Number="1">69</Step>
   </Function>
-  <Function Name="TS-255 odd even" ID="136" Type="Chaser">
-   <Speed FadeIn="0" FadeOut="0" Duration="1110"/>
+  <Function Type="Chaser" Name="TS-255 odd even" ID="136">
+   <Speed FadeIn="0" FadeOut="0" Duration="1940"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
-   <Step FadeIn="0" Number="0" Hold="0" FadeOut="0">135</Step>
-   <Step FadeIn="0" Number="1" Hold="0" FadeOut="0">134</Step>
+   <Step FadeIn="0" Hold="0" Number="0" FadeOut="0">135</Step>
+   <Step FadeIn="0" Hold="0" Number="1" FadeOut="0">134</Step>
   </Function>
-  <Function Name="LED RAND COLOR" ID="137" Type="Chaser">
-   <Speed FadeIn="0" FadeOut="0" Duration="4440"/>
+  <Function Type="Chaser" Name="LED RAND COLOR" ID="137">
+   <Speed FadeIn="0" FadeOut="0" Duration="7760"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
-   <Step FadeIn="0" Number="0" Hold="0" FadeOut="0">26</Step>
-   <Step FadeIn="0" Number="1" Hold="0" FadeOut="0">25</Step>
-   <Step FadeIn="0" Number="2" Hold="0" FadeOut="0">28</Step>
-   <Step FadeIn="0" Number="3" Hold="0" FadeOut="0">31</Step>
-   <Step FadeIn="0" Number="4" Hold="0" FadeOut="0">29</Step>
-   <Step FadeIn="0" Number="5" Hold="0" FadeOut="0">24</Step>
-   <Step FadeIn="0" Number="6" Hold="0" FadeOut="0">30</Step>
-   <Step FadeIn="0" Number="7" Hold="0" FadeOut="0">27</Step>
+   <Step FadeIn="0" Hold="0" Number="0" FadeOut="0">26</Step>
+   <Step FadeIn="0" Hold="0" Number="1" FadeOut="0">25</Step>
+   <Step FadeIn="0" Hold="0" Number="2" FadeOut="0">28</Step>
+   <Step FadeIn="0" Hold="0" Number="3" FadeOut="0">31</Step>
+   <Step FadeIn="0" Hold="0" Number="4" FadeOut="0">29</Step>
+   <Step FadeIn="0" Hold="0" Number="5" FadeOut="0">24</Step>
+   <Step FadeIn="0" Hold="0" Number="6" FadeOut="0">30</Step>
+   <Step FadeIn="0" Hold="0" Number="7" FadeOut="0">27</Step>
+  </Function>
+  <Function Type="Scene" Path="MIGHTY/positions" Name="Buehne_mitte" ID="138">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">0,155,1,20,2,255,3,0,5,8</FixtureVal>
+   <FixtureVal ID="14">0,142,1,17,2,255,5,9</FixtureVal>
+   <FixtureVal ID="15">0,106,1,20,2,255,5,9</FixtureVal>
+   <FixtureVal ID="16">0,109,1,20,5,9</FixtureVal>
+  </Function>
+  <Function Type="Scene" Path="MIGHTY/positions" Name="buehne_rechts" ID="139">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">0,192,1,20,2,255,3,0,5,11</FixtureVal>
+   <FixtureVal ID="14">0,171,1,17,2,255,5,9</FixtureVal>
+   <FixtureVal ID="15">0,146,1,20,2,255,5,11</FixtureVal>
+   <FixtureVal ID="16">0,136,1,20,5,12</FixtureVal>
+  </Function>
+  <Function Type="Scene" Path="TS-255/positions" Name="TS-255 buehne_links" ID="140">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="1">0,148,1,62,4,255</FixtureVal>
+   <FixtureVal ID="2">0,124,1,59,4,255</FixtureVal>
+   <FixtureVal ID="3">0,47,1,83,4,255</FixtureVal>
+   <FixtureVal ID="4">0,51,1,86,4,255</FixtureVal>
+  </Function>
+  <Function Type="Scene" Path="TS-255/positions" Name="TS-255 buehne_mitte" ID="141">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="1">0,187,1,65,4,255</FixtureVal>
+   <FixtureVal ID="2">0,169,1,60,4,255</FixtureVal>
+   <FixtureVal ID="3">0,88,1,60,4,255</FixtureVal>
+   <FixtureVal ID="4">0,71,1,63,4,255</FixtureVal>
+  </Function>
+  <Function Type="Scene" Path="TS-255/positions" Name="TS-255 buehne_rechts" ID="142">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="1">0,217,1,80,4,255</FixtureVal>
+   <FixtureVal ID="2">0,216,1,80,4,255</FixtureVal>
+   <FixtureVal ID="3">0,150,1,57,4,255</FixtureVal>
+   <FixtureVal ID="4">0,109,1,55,4,255</FixtureVal>
+  </Function>
+  <Function Type="Scene" Path="TS-255/positions" Name="TS-255 buehne_drums" ID="143">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="1">0,225,1,169,4,255</FixtureVal>
+   <FixtureVal ID="2">0,187,1,155,4,255</FixtureVal>
+   <FixtureVal ID="3">0,72,1,166,4,255</FixtureVal>
+   <FixtureVal ID="4">0,26,1,167,4,255</FixtureVal>
+  </Function>
+  <Function Type="Scene" Path="MIGHTY/positions" Name="buehne_drums" ID="144">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">0,151,1,20,2,255,3,0,5,11</FixtureVal>
+   <FixtureVal ID="14">0,140,1,21,2,255,5,9</FixtureVal>
+   <FixtureVal ID="15">0,109,1,20,2,255,5,11</FixtureVal>
+   <FixtureVal ID="16">0,106,1,20,5,12</FixtureVal>
+  </Function>
+  <Function Type="Scene" Path="TS-255/gobo" Name="ts255_barrot" ID="145">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="1">3,130,5,120</FixtureVal>
+   <FixtureVal ID="2">3,130,5,120</FixtureVal>
+   <FixtureVal ID="3">3,130,5,120</FixtureVal>
+   <FixtureVal ID="4">3,130,5,120</FixtureVal>
+  </Function>
+  <Function Type="Scene" Path="MIGHTY/positions" Name="buehne_4_pos" ID="146">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="5">0,128,1,15,2,255,3,0,5,11</FixtureVal>
+   <FixtureVal ID="14">0,142,1,17,2,255,5,9</FixtureVal>
+   <FixtureVal ID="15">0,109,1,20,2,255,5,11</FixtureVal>
+   <FixtureVal ID="16">0,136,1,20,5,12</FixtureVal>
   </Function>
   <Monitor ShowLabels="1" DisplayMode="0">
    <Font>Monospace,11,-1,5,50,0,0,0,0,0</Font>
    <ChannelStyle>0</ChannelStyle>
    <ValueStyle>0</ValueStyle>
-   <Grid Units="0" Width="10" Height="12"/>
-   <FxItem YPos="3088.89" ID="9" XPos="866.667"/>
-   <FxItem YPos="2040.82" ID="8" XPos="877.551"/>
-   <FxItem YPos="9911.11" ID="15" XPos="6711.11"/>
-   <FxItem YPos="9933.33" ID="14" XPos="3000"/>
+   <Grid Height="12" Units="0" Width="10"/>
    <FxItem YPos="9177.78" ID="13" XPos="8866.67"/>
-   <FxItem YPos="8133.33" ID="12" XPos="8888.89"/>
-   <FxItem YPos="717.949" ID="3" XPos="6846.15"/>
-   <FxItem YPos="692.308" ID="2" XPos="2820.51"/>
-   <FxItem YPos="692.308" ID="1" XPos="1692.31"/>
-   <FxItem YPos="9871.79" GelColor="#ffffff" ID="0" XPos="4820.51"/>
-   <FxItem YPos="7999.68" GelColor="#ffff00" ID="7" XPos="836.421"/>
-   <FxItem YPos="2777.06" GelColor="#ffff00" ID="6" XPos="8910.62"/>
-   <FxItem YPos="9897.96" ID="5" XPos="1734.69"/>
-   <FxItem YPos="743.59" ID="4" XPos="8047.86"/>
-   <FxItem YPos="916.662" ID="18" XPos="5383.87"/>
-   <FxItem YPos="871.795" ID="17" XPos="4307.69"/>
-   <FxItem YPos="9933.33" ID="16" XPos="8044.44"/>
-   <FxItem YPos="7155.56" ID="11" XPos="8911.11"/>
+   <FxItem YPos="9933.33" ID="14" XPos="3000"/>
+   <FxItem YPos="9911.11" ID="15" XPos="6711.11"/>
+   <FxItem YPos="2040.82" ID="8" XPos="877.551"/>
+   <FxItem YPos="3088.89" ID="9" XPos="866.667"/>
    <FxItem YPos="4111.11" ID="10" XPos="844.444"/>
+   <FxItem YPos="7155.56" ID="11" XPos="8911.11"/>
+   <FxItem YPos="9933.33" ID="16" XPos="8044.44"/>
+   <FxItem YPos="871.795" ID="17" XPos="4307.69"/>
+   <FxItem YPos="916.662" ID="18" XPos="5383.87"/>
+   <FxItem YPos="743.59" ID="4" XPos="8047.86"/>
+   <FxItem YPos="9897.96" ID="5" XPos="1734.69"/>
+   <FxItem GelColor="#ffff00" YPos="2777.06" ID="6" XPos="8910.62"/>
+   <FxItem GelColor="#ffff00" YPos="7999.68" ID="7" XPos="836.421"/>
+   <FxItem GelColor="#ffffff" YPos="9871.79" ID="0" XPos="4820.51"/>
+   <FxItem YPos="692.308" ID="1" XPos="1692.31"/>
+   <FxItem YPos="692.308" ID="2" XPos="2820.51"/>
+   <FxItem YPos="717.949" ID="3" XPos="6846.15"/>
+   <FxItem YPos="8133.33" ID="12" XPos="8888.89"/>
   </Monitor>
  </Engine>
  <VirtualConsole>
@@ -1540,13 +1624,13 @@
     <BackgroundImage>None</BackgroundImage>
     <Font>Default</Font>
    </Appearance>
-   <Button Icon="" ID="9" Caption="Strobe">
+   <Button ID="9" Icon="" Caption="Strobe">
     <Function ID="0"/>
     <Action>Flash</Action>
     <Key>Num++</Key>
     <Intensity Adjust="True">100</Intensity>
     <Input Channel="6" Universe="0"/>
-    <WindowState Visible="True" Width="105" X="5" Y="525" Height="35"/>
+    <WindowState Visible="True" X="5" Y="525" Height="35" Width="105"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -1555,12 +1639,12 @@
      <Font>Sans Serif,10,-1,5,75,0,0,0,0,0</Font>
     </Appearance>
    </Button>
-   <Button Icon="" ID="38" Caption="">
+   <Button ID="38" Icon="" Caption="">
     <Function ID="4294967295"/>
     <Action>Blackout</Action>
     <Key>Space</Key>
     <Intensity Adjust="False">100</Intensity>
-    <WindowState Visible="True" Width="105" X="630" Y="400" Height="60"/>
+    <WindowState Visible="True" X="230" Y="520" Height="60" Width="105"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -1569,11 +1653,11 @@
      <Font>Default</Font>
     </Appearance>
    </Button>
-   <Button Icon="" ID="44" Caption="Fog">
+   <Button ID="44" Icon="" Caption="Fog">
     <Function ID="11"/>
     <Action>Toggle</Action>
     <Intensity Adjust="False">100</Intensity>
-    <WindowState Visible="True" Width="105" X="115" Y="525" Height="35"/>
+    <WindowState Visible="True" X="115" Y="525" Height="35" Width="105"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>4292342264</ForegroundColor>
@@ -1582,166 +1666,6 @@
      <Font>Sans Serif,10,-1,5,75,0,0,0,0,0</Font>
     </Appearance>
    </Button>
-   <Frame ID="6" Caption="Scanner Control">
-    <Appearance>
-     <FrameStyle>Sunken</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <WindowState Visible="True" Width="455" X="625" Y="0" Height="220"/>
-    <AllowChildren>True</AllowChildren>
-    <AllowResize>False</AllowResize>
-    <ShowHeader>True</ShowHeader>
-    <ShowEnableButton>True</ShowEnableButton>
-    <Collapsed>False</Collapsed>
-    <Disabled>False</Disabled>
-    <Enable>
-     <Key></Key>
-    </Enable>
-    <Slider ID="13" WidgetStyle="Knob" InvertedAppearance="false" Caption="TS-255 Gobo">
-     <WindowState Visible="True" Width="65" X="130" Y="45" Height="170"/>
-     <Appearance>
-      <FrameStyle>Sunken</FrameStyle>
-      <ForegroundColor>4291348480</ForegroundColor>
-      <BackgroundColor>Default</BackgroundColor>
-      <BackgroundImage>None</BackgroundImage>
-      <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
-     </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level Value="194" HighLimit="255" LowLimit="0">
-      <Channel Fixture="1">3</Channel>
-      <Channel Fixture="2">3</Channel>
-      <Channel Fixture="3">3</Channel>
-      <Channel Fixture="4">3</Channel>
-     </Level>
-     <Playback>
-      <Function>4294967295</Function>
-     </Playback>
-    </Slider>
-    <Slider ID="14" WidgetStyle="Slider" InvertedAppearance="false" Caption="TS-255 Shutter">
-     <WindowState Visible="True" Width="60" X="70" Y="45" Height="170"/>
-     <Appearance>
-      <FrameStyle>Sunken</FrameStyle>
-      <ForegroundColor>4291348480</ForegroundColor>
-      <BackgroundColor>Default</BackgroundColor>
-      <BackgroundImage>None</BackgroundImage>
-      <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
-     </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="None">Level</SliderMode>
-     <Level Value="0" HighLimit="255" LowLimit="0">
-      <Channel Fixture="1">4</Channel>
-      <Channel Fixture="2">4</Channel>
-      <Channel Fixture="3">4</Channel>
-      <Channel Fixture="4">4</Channel>
-     </Level>
-     <Playback>
-      <Function>4294967295</Function>
-     </Playback>
-    </Slider>
-    <Slider ID="15" WidgetStyle="Knob" InvertedAppearance="false" Caption="TS-255 Color">
-     <WindowState Visible="True" Width="65" X="5" Y="45" Height="170"/>
-     <Appearance>
-      <FrameStyle>Sunken</FrameStyle>
-      <ForegroundColor>4291348480</ForegroundColor>
-      <BackgroundColor>Default</BackgroundColor>
-      <BackgroundImage>None</BackgroundImage>
-      <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
-     </Appearance>
-     <Input Channel="2" Universe="0"/>
-     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="Preset">Submaster</SliderMode>
-     <Level Value="105" HighLimit="255" LowLimit="0">
-      <Channel Fixture="1">2</Channel>
-      <Channel Fixture="2">2</Channel>
-      <Channel Fixture="3">2</Channel>
-      <Channel Fixture="4">2</Channel>
-     </Level>
-     <Playback>
-      <Function>4294967295</Function>
-     </Playback>
-    </Slider>
-    <Slider ID="18" WidgetStyle="Knob" InvertedAppearance="false" Caption="Mighty Gobo">
-     <WindowState Visible="True" Width="65" X="385" Y="45" Height="170"/>
-     <Appearance>
-      <FrameStyle>Sunken</FrameStyle>
-      <ForegroundColor>4291348480</ForegroundColor>
-      <BackgroundColor>Default</BackgroundColor>
-      <BackgroundImage>None</BackgroundImage>
-      <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
-     </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level Value="50" HighLimit="254" LowLimit="0">
-      <Channel Fixture="5">4</Channel>
-      <Channel Fixture="14">4</Channel>
-      <Channel Fixture="15">4</Channel>
-      <Channel Fixture="16">4</Channel>
-     </Level>
-     <Playback>
-      <Function>4294967295</Function>
-     </Playback>
-    </Slider>
-    <Slider ID="19" WidgetStyle="Slider" InvertedAppearance="false" Caption="Mighty Shutter">
-     <WindowState Visible="True" Width="60" X="325" Y="45" Height="170"/>
-     <Appearance>
-      <FrameStyle>Sunken</FrameStyle>
-      <ForegroundColor>4291348480</ForegroundColor>
-      <BackgroundColor>Default</BackgroundColor>
-      <BackgroundImage>None</BackgroundImage>
-      <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
-     </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="None">Level</SliderMode>
-     <Level Value="0" HighLimit="255" LowLimit="0">
-      <Channel Fixture="5">5</Channel>
-      <Channel Fixture="14">5</Channel>
-      <Channel Fixture="15">5</Channel>
-      <Channel Fixture="16">5</Channel>
-     </Level>
-     <Playback>
-      <Function>4294967295</Function>
-     </Playback>
-    </Slider>
-    <Slider ID="20" WidgetStyle="Knob" InvertedAppearance="false" Caption="Mighty Color">
-     <WindowState Visible="True" Width="65" X="260" Y="45" Height="170"/>
-     <Appearance>
-      <FrameStyle>Sunken</FrameStyle>
-      <ForegroundColor>4291348480</ForegroundColor>
-      <BackgroundColor>Default</BackgroundColor>
-      <BackgroundImage>None</BackgroundImage>
-      <Font>Sans Serif,10,-1,5,50,0,0,0,0,0</Font>
-     </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level Value="85" HighLimit="255" LowLimit="0">
-      <Channel Fixture="5">3</Channel>
-      <Channel Fixture="14">3</Channel>
-      <Channel Fixture="15">3</Channel>
-      <Channel Fixture="16">3</Channel>
-     </Level>
-     <Playback>
-      <Function>4294967295</Function>
-     </Playback>
-    </Slider>
-    <Slider ID="1" WidgetStyle="Slider" InvertedAppearance="false" Caption="Gobo rot.">
-     <WindowState Visible="True" Width="65" X="195" Y="45" Height="170"/>
-     <Appearance>
-      <FrameStyle>Sunken</FrameStyle>
-      <ForegroundColor>4291348480</ForegroundColor>
-      <BackgroundColor>Default</BackgroundColor>
-      <BackgroundImage>None</BackgroundImage>
-      <Font>Default</Font>
-     </Appearance>
-     <SliderMode ValueDisplayStyle="Exact" Monitor="false" ClickAndGoType="Preset">Level</SliderMode>
-     <Level Value="0" HighLimit="255" LowLimit="0">
-      <Channel Fixture="1">5</Channel>
-      <Channel Fixture="2">5</Channel>
-      <Channel Fixture="3">5</Channel>
-      <Channel Fixture="4">5</Channel>
-     </Level>
-     <Playback>
-      <Function>4294967295</Function>
-     </Playback>
-    </Slider>
-   </Frame>
    <Frame ID="735" Caption="Tastatur">
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
@@ -1750,7 +1674,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" Width="620" X="5" Y="0" Height="260"/>
+    <WindowState Visible="True" X="5" Y="0" Height="260" Width="620"/>
     <AllowChildren>False</AllowChildren>
     <AllowResize>False</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -1760,12 +1684,12 @@
     <Enable>
      <Key></Key>
     </Enable>
-    <Button Icon="" ID="736" Caption="LED RED (1)">
+    <Button ID="736" Icon="" Caption="LED RED (1)">
      <Function ID="24"/>
-     <Action>Toggle</Action>
+     <Action>Flash</Action>
      <Key>1</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="10" Y="50" Height="50"/>
+     <WindowState Visible="True" X="10" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1774,12 +1698,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="737" Caption="LED GREEN (2)">
+    <Button ID="737" Icon="" Caption="LED GREEN (2)">
      <Function ID="25"/>
-     <Action>Toggle</Action>
+     <Action>Flash</Action>
      <Key>2</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="60" Y="50" Height="50"/>
+     <WindowState Visible="True" X="60" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1788,12 +1712,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="738" Caption="LED BLUE (3)">
+    <Button ID="738" Icon="" Caption="LED BLUE (3)">
      <Function ID="26"/>
-     <Action>Toggle</Action>
+     <Action>Flash</Action>
      <Key>3</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="110" Y="50" Height="50"/>
+     <WindowState Visible="True" X="110" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1802,12 +1726,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="739" Caption="LED YELLOW (4)">
+    <Button ID="739" Icon="" Caption="LED YELLOW (4)">
      <Function ID="27"/>
-     <Action>Toggle</Action>
+     <Action>Flash</Action>
      <Key>4</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="160" Y="50" Height="50"/>
+     <WindowState Visible="True" X="160" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1816,12 +1740,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="740" Caption="LED PURPLE (5)">
+    <Button ID="740" Icon="" Caption="LED PURPLE (5)">
      <Function ID="29"/>
-     <Action>Toggle</Action>
+     <Action>Flash</Action>
      <Key>5</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="210" Y="50" Height="50"/>
+     <WindowState Visible="True" X="210" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1830,12 +1754,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="741" Caption="LED ORANGE (6)">
+    <Button ID="741" Icon="" Caption="LED ORANGE (6)">
      <Function ID="28"/>
-     <Action>Toggle</Action>
+     <Action>Flash</Action>
      <Key>6</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="260" Y="50" Height="50"/>
+     <WindowState Visible="True" X="260" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1844,12 +1768,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="742" Caption="LED TEAL (7)">
+    <Button ID="742" Icon="" Caption="LED TEAL (7)">
      <Function ID="30"/>
-     <Action>Toggle</Action>
+     <Action>Flash</Action>
      <Key>7</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="310" Y="50" Height="50"/>
+     <WindowState Visible="True" X="310" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1858,12 +1782,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="743" Caption="LED WHITE (8)">
+    <Button ID="743" Icon="" Caption="LED WHITE (8)">
      <Function ID="32"/>
-     <Action>Toggle</Action>
+     <Action>Flash</Action>
      <Key>8</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="360" Y="50" Height="50"/>
+     <WindowState Visible="True" X="360" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1872,12 +1796,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="744" Caption="MOON AUTO SLOW (9)">
+    <Button ID="744" Icon="" Caption="MOON AUTO SLOW (9)">
      <Function ID="89"/>
      <Action>Toggle</Action>
      <Key>9</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="410" Y="50" Height="50"/>
+     <WindowState Visible="True" X="410" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1886,12 +1810,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="745" Caption="MOON ROT (0)">
+    <Button ID="745" Icon="" Caption="MOON ROT (0)">
      <Function ID="81"/>
      <Action>Toggle</Action>
      <Key>0</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="460" Y="50" Height="50"/>
+     <WindowState Visible="True" X="460" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1900,12 +1824,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="746" Caption="MOON GRUEN (-)">
+    <Button ID="746" Icon="" Caption="MOON GRUEN (-)">
      <Function ID="83"/>
      <Action>Toggle</Action>
      <Key>-</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="510" Y="50" Height="50"/>
+     <WindowState Visible="True" X="510" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1914,12 +1838,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="747" Caption="MOON BLAU (=)">
+    <Button ID="747" Icon="" Caption="MOON BLAU (=)">
      <Function ID="82"/>
      <Action>Toggle</Action>
      <Key>=</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="560" Y="50" Height="50"/>
+     <WindowState Visible="True" X="560" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1928,12 +1852,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="748" Caption="TS-255 RED (q)">
+    <Button ID="748" Icon="" Caption="TS-255 RED (q)">
      <Function ID="43"/>
      <Action>Toggle</Action>
      <Key>Q</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="10" Y="100" Height="50"/>
+     <WindowState Visible="True" X="10" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1942,12 +1866,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="749" Caption="TS-255 GREEN (w)">
+    <Button ID="749" Icon="" Caption="TS-255 GREEN (w)">
      <Function ID="40"/>
      <Action>Toggle</Action>
      <Key>W</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="60" Y="100" Height="50"/>
+     <WindowState Visible="True" X="60" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1956,12 +1880,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="750" Caption="TS-255 BLUE (e)">
+    <Button ID="750" Icon="" Caption="TS-255 BLUE (e)">
      <Function ID="21"/>
      <Action>Toggle</Action>
      <Key>E</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="110" Y="100" Height="50"/>
+     <WindowState Visible="True" X="110" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1970,12 +1894,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="751" Caption="TS-255 YELLOW (r)">
+    <Button ID="751" Icon="" Caption="TS-255 YELLOW (r)">
      <Function ID="22"/>
      <Action>Toggle</Action>
      <Key>R</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="160" Y="100" Height="50"/>
+     <WindowState Visible="True" X="160" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1984,12 +1908,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="752" Caption="TS-255 PURPLE (t)">
+    <Button ID="752" Icon="" Caption="TS-255 PURPLE (t)">
      <Function ID="42"/>
      <Action>Toggle</Action>
      <Key>T</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="210" Y="100" Height="50"/>
+     <WindowState Visible="True" X="210" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1998,12 +1922,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="753" Caption="TS-255 ORANGE (y)">
+    <Button ID="753" Icon="" Caption="TS-255 ORANGE (y)">
      <Function ID="39"/>
      <Action>Toggle</Action>
      <Key>Y</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="260" Y="100" Height="50"/>
+     <WindowState Visible="True" X="260" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2012,12 +1936,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="754" Caption="TS-255 pink (u)">
+    <Button ID="754" Icon="" Caption="TS-255 pink (u)">
      <Function ID="41"/>
      <Action>Toggle</Action>
      <Key>U</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="310" Y="100" Height="50"/>
+     <WindowState Visible="True" X="310" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2026,12 +1950,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="755" Caption="TS-255 WHITE (i)">
+    <Button ID="755" Icon="" Caption="TS-255 WHITE (i)">
      <Function ID="1"/>
      <Action>Toggle</Action>
      <Key>I</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="360" Y="100" Height="50"/>
+     <WindowState Visible="True" X="360" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2040,12 +1964,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="756" Caption="MOON AUTO FAST (O)">
+    <Button ID="756" Icon="" Caption="MOON AUTO FAST (O)">
      <Function ID="88"/>
      <Action>Toggle</Action>
      <Key>O</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="410" Y="100" Height="50"/>
+     <WindowState Visible="True" X="410" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2054,12 +1978,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="757" Caption="MOON ROTA VSLOW (p)">
+    <Button ID="757" Icon="" Caption="MOON ROTA VSLOW (p)">
      <Function ID="87"/>
      <Action>Toggle</Action>
      <Key>P</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="460" Y="100" Height="50"/>
+     <WindowState Visible="True" X="460" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2068,12 +1992,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="758" Caption="MOON ROTA SLOW ([)">
+    <Button ID="758" Icon="" Caption="MOON ROTA SLOW ([)">
      <Function ID="86"/>
      <Action>Toggle</Action>
      <Key>[</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="510" Y="100" Height="50"/>
+     <WindowState Visible="True" X="510" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2082,12 +2006,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="759" Caption="MOON ROTA FAST (])">
+    <Button ID="759" Icon="" Caption="MOON ROTA FAST (])">
      <Function ID="85"/>
      <Action>Toggle</Action>
      <Key>]</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="560" Y="100" Height="50"/>
+     <WindowState Visible="True" X="560" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2096,12 +2020,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="760" Caption="MIGHTY RED (a)">
+    <Button ID="760" Icon="" Caption="MIGHTY RED (a)">
      <Function ID="56"/>
      <Action>Toggle</Action>
      <Key>A</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="10" Y="150" Height="50"/>
+     <WindowState Visible="True" X="10" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2110,12 +2034,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="761" Caption="MIGHTY GREEN (s)">
+    <Button ID="761" Icon="" Caption="MIGHTY GREEN (s)">
      <Function ID="57"/>
      <Action>Toggle</Action>
      <Key>S</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="60" Y="150" Height="50"/>
+     <WindowState Visible="True" X="60" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2124,12 +2048,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="762" Caption="MIGHTY BLUE (d)">
+    <Button ID="762" Icon="" Caption="MIGHTY BLUE (d)">
      <Function ID="58"/>
      <Action>Toggle</Action>
      <Key>D</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="110" Y="150" Height="50"/>
+     <WindowState Visible="True" X="110" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2138,12 +2062,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="763" Caption="MIGHTY YELLOW (f)">
+    <Button ID="763" Icon="" Caption="MIGHTY YELLOW (f)">
      <Function ID="59"/>
      <Action>Toggle</Action>
      <Key>F</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="160" Y="150" Height="50"/>
+     <WindowState Visible="True" X="160" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2152,12 +2076,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="764" Caption="MIGHTY PURPLE (g)">
+    <Button ID="764" Icon="" Caption="MIGHTY PURPLE (g)">
      <Function ID="60"/>
      <Action>Toggle</Action>
      <Key>G</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="210" Y="150" Height="50"/>
+     <WindowState Visible="True" X="210" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2166,12 +2090,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="765" Caption="MIGHTY ORANGE (h)">
+    <Button ID="765" Icon="" Caption="MIGHTY ORANGE (h)">
      <Function ID="61"/>
      <Action>Toggle</Action>
      <Key>H</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="260" Y="150" Height="50"/>
+     <WindowState Visible="True" X="260" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2180,12 +2104,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="766" Caption="MIGHTY pink (j)">
+    <Button ID="766" Icon="" Caption="MIGHTY pink (j)">
      <Function ID="62"/>
      <Action>Toggle</Action>
      <Key>J</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="310" Y="150" Height="50"/>
+     <WindowState Visible="True" X="310" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2194,12 +2118,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="767" Caption="MIGHTY WHITE (k)">
+    <Button ID="767" Icon="" Caption="MIGHTY WHITE (k)">
      <Function ID="63"/>
      <Action>Toggle</Action>
      <Key>K</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="360" Y="150" Height="50"/>
+     <WindowState Visible="True" X="360" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2208,11 +2132,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="768" Caption="Schalter 768">
+    <Button ID="768" Icon="" Caption="Schalter 768">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="410" Y="150" Height="50"/>
+     <WindowState Visible="True" X="410" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2221,12 +2145,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="769" Caption="MOON STROBO MED (;)">
+    <Button ID="769" Icon="" Caption="MOON STROBO MED (;)">
      <Function ID="92"/>
      <Action>Toggle</Action>
      <Key>;</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="460" Y="150" Height="50"/>
+     <WindowState Visible="True" X="460" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2235,11 +2159,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="770" Caption="">
+    <Button ID="770" Icon="" Caption="">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="510" Y="150" Height="50"/>
+     <WindowState Visible="True" X="510" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4294967295</ForegroundColor>
@@ -2248,12 +2172,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="771" Caption="MOON STROBO FAST (\)">
+    <Button ID="771" Icon="" Caption="MOON STROBO FAST (\)">
      <Function ID="91"/>
      <Action>Toggle</Action>
      <Key>\</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="560" Y="150" Height="50"/>
+     <WindowState Visible="True" X="560" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2262,11 +2186,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="772" Caption="TS-255 midout">
+    <Button ID="772" Icon="" Caption="TS-255 midout">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="10" Y="200" Height="50"/>
+     <WindowState Visible="True" X="10" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4294967295</ForegroundColor>
@@ -2275,12 +2199,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="773" Caption="TS-255 midout">
+    <Button ID="773" Icon="" Caption="TS-255 midout">
      <Function ID="23"/>
      <Action>Toggle</Action>
      <Key>Z</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="60" Y="200" Height="50"/>
+     <WindowState Visible="True" X="60" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2289,12 +2213,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="774" Caption="LED pars random (X)">
+    <Button ID="774" Icon="" Caption="LED pars random (X)">
      <Function ID="112"/>
      <Action>Toggle</Action>
      <Key>X</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="110" Y="200" Height="50"/>
+     <WindowState Visible="True" X="110" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2303,12 +2227,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="775" Caption="LED RAND COLOR (C)">
+    <Button ID="775" Icon="" Caption="LED RAND COLOR (C)">
      <Function ID="137"/>
      <Action>Toggle</Action>
      <Key>C</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="160" Y="200" Height="50"/>
+     <WindowState Visible="True" X="160" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2317,11 +2241,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="776" Caption="Schalter 776">
+    <Button ID="776" Icon="" Caption="Schalter 776">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="210" Y="200" Height="50"/>
+     <WindowState Visible="True" X="210" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2330,12 +2254,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="777" Caption="TS-255 ROAM (V)">
+    <Button ID="777" Icon="" Caption="TS-255 ROAM (V)">
      <Function ID="2"/>
      <Action>Toggle</Action>
      <Key>V</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="260" Y="200" Height="50"/>
+     <WindowState Visible="True" X="260" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2344,12 +2268,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="778" Caption="Mighty roam (B)">
+    <Button ID="778" Icon="" Caption="Mighty roam (B)">
      <Function ID="3"/>
      <Action>Toggle</Action>
      <Key>B</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="310" Y="200" Height="50"/>
+     <WindowState Visible="True" X="310" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2358,12 +2282,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="779" Caption="MIGHTY RANDOM POS (N)">
+    <Button ID="779" Icon="" Caption="MIGHTY RANDOM POS (N)">
      <Function ID="130"/>
      <Action>Toggle</Action>
      <Key>N</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="360" Y="200" Height="50"/>
+     <WindowState Visible="True" X="360" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2372,12 +2296,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="780" Caption="TS-255 RANDOM POS (M)">
+    <Button ID="780" Icon="" Caption="TS-255 RANDOM POS (M)">
      <Function ID="111"/>
      <Action>Toggle</Action>
      <Key>M</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="410" Y="200" Height="50"/>
+     <WindowState Visible="True" X="410" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2386,12 +2310,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="781" Caption="MIGHTY ODD EVEN(,)">
+    <Button ID="781" Icon="" Caption="MIGHTY ODD EVEN(,)">
      <Function ID="133"/>
      <Action>Toggle</Action>
      <Key>,</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="460" Y="200" Height="50"/>
+     <WindowState Visible="True" X="460" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2400,12 +2324,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="782" Caption="MIGHTY SWITCH (.)">
+    <Button ID="782" Icon="" Caption="MIGHTY SWITCH (.)">
      <Function ID="8"/>
      <Action>Toggle</Action>
      <Key>.</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="510" Y="200" Height="50"/>
+     <WindowState Visible="True" X="510" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2414,11 +2338,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="783" Caption="Schalter 783">
+    <Button ID="783" Icon="" Caption="Schalter 783">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="560" Y="200" Height="50"/>
+     <WindowState Visible="True" X="560" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4294967295</ForegroundColor>
@@ -2436,7 +2360,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" Width="620" X="5" Y="260" Height="260"/>
+    <WindowState Visible="True" X="5" Y="260" Height="260" Width="620"/>
     <AllowChildren>False</AllowChildren>
     <AllowResize>False</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -2446,12 +2370,12 @@
     <Enable>
      <Key></Key>
     </Enable>
-    <Button Icon="" ID="840" Caption="LED 1 ON (S+1)">
+    <Button ID="840" Icon="" Caption="LED 1 ON (S+1)">
      <Function ID="75"/>
      <Action>Toggle</Action>
      <Key>Shift+!</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="10" Y="50" Height="50"/>
+     <WindowState Visible="True" X="10" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2460,12 +2384,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="841" Caption="LED 2 ON (S+2)">
+    <Button ID="841" Icon="" Caption="LED 2 ON (S+2)">
      <Function ID="76"/>
      <Action>Toggle</Action>
      <Key>Shift+@</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="60" Y="50" Height="50"/>
+     <WindowState Visible="True" X="60" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2474,12 +2398,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="842" Caption="LED 3 ON (S+3)">
+    <Button ID="842" Icon="" Caption="LED 3 ON (S+3)">
      <Function ID="77"/>
      <Action>Toggle</Action>
      <Key>Shift+#</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="110" Y="50" Height="50"/>
+     <WindowState Visible="True" X="110" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2488,12 +2412,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="843" Caption="LED 4 ON (S+4)">
+    <Button ID="843" Icon="" Caption="LED 4 ON (S+4)">
      <Function ID="78"/>
      <Action>Toggle</Action>
      <Key>Shift+$</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="160" Y="50" Height="50"/>
+     <WindowState Visible="True" X="160" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2502,12 +2426,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="844" Caption="LED 5 ON (S+5)">
+    <Button ID="844" Icon="" Caption="LED 5 ON (S+5)">
      <Function ID="79"/>
      <Action>Toggle</Action>
      <Key>Shift+%</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="210" Y="50" Height="50"/>
+     <WindowState Visible="True" X="210" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2516,11 +2440,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="845" Caption="Schalter 845">
+    <Button ID="845" Icon="" Caption="Schalter 845">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="260" Y="50" Height="50"/>
+     <WindowState Visible="True" X="260" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4294967295</ForegroundColor>
@@ -2529,12 +2453,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="846" Caption="LED 6 ON (S+7)">
+    <Button ID="846" Icon="" Caption="LED 6 ON (S+7)">
      <Function ID="80"/>
      <Action>Toggle</Action>
      <Key>Shift+&amp;</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="310" Y="50" Height="50"/>
+     <WindowState Visible="True" X="310" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2543,11 +2467,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="847" Caption="Schalter 847">
+    <Button ID="847" Icon="" Caption="Schalter 847">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="360" Y="50" Height="50"/>
+     <WindowState Visible="True" X="360" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2556,11 +2480,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="848" Caption="Schalter 848">
+    <Button ID="848" Icon="" Caption="Schalter 848">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="410" Y="50" Height="50"/>
+     <WindowState Visible="True" X="410" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2569,11 +2493,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="849" Caption="Schalter 849">
+    <Button ID="849" Icon="" Caption="Schalter 849">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="460" Y="50" Height="50"/>
+     <WindowState Visible="True" X="460" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2582,11 +2506,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="850" Caption="Schalter 850">
+    <Button ID="850" Icon="" Caption="Schalter 850">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="510" Y="50" Height="50"/>
+     <WindowState Visible="True" X="510" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2595,12 +2519,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="851" Caption="SCAN LED INIT (S++)">
+    <Button ID="851" Icon="" Caption="SCAN LED INIT (S++)">
      <Function ID="70"/>
      <Action>Toggle</Action>
      <Key>Shift++</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="560" Y="50" Height="50"/>
+     <WindowState Visible="True" X="560" Y="50" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4294967040</ForegroundColor>
@@ -2609,12 +2533,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="852" Caption="TS-255 1 ON (S+Q)">
+    <Button ID="852" Icon="" Caption="TS-255 1 ON (S+Q)">
      <Function ID="35"/>
      <Action>Toggle</Action>
      <Key>Shift+Q</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="10" Y="100" Height="50"/>
+     <WindowState Visible="True" X="10" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2623,12 +2547,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="853" Caption="TS-255 2 ON (S+W)">
+    <Button ID="853" Icon="" Caption="TS-255 2 ON (S+W)">
      <Function ID="67"/>
      <Action>Toggle</Action>
      <Key>Shift+W</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="60" Y="100" Height="50"/>
+     <WindowState Visible="True" X="60" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2637,12 +2561,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="854" Caption="TS-255 3 ON (S+E)">
+    <Button ID="854" Icon="" Caption="TS-255 3 ON (S+E)">
      <Function ID="68"/>
      <Action>Toggle</Action>
      <Key>Shift+E</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="110" Y="100" Height="50"/>
+     <WindowState Visible="True" X="110" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2651,12 +2575,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="855" Caption="TS-255 4 ON (S+R)">
+    <Button ID="855" Icon="" Caption="TS-255 4 ON (S+R)">
      <Function ID="69"/>
      <Action>Toggle</Action>
      <Key>Shift+R</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="160" Y="100" Height="50"/>
+     <WindowState Visible="True" X="160" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2665,11 +2589,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="856" Caption="Schalter 856">
+    <Button ID="856" Icon="" Caption="Schalter 856">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="210" Y="100" Height="50"/>
+     <WindowState Visible="True" X="210" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2678,11 +2602,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="857" Caption="Schalter 857">
+    <Button ID="857" Icon="" Caption="Schalter 857">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="260" Y="100" Height="50"/>
+     <WindowState Visible="True" X="260" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2691,11 +2615,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="858" Caption="Schalter 858">
+    <Button ID="858" Icon="" Caption="Schalter 858">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="310" Y="100" Height="50"/>
+     <WindowState Visible="True" X="310" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2704,11 +2628,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="859" Caption="Schalter 859">
+    <Button ID="859" Icon="" Caption="Schalter 859">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="360" Y="100" Height="50"/>
+     <WindowState Visible="True" X="360" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2717,11 +2641,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="860" Caption="Schalter 860">
+    <Button ID="860" Icon="" Caption="Schalter 860">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="410" Y="100" Height="50"/>
+     <WindowState Visible="True" X="410" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2730,11 +2654,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="861" Caption="Schalter 861">
+    <Button ID="861" Icon="" Caption="Schalter 861">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="460" Y="100" Height="50"/>
+     <WindowState Visible="True" X="460" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2743,11 +2667,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="862" Caption="Schalter 862">
+    <Button ID="862" Icon="" Caption="Schalter 862">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="510" Y="100" Height="50"/>
+     <WindowState Visible="True" X="510" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2756,11 +2680,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="863" Caption="Schalter 863">
+    <Button ID="863" Icon="" Caption="Schalter 863">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="560" Y="100" Height="50"/>
+     <WindowState Visible="True" X="560" Y="100" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2769,12 +2693,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="864" Caption="Mighty 1 ON (S+A)">
+    <Button ID="864" Icon="" Caption="Mighty 1 ON (S+A)">
      <Function ID="71"/>
      <Action>Toggle</Action>
      <Key>Shift+A</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="10" Y="150" Height="50"/>
+     <WindowState Visible="True" X="10" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2783,12 +2707,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="865" Caption="Mighty 2 ON (S+S)">
+    <Button ID="865" Icon="" Caption="Mighty 2 ON (S+S)">
      <Function ID="72"/>
      <Action>Toggle</Action>
      <Key>Shift+S</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="60" Y="150" Height="50"/>
+     <WindowState Visible="True" X="60" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2797,12 +2721,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="866" Caption="Mighty 3 ON (S+D)">
+    <Button ID="866" Icon="" Caption="Mighty 3 ON (S+D)">
      <Function ID="73"/>
      <Action>Toggle</Action>
      <Key>Shift+D</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="110" Y="150" Height="50"/>
+     <WindowState Visible="True" X="110" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2811,12 +2735,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="867" Caption="Mighty 4 ON (S+F)">
+    <Button ID="867" Icon="" Caption="Mighty 4 ON (S+F)">
      <Function ID="74"/>
      <Action>Toggle</Action>
      <Key>Shift+F</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="160" Y="150" Height="50"/>
+     <WindowState Visible="True" X="160" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2825,11 +2749,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="868" Caption="Schalter 868">
+    <Button ID="868" Icon="" Caption="Schalter 868">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="210" Y="150" Height="50"/>
+     <WindowState Visible="True" X="210" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2838,11 +2762,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="869" Caption="Schalter 869">
+    <Button ID="869" Icon="" Caption="Schalter 869">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="260" Y="150" Height="50"/>
+     <WindowState Visible="True" X="260" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2851,11 +2775,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="870" Caption="Schalter 870">
+    <Button ID="870" Icon="" Caption="Schalter 870">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="310" Y="150" Height="50"/>
+     <WindowState Visible="True" X="310" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2864,11 +2788,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="871" Caption="Schalter 871">
+    <Button ID="871" Icon="" Caption="Schalter 871">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="360" Y="150" Height="50"/>
+     <WindowState Visible="True" X="360" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2877,11 +2801,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="872" Caption="Schalter 872">
+    <Button ID="872" Icon="" Caption="Schalter 872">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="410" Y="150" Height="50"/>
+     <WindowState Visible="True" X="410" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2890,11 +2814,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="873" Caption="Schalter 873">
+    <Button ID="873" Icon="" Caption="Schalter 873">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="460" Y="150" Height="50"/>
+     <WindowState Visible="True" X="460" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2903,11 +2827,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="874" Caption="Schalter 874">
+    <Button ID="874" Icon="" Caption="Schalter 874">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="510" Y="150" Height="50"/>
+     <WindowState Visible="True" X="510" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2916,11 +2840,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="875" Caption="Schalter 875">
+    <Button ID="875" Icon="" Caption="Schalter 875">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="560" Y="150" Height="50"/>
+     <WindowState Visible="True" X="560" Y="150" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2929,11 +2853,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="876" Caption="Schalter 876">
+    <Button ID="876" Icon="" Caption="Schalter 876">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="10" Y="200" Height="50"/>
+     <WindowState Visible="True" X="10" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2942,11 +2866,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="877" Caption="Schalter 877">
+    <Button ID="877" Icon="" Caption="Schalter 877">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="60" Y="200" Height="50"/>
+     <WindowState Visible="True" X="60" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2955,11 +2879,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="878" Caption="Schalter 878">
+    <Button ID="878" Icon="" Caption="Schalter 878">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="110" Y="200" Height="50"/>
+     <WindowState Visible="True" X="110" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2968,11 +2892,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="879" Caption="">
+    <Button ID="879" Icon="" Caption="">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="160" Y="200" Height="50"/>
+     <WindowState Visible="True" X="160" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2981,11 +2905,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="880" Caption="Schalter 880">
+    <Button ID="880" Icon="" Caption="Schalter 880">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="210" Y="200" Height="50"/>
+     <WindowState Visible="True" X="210" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2994,11 +2918,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="881" Caption="Schalter 881">
+    <Button ID="881" Icon="" Caption="Schalter 881">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="260" Y="200" Height="50"/>
+     <WindowState Visible="True" X="260" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -3007,11 +2931,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="882" Caption="Schalter 882">
+    <Button ID="882" Icon="" Caption="Schalter 882">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="310" Y="200" Height="50"/>
+     <WindowState Visible="True" X="310" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -3020,11 +2944,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="883" Caption="Schalter 883">
+    <Button ID="883" Icon="" Caption="Schalter 883">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="360" Y="200" Height="50"/>
+     <WindowState Visible="True" X="360" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -3033,11 +2957,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="884" Caption="Schalter 884">
+    <Button ID="884" Icon="" Caption="Schalter 884">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="410" Y="200" Height="50"/>
+     <WindowState Visible="True" X="410" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -3046,12 +2970,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="885" Caption="TS-255 ODD EVEN">
+    <Button ID="885" Icon="" Caption="TS-255 ODD EVEN">
      <Function ID="136"/>
      <Action>Toggle</Action>
      <Key>Shift+&lt;</Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="460" Y="200" Height="50"/>
+     <WindowState Visible="True" X="460" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -3060,12 +2984,12 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="886" Caption="TS-255 SWITCH (S+.)">
+    <Button ID="886" Icon="" Caption="TS-255 SWITCH (S+.)">
      <Function ID="90"/>
      <Action>Toggle</Action>
      <Key>Shift+></Key>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="510" Y="200" Height="50"/>
+     <WindowState Visible="True" X="510" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -3074,11 +2998,11 @@
       <Font>Default</Font>
      </Appearance>
     </Button>
-    <Button Icon="" ID="887" Caption="Schalter 887">
+    <Button ID="887" Icon="" Caption="Schalter 887">
      <Function ID="4294967295"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
-     <WindowState Visible="True" Width="50" X="560" Y="200" Height="50"/>
+     <WindowState Visible="True" X="560" Y="200" Height="50" Width="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>4294967295</ForegroundColor>
@@ -3088,8 +3012,8 @@
      </Appearance>
     </Button>
    </Frame>
-   <XYPad ID="888" InvertedAppearance="0" Caption="XY Pad">
-    <WindowState Visible="True" Width="185" X="845" Y="235" Height="170"/>
+   <XYPad ID="888" Caption="XY Pad" InvertedAppearance="0">
+    <WindowState Visible="True" X="680" Y="400" Height="175" Width="200"/>
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -3098,28 +3022,29 @@
      <Font>Default</Font>
     </Appearance>
     <Fixture Head="0" ID="5">
-     <Axis HighLimit="1" ID="X" LowLimit="0" Reverse="False"/>
-     <Axis HighLimit="1" ID="Y" LowLimit="0" Reverse="False"/>
+     <Axis HighLimit="1" ID="X" Reverse="False" LowLimit="0"/>
+     <Axis HighLimit="1" ID="Y" Reverse="False" LowLimit="0"/>
     </Fixture>
     <Fixture Head="0" ID="14">
-     <Axis HighLimit="1" ID="X" LowLimit="0" Reverse="False"/>
-     <Axis HighLimit="1" ID="Y" LowLimit="0" Reverse="False"/>
+     <Axis HighLimit="1" ID="X" Reverse="False" LowLimit="0"/>
+     <Axis HighLimit="1" ID="Y" Reverse="False" LowLimit="0"/>
     </Fixture>
     <Fixture Head="0" ID="15">
-     <Axis HighLimit="1" ID="X" LowLimit="0" Reverse="False"/>
-     <Axis HighLimit="1" ID="Y" LowLimit="0" Reverse="False"/>
+     <Axis HighLimit="1" ID="X" Reverse="False" LowLimit="0"/>
+     <Axis HighLimit="1" ID="Y" Reverse="False" LowLimit="0"/>
     </Fixture>
     <Fixture Head="0" ID="16">
-     <Axis HighLimit="1" ID="X" LowLimit="0" Reverse="False"/>
-     <Axis HighLimit="1" ID="Y" LowLimit="0" Reverse="False"/>
+     <Axis HighLimit="1" ID="X" Reverse="False" LowLimit="0"/>
+     <Axis HighLimit="1" ID="Y" Reverse="False" LowLimit="0"/>
     </Fixture>
-    <Pan Position="129"/>
-    <Tilt Position="120"/>
+    <Window vMin="0" vMax="256" hMin="0" hMax="226"/>
+    <Pan Position="130"/>
+    <Tilt Position="186"/>
     <Width/>
     <Height/>
    </XYPad>
-   <XYPad ID="889" InvertedAppearance="0" Caption="XY Pad">
-    <WindowState Visible="True" Width="185" X="1040" Y="245" Height="170"/>
+   <XYPad ID="889" Caption="XY Pad" InvertedAppearance="0">
+    <WindowState Visible="True" X="890" Y="400" Height="175" Width="200"/>
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -3128,20 +3053,20 @@
      <Font>Default</Font>
     </Appearance>
     <Fixture Head="0" ID="1">
-     <Axis HighLimit="1" ID="X" LowLimit="0" Reverse="False"/>
-     <Axis HighLimit="1" ID="Y" LowLimit="0" Reverse="False"/>
+     <Axis HighLimit="1" ID="X" Reverse="False" LowLimit="0"/>
+     <Axis HighLimit="1" ID="Y" Reverse="False" LowLimit="0"/>
     </Fixture>
     <Fixture Head="0" ID="2">
-     <Axis HighLimit="1" ID="X" LowLimit="0" Reverse="False"/>
-     <Axis HighLimit="1" ID="Y" LowLimit="0" Reverse="False"/>
+     <Axis HighLimit="1" ID="X" Reverse="False" LowLimit="0"/>
+     <Axis HighLimit="1" ID="Y" Reverse="False" LowLimit="0"/>
     </Fixture>
     <Fixture Head="0" ID="3">
-     <Axis HighLimit="1" ID="X" LowLimit="0" Reverse="False"/>
-     <Axis HighLimit="1" ID="Y" LowLimit="0" Reverse="False"/>
+     <Axis HighLimit="1" ID="X" Reverse="False" LowLimit="0"/>
+     <Axis HighLimit="1" ID="Y" Reverse="False" LowLimit="0"/>
     </Fixture>
     <Fixture Head="0" ID="4">
-     <Axis HighLimit="1" ID="X" LowLimit="0" Reverse="False"/>
-     <Axis HighLimit="1" ID="Y" LowLimit="0" Reverse="False"/>
+     <Axis HighLimit="1" ID="X" Reverse="False" LowLimit="0"/>
+     <Axis HighLimit="1" ID="Y" Reverse="False" LowLimit="0"/>
     </Fixture>
     <Pan Position="120"/>
     <Tilt Position="107"/>
@@ -3149,7 +3074,7 @@
     <Height/>
    </XYPad>
    <SpeedDial ID="0" Caption="Dauer">
-    <WindowState Visible="True" Width="200" X="630" Y="225" Height="175"/>
+    <WindowState Visible="True" X="1095" Y="400" Height="175" Width="200"/>
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -3164,7 +3089,7 @@
     <Div/>
     <MultDivReset/>
     <Apply/>
-    <Time>1110</Time>
+    <Time>1940</Time>
     <Function FadeIn="0" FadeOut="0" Duration="6">90</Function>
     <Function FadeIn="0" FadeOut="0" Duration="10">2</Function>
     <Function FadeIn="0" FadeOut="0" Duration="6">111</Function>
@@ -3176,10 +3101,664 @@
     <Function FadeIn="0" FadeOut="0" Duration="8">137</Function>
     <Function FadeIn="0" FadeOut="0" Duration="7">112</Function>
    </SpeedDial>
+   <Frame ID="1" Caption="Alt Tastatur">
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <WindowState Visible="True" X="625" Y="0" Height="260" Width="620"/>
+    <AllowChildren>False</AllowChildren>
+    <AllowResize>False</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <Enable>
+     <Key></Key>
+    </Enable>
+    <Button ID="2" Icon="" Caption="Schalter 2">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="10" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="3" Icon="" Caption="Schalter 3">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="60" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="4" Icon="" Caption="Schalter 4">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="110" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="5" Icon="" Caption="Schalter 5">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="160" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="6" Icon="" Caption="Schalter 6">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="210" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="7" Icon="" Caption="Schalter 7">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="260" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="8" Icon="" Caption="Schalter 8">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="310" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="10" Icon="" Caption="Schalter 10">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="360" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="11" Icon="" Caption="Schalter 11">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="410" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="12" Icon="" Caption="Schalter 12">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="460" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="13" Icon="" Caption="Schalter 13">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="510" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="14" Icon="" Caption="Schalter 14">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="560" Y="50" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="15" Icon="" Caption="TS-255 buehne_links (A+Q)">
+     <Function ID="140"/>
+     <Action>Toggle</Action>
+     <Key>Alt+Q</Key>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="10" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="16" Icon="" Caption="TS-255 buehne_mitte (A+W)">
+     <Function ID="141"/>
+     <Action>Toggle</Action>
+     <Key>Alt+W</Key>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="60" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="17" Icon="" Caption="TS-255 buehne_rechts (A+E)">
+     <Function ID="142"/>
+     <Action>Toggle</Action>
+     <Key>Alt+E</Key>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="110" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="18" Icon="" Caption="TS-255 buehne_drums (A+R)">
+     <Function ID="143"/>
+     <Action>Toggle</Action>
+     <Key>Alt+R</Key>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="160" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="19" Icon="" Caption="ts255_barrot (A+T)">
+     <Function ID="145"/>
+     <Action>Toggle</Action>
+     <Key>Alt+T</Key>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="210" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="20" Icon="" Caption="Schalter 20">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="260" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="21" Icon="" Caption="Schalter 21">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="310" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="22" Icon="" Caption="Schalter 22">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="360" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="23" Icon="" Caption="Schalter 23">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="410" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="24" Icon="" Caption="Schalter 24">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="460" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="25" Icon="" Caption="Schalter 25">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="510" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="26" Icon="" Caption="Schalter 26">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="560" Y="100" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="27" Icon="" Caption="Buehne_links (A+A)">
+     <Function ID="93"/>
+     <Action>Toggle</Action>
+     <Key>Alt+A</Key>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="10" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="28" Icon="" Caption="Buehne_mitte  (A+S)">
+     <Function ID="138"/>
+     <Action>Toggle</Action>
+     <Key>Alt+S</Key>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="60" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="29" Icon="" Caption="buehne_rechts (A+D)">
+     <Function ID="139"/>
+     <Action>Toggle</Action>
+     <Key>Alt+D</Key>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="110" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="30" Icon="" Caption="buehne_drums (A+F)">
+     <Function ID="144"/>
+     <Action>Toggle</Action>
+     <Key>Alt+F</Key>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="160" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="31" Icon="" Caption="buehne_4_pos (A+G)">
+     <Function ID="146"/>
+     <Action>Toggle</Action>
+     <Key>Alt+G</Key>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="210" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="32" Icon="" Caption="Schalter 32">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="260" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="33" Icon="" Caption="Schalter 33">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="310" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="34" Icon="" Caption="Schalter 34">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="360" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="35" Icon="" Caption="Schalter 35">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="410" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="36" Icon="" Caption="Schalter 36">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="460" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="37" Icon="" Caption="Schalter 37">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="510" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="39" Icon="" Caption="Schalter 39">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="560" Y="150" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="40" Icon="" Caption="BLINDER_KONZERT (A+Z)">
+     <Function ID="97"/>
+     <Action>Toggle</Action>
+     <Key>Alt+Z</Key>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="10" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="41" Icon="" Caption="Schalter 41">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="60" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="42" Icon="" Caption="Schalter 42">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="110" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="43" Icon="" Caption="Schalter 43">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="160" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="45" Icon="" Caption="Schalter 45">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="210" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="46" Icon="" Caption="Schalter 46">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="260" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="47" Icon="" Caption="Schalter 47">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="310" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="48" Icon="" Caption="Schalter 48">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="360" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="49" Icon="" Caption="Schalter 49">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="410" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="50" Icon="" Caption="Schalter 50">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="460" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="51" Icon="" Caption="Schalter 51">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="510" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+    <Button ID="52" Icon="" Caption="Schalter 52">
+     <Function ID="4294967295"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+     <WindowState Visible="True" X="560" Y="200" Height="50" Width="50"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+    </Button>
+   </Frame>
   </Frame>
   <Properties>
-   <Size Width="1385" Height="855"/>
-   <GrandMaster ValueMode="Reduce" SliderMode="Normal" ChannelMode="Intensity"/>
+   <Size Height="855" Width="1385"/>
+   <GrandMaster ChannelMode="Intensity" ValueMode="Reduce" SliderMode="Normal"/>
   </Properties>
  </VirtualConsole>
  <SimpleDesk>

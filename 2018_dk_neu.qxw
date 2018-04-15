@@ -384,8 +384,8 @@
    <FixtureVal ID="3">2,80</FixtureVal>
    <FixtureVal ID="4">2,80</FixtureVal>
   </Function>
-  <Function ID="23" Type="Collection" Name="TS-255 midout"/>
-  <Function ID="24" Type="Scene" Name="LED RED" Path="LED PAR/colors">
+  <Function ID="23" Type="Collection" Name="TS-255 midout" Path="TSS-255"/>
+  <Function ID="24" Type="Scene" Name="LED RED" Path="LED PAR/colors all">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,255,1,0,2,0</FixtureVal>
    <FixtureVal ID="9">0,255,1,0,2,0</FixtureVal>
@@ -394,7 +394,7 @@
    <FixtureVal ID="12">0,255,1,0,2,0</FixtureVal>
    <FixtureVal ID="13">0,255,1,0,2,0</FixtureVal>
   </Function>
-  <Function ID="25" Type="Scene" Name="LED GREEN" Path="LED PAR/colors">
+  <Function ID="25" Type="Scene" Name="LED GREEN" Path="LED PAR/colors all">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,0,1,255,2,0</FixtureVal>
    <FixtureVal ID="9">0,0,1,255,2,0</FixtureVal>
@@ -403,7 +403,7 @@
    <FixtureVal ID="12">0,0,1,255,2,0</FixtureVal>
    <FixtureVal ID="13">0,0,1,255,2,0</FixtureVal>
   </Function>
-  <Function ID="26" Type="Scene" Name="LED BLUE" Path="LED PAR/colors">
+  <Function ID="26" Type="Scene" Name="LED BLUE" Path="LED PAR/colors all">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,0,1,0,2,255</FixtureVal>
    <FixtureVal ID="9">0,0,1,0,2,255</FixtureVal>
@@ -412,7 +412,7 @@
    <FixtureVal ID="12">0,0,1,0,2,255</FixtureVal>
    <FixtureVal ID="13">0,0,1,0,2,255</FixtureVal>
   </Function>
-  <Function ID="27" Type="Scene" Name="LED YELLOW" Path="LED PAR/colors">
+  <Function ID="27" Type="Scene" Name="LED YELLOW" Path="LED PAR/colors all">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,255,1,255,2,0</FixtureVal>
    <FixtureVal ID="9">0,255,1,255,2,0</FixtureVal>
@@ -421,7 +421,7 @@
    <FixtureVal ID="12">0,255,1,255,2,0</FixtureVal>
    <FixtureVal ID="13">0,255,1,255,2,0</FixtureVal>
   </Function>
-  <Function ID="28" Type="Scene" Name="LED ORANGE" Path="LED PAR/colors">
+  <Function ID="28" Type="Scene" Name="LED ORANGE" Path="LED PAR/colors all">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,255,1,128,2,0</FixtureVal>
    <FixtureVal ID="9">0,255,1,128,2,0</FixtureVal>
@@ -430,7 +430,7 @@
    <FixtureVal ID="12">0,255,1,128,2,0</FixtureVal>
    <FixtureVal ID="13">0,255,1,128,2,0</FixtureVal>
   </Function>
-  <Function ID="29" Type="Scene" Name="LED PURPLE" Path="LED PAR/colors">
+  <Function ID="29" Type="Scene" Name="LED PURPLE" Path="LED PAR/colors all">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,255,1,0,2,255</FixtureVal>
    <FixtureVal ID="9">0,255,1,0,2,255</FixtureVal>
@@ -439,7 +439,7 @@
    <FixtureVal ID="12">0,255,1,0,2,255</FixtureVal>
    <FixtureVal ID="13">0,255,1,0,2,255</FixtureVal>
   </Function>
-  <Function ID="30" Type="Scene" Name="LED TEAL" Path="LED PAR/colors">
+  <Function ID="30" Type="Scene" Name="LED TEAL" Path="LED PAR/colors all">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,0,1,255,2,255</FixtureVal>
    <FixtureVal ID="9">0,0,1,255,2,255</FixtureVal>
@@ -448,7 +448,7 @@
    <FixtureVal ID="12">0,0,1,255,2,255</FixtureVal>
    <FixtureVal ID="13">0,0,1,255,2,255</FixtureVal>
   </Function>
-  <Function ID="31" Type="Scene" Name="LED PINK" Path="LED PAR/colors">
+  <Function ID="31" Type="Scene" Name="LED PINK" Path="LED PAR/colors all">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,255,1,51,2,170</FixtureVal>
    <FixtureVal ID="9">0,255,1,51,2,170</FixtureVal>
@@ -457,7 +457,7 @@
    <FixtureVal ID="12">0,255,1,51,2,170</FixtureVal>
    <FixtureVal ID="13">0,255,1,51,2,170</FixtureVal>
   </Function>
-  <Function ID="32" Type="Scene" Name="LED WARMWHITE" Path="LED PAR/colors">
+  <Function ID="32" Type="Scene" Name="LED WARMWHITE" Path="LED PAR/colors all">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,255,1,255,2,211</FixtureVal>
    <FixtureVal ID="9">0,255,1,255,2,211</FixtureVal>
@@ -466,7 +466,7 @@
    <FixtureVal ID="12">0,255,1,255,2,211</FixtureVal>
    <FixtureVal ID="13">0,255,1,255,2,211</FixtureVal>
   </Function>
-  <Function ID="33" Type="Scene" Name="LED WHITE" Path="LED PAR/colors">
+  <Function ID="33" Type="Scene" Name="LED WHITE" Path="LED PAR/colors all">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">0,255,1,255,2,255</FixtureVal>
    <FixtureVal ID="9">0,255,1,255,2,255</FixtureVal>
@@ -758,7 +758,7 @@
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="16">5,255</FixtureVal>
   </Function>
-  <Function ID="75" Type="Scene" Name="LED 1 ON" Path="LED PAR/einzeln">
+  <Function ID="75" Type="Scene" Name="LED 1 BRIGHT" Path="LED PAR/LED 1/INTENSITY">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">3,20</FixtureVal>
   </Function>
@@ -978,19 +978,19 @@
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="16">0,217,1,38,2,255</FixtureVal>
   </Function>
-  <Function ID="131" Type="Collection" Name="Mighty odd">
+  <Function ID="131" Type="Collection" Name="Mighty odd" Path="MIGHTY">
    <Step Number="0">71</Step>
    <Step Number="1">73</Step>
   </Function>
-  <Function ID="132" Type="Collection" Name="Mighty even">
+  <Function ID="132" Type="Collection" Name="Mighty even" Path="MIGHTY">
    <Step Number="0">72</Step>
    <Step Number="1">74</Step>
   </Function>
-  <Function ID="134" Type="Collection" Name="ts-255 odd">
+  <Function ID="134" Type="Collection" Name="ts-255 odd" Path="TSS-255">
    <Step Number="0">35</Step>
    <Step Number="1">68</Step>
   </Function>
-  <Function ID="135" Type="Collection" Name="TS-255 even">
+  <Function ID="135" Type="Collection" Name="TS-255 even" Path="TSS-255">
    <Step Number="0">67</Step>
    <Step Number="1">69</Step>
   </Function>
@@ -1132,6 +1132,130 @@
   <Function ID="174" Type="Scene" Name="QUAD PHASE 2 ROT BLAU" Path="QUAD PHASE HP/QUAD PHASE HP 2/FARBEN">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="21">0,95</FixtureVal>
+  </Function>
+  <Function ID="175" Type="Scene" Name="LED 1 MAX" Path="LED PAR/LED 1/INTENSITY">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,255</FixtureVal>
+  </Function>
+  <Function ID="176" Type="Scene" Name="LED 1 OFF" Path="LED PAR/LED 1/INTENSITY">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,0</FixtureVal>
+  </Function>
+  <Function ID="177" Type="Scene" Name="LED 1 DIMMED" Path="LED PAR/LED 1/INTENSITY">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,5</FixtureVal>
+  </Function>
+  <Function ID="178" Type="Scene" Name="LED 1 BRIGHT AF" Path="LED PAR/LED 1/INTENSITY">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,100</FixtureVal>
+  </Function>
+  <Function ID="179" Type="Scene" Name="LED 1 BLUE" Path="LED PAR/LED 1/COLORS">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">2,255</FixtureVal>
+  </Function>
+  <Function ID="184" Type="Scene" Name="LED 1 RED" Path="LED PAR/LED 1/COLORS">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">0,255</FixtureVal>
+  </Function>
+  <Function ID="185" Type="Scene" Name="LED 1 GREEN" Path="LED PAR/LED 1/COLORS">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">1,255</FixtureVal>
+  </Function>
+  <Function ID="186" Type="Scene" Name="LED 1 ORANGE" Path="LED PAR/LED 1/COLORS">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">0,255,1,128</FixtureVal>
+  </Function>
+  <Function ID="187" Type="Scene" Name="LED 1 PINK" Path="LED PAR/LED 1/COLORS">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">0,255,1,51,2,170</FixtureVal>
+  </Function>
+  <Function ID="188" Type="Scene" Name="LED 1 WHITE" Path="LED PAR/LED 1/COLORS">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">0,255,1,255,2,255</FixtureVal>
+  </Function>
+  <Function ID="189" Type="Scene" Name="LED 1 TEAL" Path="LED PAR/LED 1/COLORS">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">1,255,2,255</FixtureVal>
+  </Function>
+  <Function ID="190" Type="Collection" Name="QUAD_BOTH_RED_ROT_MAX" Path="QUAD_PHASE_HP">
+   <Step Number="0">17</Step>
+   <Step Number="1">168</Step>
+   <Step Number="2">160</Step>
+   <Step Number="3">167</Step>
+   <Step Number="4">161</Step>
+   <Step Number="5">18</Step>
+  </Function>
+  <Function ID="191" Type="Collection" Name="QUAD_1_ROT_CW_2_STAND" Path="QUAD_PHASE_HP">
+   <Step Number="0">159</Step>
+   <Step Number="1">163</Step>
+  </Function>
+  <Function ID="192" Type="Collection" Name="QUAD_1_STAND_2_ROT_CW" Path="QUAD_PHASE_HP">
+   <Step Number="0">166</Step>
+   <Step Number="1">156</Step>
+  </Function>
+  <Function ID="193" Type="Chaser" Name="QUAD_ROTATION_SWITCH">
+   <Speed FadeIn="0" FadeOut="0" Duration="1000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Random</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">191</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">192</Step>
+   <Step Number="2" FadeIn="0" Hold="1000" FadeOut="0">197</Step>
+   <Step Number="3" FadeIn="0" Hold="1000" FadeOut="0">196</Step>
+   <Step Number="4" FadeIn="0" Hold="1000" FadeOut="0">199</Step>
+   <Step Number="5" FadeIn="0" Hold="1000" FadeOut="0">198</Step>
+  </Function>
+  <Function ID="194" Type="Scene" Name="QUAD PHASE 2 ROTATION COUNTERCLOCKWISE FAST" Path="QUAD PHASE HP/QUAD PHASE HP 2/ROTATION">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">1,200</FixtureVal>
+  </Function>
+  <Function ID="195" Type="Scene" Name="QUAD PHASE 1 ROTATION COUNTERCLOCKWISE FAST" Path="QUAD PHASE HP/QUAD PHASE HP 1/ROTATION">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">1,200</FixtureVal>
+  </Function>
+  <Function ID="196" Type="Collection" Name="QUAD_1_ROT_CCW_2_STAND" Path="QUAD_PHASE_HP">
+   <Step Number="0">195</Step>
+   <Step Number="1">163</Step>
+  </Function>
+  <Function ID="197" Type="Collection" Name="QUAD_1_STAND_2_ROT_CCW" Path="QUAD_PHASE_HP">
+   <Step Number="0">156</Step>
+   <Step Number="1">194</Step>
+  </Function>
+  <Function ID="198" Type="Collection" Name="QUAD_BOTH_ROT_CW" Path="QUAD_PHASE_HP">
+   <Step Number="0">159</Step>
+   <Step Number="1">166</Step>
+  </Function>
+  <Function ID="199" Type="Collection" Name="QUAD_BOTH_ROT_CCW" Path="QUAD_PHASE_HP">
+   <Step Number="0">194</Step>
+   <Step Number="1">195</Step>
+  </Function>
+  <Function ID="200" Type="Collection" Name="MOONFLOWER_1_ROT_2_STAND" Path="MOONFLOWERS_OLD">
+   <Step Number="0">85</Step>
+   <Step Number="1">202</Step>
+  </Function>
+  <Function ID="201" Type="Scene" Name="MOON 1 ROTA OFF" Path="MOONFLOWERS_ALT/MOONFLOWERS_ALT_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="17">3,0</FixtureVal>
+  </Function>
+  <Function ID="202" Type="Scene" Name="MOON 2 ROTA OFF" Path="MOONFLOWERS_ALT/MOONFLOWERS_ALT_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="18">3,0</FixtureVal>
+  </Function>
+  <Function ID="203" Type="Collection" Name="MOONFLOWER_1_STAND_2_ROT" Path="MOONFLOWERS_OLD">
+   <Step Number="0">201</Step>
+   <Step Number="1">9</Step>
+  </Function>
+  <Function ID="204" Type="Chaser" Name="MOONFLOWER_ROTATION_SWITCH">
+   <Speed FadeIn="0" FadeOut="0" Duration="1000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Random</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">200</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">203</Step>
+  </Function>
+  <Function ID="205" Type="Collection" Name="ALL_FLOWERS_ROTATION_SWITCH">
+   <Step Number="0">204</Step>
+   <Step Number="1">193</Step>
   </Function>
   <Monitor DisplayMode="0" ShowLabels="1">
    <Font>Monospace,11,-1,5,50,0,0,0,0,0</Font>

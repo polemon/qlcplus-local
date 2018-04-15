@@ -244,7 +244,7 @@
    <Model>Quad Phase</Model>
    <Mode>4-CH Mode</Mode>
    <ID>20</ID>
-   <Name>Quad Phase</Name>
+   <Name>Quad Phase #1</Name>
    <Universe>0</Universe>
    <Address>136</Address>
    <Channels>4</Channels>
@@ -254,7 +254,7 @@
    <Model>Quad Phase</Model>
    <Mode>4-CH Mode</Mode>
    <ID>21</ID>
-   <Name>Quad Phase</Name>
+   <Name>Quad Phase #2</Name>
    <Universe>0</Universe>
    <Address>140</Address>
    <Channels>4</Channels>
@@ -346,15 +346,6 @@
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="17">3,0</FixtureVal>
   </Function>
-  <Function ID="14" Type="Scene" Name="LED PAR strobe master" Path="LED PAR">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="8">4,255</FixtureVal>
-   <FixtureVal ID="9">4,255</FixtureVal>
-   <FixtureVal ID="10">4,255</FixtureVal>
-   <FixtureVal ID="11">4,255</FixtureVal>
-   <FixtureVal ID="12">4,255</FixtureVal>
-   <FixtureVal ID="13">4,255</FixtureVal>
-  </Function>
   <Function ID="15" Type="Scene" Name="MOON 2 ROTA STOP" Path="MOONFLOWERS_ALT/MOONFLOWERS_ALT_2">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="18">3,0</FixtureVal>
@@ -362,6 +353,22 @@
   <Function ID="16" Type="Scene" Name="MOON 2 ROTA VSLOW" Path="MOONFLOWERS_ALT/MOONFLOWERS_ALT_2">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="18">3,45</FixtureVal>
+  </Function>
+  <Function ID="17" Type="Scene" Name="QUAD PHASE 1 ROT" Path="QUAD PHASE HP/QUAD PHASE HP 1/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">0,0</FixtureVal>
+  </Function>
+  <Function ID="18" Type="Scene" Name="QUAD PHASE 1 ON" Path="QUAD PHASE HP/QUAD PHASE HP 1/SHUTTER">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">3,16</FixtureVal>
+  </Function>
+  <Function ID="19" Type="Scene" Name="QUAD PHASE 1 OFF" Path="QUAD PHASE HP/QUAD PHASE HP 1/SHUTTER">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">3,0</FixtureVal>
+  </Function>
+  <Function ID="20" Type="Scene" Name="QUAD PHASE 1 GRUEN" Path="QUAD PHASE HP/QUAD PHASE HP 1/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">0,29</FixtureVal>
   </Function>
   <Function ID="21" Type="Scene" Name="TS-255 blue" Path="TS-255/TS-255 color">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -789,7 +796,7 @@
   </Function>
   <Function ID="84" Type="Scene" Name="MOON 1 AUS" Path="MOONFLOWERS_ALT/MOONFLOWERS_ALT_1">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="17">0,0</FixtureVal>
+   <FixtureVal ID="17">0,0,1,0,2,0,3,0</FixtureVal>
   </Function>
   <Function ID="85" Type="Scene" Name="MOON 1 ROTA FAST" Path="MOONFLOWERS_ALT/MOONFLOWERS_ALT_1">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -812,6 +819,18 @@
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="18">0,229</FixtureVal>
   </Function>
+  <Function ID="90" Type="Scene" Name="QUAD PHASE 1 BLAU" Path="QUAD PHASE HP/QUAD PHASE HP 1/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">0,45</FixtureVal>
+  </Function>
+  <Function ID="91" Type="Scene" Name="QUAD PHASE 1 WHITE" Path="QUAD PHASE HP/QUAD PHASE HP 1/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">0,62</FixtureVal>
+  </Function>
+  <Function ID="92" Type="Scene" Name="QUAD PHASE 1 ROT GRUEN" Path="QUAD PHASE HP/QUAD PHASE HP 1/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">0,75</FixtureVal>
+  </Function>
   <Function ID="93" Type="Scene" Name="Buehne_links" Path="MIGHTY/positions">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="5">0,128,1,24,2,255,3,0,5,9</FixtureVal>
@@ -830,6 +849,10 @@
   <Function ID="96" Type="Scene" Name="scan_1_pos_3" Path="TS-255/positions">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="1">0,161,1,36</FixtureVal>
+  </Function>
+  <Function ID="97" Type="Scene" Name="QUAD PHASE 1 ROT BLAU" Path="QUAD PHASE HP/QUAD PHASE HP 1/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">0,90</FixtureVal>
   </Function>
   <Function ID="98" Type="Scene" Name="scan_1_pos_4" Path="TS-255/positions">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -882,6 +905,14 @@
   <Function ID="110" Type="Scene" Name="scan_4_pos_4" Path="TS-255/positions">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="4">0,133,1,66</FixtureVal>
+  </Function>
+  <Function ID="111" Type="Scene" Name="QUAD PHASE 1 ROT WHITE" Path="QUAD PHASE HP/QUAD PHASE HP 1/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">0,110</FixtureVal>
+  </Function>
+  <Function ID="112" Type="Scene" Name="QUAD PHASE 1 FULL ON" Path="QUAD PHASE HP/QUAD PHASE HP 1/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">0,255</FixtureVal>
   </Function>
   <Function ID="113" Type="Scene" Name="mighty_1_pos_1" Path="MIGHTY/positions">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -1025,6 +1056,82 @@
    <FixtureVal ID="14">0,142,1,17,2,255,5,9</FixtureVal>
    <FixtureVal ID="15">0,109,1,20,2,255,5,11</FixtureVal>
    <FixtureVal ID="16">0,136,1,20,5,12</FixtureVal>
+  </Function>
+  <Function ID="156" Type="Scene" Name="QUAD PHASE 1 ROTATION OFF" Path="QUAD PHASE HP/QUAD PHASE HP 1/ROTATION">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">1,0</FixtureVal>
+  </Function>
+  <Function ID="157" Type="Scene" Name="QUAD PHASE 1 ROTATION CLOCKWISE SLOW" Path="QUAD PHASE HP/QUAD PHASE HP 1/ROTATION">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">1,100</FixtureVal>
+  </Function>
+  <Function ID="158" Type="Scene" Name="QUAD PHASE 1 ROTATION CLOCKWISE MEDIUM" Path="QUAD PHASE HP/QUAD PHASE HP 1/ROTATION">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">1,75</FixtureVal>
+  </Function>
+  <Function ID="159" Type="Scene" Name="QUAD PHASE 1 ROTATION CLOCKWISE FAST" Path="QUAD PHASE HP/QUAD PHASE HP 1/ROTATION">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">1,50</FixtureVal>
+  </Function>
+  <Function ID="160" Type="Scene" Name="QUAD PHASE 1 ROTATION CLOCKWISE VERY FAST" Path="QUAD PHASE HP/QUAD PHASE HP 1/ROTATION">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="20">1,10</FixtureVal>
+  </Function>
+  <Function ID="161" Type="Scene" Name="QUAD PHASE 2 ON" Path="QUAD PHASE HP/QUAD PHASE HP 2/SHUTTER">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">3,16</FixtureVal>
+  </Function>
+  <Function ID="162" Type="Scene" Name="QUAD PHASE 2 OFF" Path="QUAD PHASE HP/QUAD PHASE HP 2/SHUTTER">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">3,0</FixtureVal>
+  </Function>
+  <Function ID="163" Type="Scene" Name="QUAD PHASE 2 ROTATION OFF" Path="QUAD PHASE HP/QUAD PHASE HP 2/ROTATION">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">1,0</FixtureVal>
+  </Function>
+  <Function ID="164" Type="Scene" Name="QUAD PHASE 2 ROTATION CLOCKWISE SLOW" Path="QUAD PHASE HP/QUAD PHASE HP 2/ROTATION">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">1,100</FixtureVal>
+  </Function>
+  <Function ID="165" Type="Scene" Name="QUAD PHASE 2 ROTATION CLOCKWISE MEDIUM" Path="QUAD PHASE HP/QUAD PHASE HP 2/ROTATION">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">1,75</FixtureVal>
+  </Function>
+  <Function ID="166" Type="Scene" Name="QUAD PHASE 2 ROTATION CLOCKWISE FAST">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">1,50</FixtureVal>
+  </Function>
+  <Function ID="167" Type="Scene" Name="QUAD PHASE 2 ROTATION CLOCKWISE VERY FEST" Path="QUAD PHASE HP/QUAD PHASE HP 2/ROTATION">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">1,10</FixtureVal>
+  </Function>
+  <Function ID="168" Type="Scene" Name="QUAD PHASE 2 ROT" Path="QUAD PHASE HP/QUAD PHASE HP 2/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">0,6</FixtureVal>
+  </Function>
+  <Function ID="169" Type="Scene" Name="QUAD PHASE 2 GRUEN" Path="QUAD PHASE HP/QUAD PHASE HP 2/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">0,26</FixtureVal>
+  </Function>
+  <Function ID="170" Type="Scene" Name="QUAD PHASE 2 BLAU" Path="QUAD PHASE HP/QUAD PHASE HP 2/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">0,40</FixtureVal>
+  </Function>
+  <Function ID="171" Type="Scene" Name="QUAD PHASE 2 WHITE" Path="QUAD PHASE HP/QUAD PHASE HP 2/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">0,57</FixtureVal>
+  </Function>
+  <Function ID="172" Type="Scene" Name="QUAD PHASE 2 ROT GRUEN" Path="QUAD PHASE HP/QUAD PHASE HP 2/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">0,79</FixtureVal>
+  </Function>
+  <Function ID="173" Type="Scene" Name="QUAD PHASE 2 BLAU GRUEN" Path="QUAD PHASE HP/QUAD PHASE HP 2/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">0,127</FixtureVal>
+  </Function>
+  <Function ID="174" Type="Scene" Name="QUAD PHASE 2 ROT BLAU" Path="QUAD PHASE HP/QUAD PHASE HP 2/FARBEN">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="21">0,95</FixtureVal>
   </Function>
   <Monitor DisplayMode="0" ShowLabels="1">
    <Font>Monospace,11,-1,5,50,0,0,0,0,0</Font>
